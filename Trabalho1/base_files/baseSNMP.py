@@ -1,3 +1,4 @@
+
 from snimpy.manager import Manager as M
 from snimpy.manager import load
 from snimpy import mib
@@ -5,6 +6,12 @@ import time
 import re
 import argparse
 import sys
+import matplotlib.pyplot as plt
+import numpy as np
+import matplotlib.patches as mpatches
+import warnings
+import matplotlib.cbook
+warnings.filterwarnings("ignore",category=matplotlib.cbook.mplDeprecation)
 
 def IPfromOctetString(t,s):
     if t==1 or t==3:    #IPv4 global, non-global
@@ -38,10 +45,45 @@ def main():
     for addr, i in m.ipAddressIfIndex.items():
         if not i in ifWithAddr:
             ifWithAddr.update({i:IPfromOctetString(addr[0],addr[1])})
+            
 
     t = 0
+    
+    fig = plt.figure(num=None, figsize=(10, 7.5), dpi=80)
+    plt.subplots_adjust(wspace=0.25)
+    plt.subplots_adjust(hspace=0.25)
+    plt.ion()
+    
     try:
+        inPkts = {}
+        inPktsDiference = {}
+        outPkts = {}  
+        outPktsDiference = {}
+        inOcts = {}
+        inOctsDiference = {}
+        outOcts = {}
+        outOctsDiference = {}
+        colors = {}  
+        colormap = ['r.-','y.-','g.-','b.-','m.-']
+        counter = 0 
+        patches=[]
+        for i, name in m.ifDescr.items():
+            if i in ifWithAddr:
+                inPkts.update({name:[]})
+                inPktsDiference.update({name:[]})
+                outPkts.update({name:[]})
+                outPktsDiference.update({name:[]})
+                inOcts.update({name:[]})
+                inOctsDiference.update({name:[]})
+                outOcts.update({name:[]})
+                outOctsDiference.update({name:[]})
+                
+                colors.update({name:colormap[counter]})
+                counter +=1
+                if counter >= len(colormap):
+                    counter =0
 
+        counter = 0
         while True:
             ifOutUCastPkts={} #Stores (order, OutPkts) of all interfaces
             for i, pkts in m.ifHCOutUcastPkts.items():
@@ -73,18 +115,103 @@ def main():
                     if not i in ifQstats:
                         ifQstats.update({i:pkts})
 
+            x = np.arange(0, t+args.sinterval, 5)
+            
+            order = []
+
+            aux = 0
+
             print("=== %d Seconds passed ===" % t)
             for i, name in m.ifDescr.items():
                 if i in ifWithAddr:
-                    print("%s, %s - pkts[in/out][%s/%s] - octets[in/out][%s/%s] - queue[%s]" % (ifWithAddr[i], name, ifInUCastPkts[i], ifOutUCastPkts[i], ifInOctets[i], ifOutOctets[i], ifQstats[i]))
 
+                    print("%s, %s \t pkts[in/out][%s/%s] \t octets[in/out][%s/%s] \t queue[%s]" % (ifWithAddr[i], name, ifInUCastPkts[i], ifOutUCastPkts[i], ifInOctets[i], ifOutOctets[i], ifQstats[i]))
+                    order.append(name)
+
+                    #Plot in Packets
+                    plt.subplot(2, 2, 1)
+                    plt.title('In Packets')
+                    plt.ylabel('Packets')
+                    inPkts[name] += [ifInUCastPkts[i]]
+                    inPktsDiference[name] += [ifInUCastPkts[i]]
+                    if(counter != 0):
+                        if counter==1:
+                            inPktsDiference[name][1] = inPkts[name][1]-inPkts[name][0]
+                            inPktsDiference[name][0] = 0
+                        else:
+                            inPktsDiference[name][counter] = inPkts[name][counter]-inPkts[name][counter-1]
+                        
+                        plt.plot(x, inPktsDiference[name], colors[name])    
+                    else:
+                        plt.plot(x, 0, colors[name])
+                    
+                    #Plot out Packets
+                    plt.subplot(2, 2, 2)
+                    plt.title('Out Packets')
+                    outPkts[name] += [ifOutUCastPkts[i]]
+                    outPktsDiference[name] += [ifOutUCastPkts[i]]
+                    if(counter != 0):
+                        if counter==1:
+                            outPktsDiference[name][1] = outPkts[name][1]-outPkts[name][0]
+                            outPktsDiference[name][0] = 0
+                        else:
+                            outPktsDiference[name][counter] = outPkts[name][counter]-outPkts[name][counter-1]
+                        
+                        plt.plot(x, outPktsDiference[name], colors[name])    
+                    else:
+                        plt.plot(x, 0, colors[name])
+                    
+                    #Plot in Octets
+                    plt.subplot(2, 2, 3)
+                    plt.title('In Octets')
+                    plt.xlabel('Time (s)')
+                    plt.ylabel('Octets')
+                    inOcts[name] += [ifInOctets[i]]
+                    inOctsDiference[name] += [ifInOctets[i]]
+                    if(counter != 0):
+                        if counter==1:
+                            inOctsDiference[name][1] = inOcts[name][1]-inOcts[name][0]
+                            inOctsDiference[name][0] = 0
+                        else:
+                            inOctsDiference[name][counter] = inOcts[name][counter]-inOcts[name][counter-1]
+                        
+                        plt.plot(x, inOctsDiference[name], colors[name])    
+                    else:
+                        plt.plot(x, 0, colors[name])
+                    
+                    #Plot out Octets
+                    plt.subplot(2, 2, 0)
+                    plt.title('Out Octets')
+                    plt.xlabel('Time (s)')
+                    outOcts[name] += [ifOutOctets[i]]
+                    outOctsDiference[name] += [ifOutOctets[i]]
+                    if(counter != 0):
+                        if counter==1:
+                            outOctsDiference[name][1] = outOcts[name][1]-outOcts[name][0]
+                            outOctsDiference[name][0] = 0
+                        else:
+                            outOctsDiference[name][counter] = outOcts[name][counter]-outOcts[name][counter-1]
+                        
+                        plt.plot(x, outOctsDiference[name], colors[name])    
+                    else:
+                        plt.plot(x, 0, colors[name])
+                    
+                    aux+=1
+                        
             print("========================")
+            counter+=1       
+            plt.subplot(2, 2, 1)
+            plt.legend(order, ncol=4, loc='upper center', bbox_to_anchor=[1.1, 1.3], columnspacing=1.0, labelspacing=0.0,handletextpad=0.0, handlelength=1.5, fancybox=True, shadow=True)
+
+            plt.draw()
 
             time.sleep(args.sinterval)
             t += args.sinterval
+            
 
     except KeyboardInterrupt:
         print "Finished after %d seconds..." % t
+        fig.savefig('output.jpg')
         sys.stdout.close()
 
 
