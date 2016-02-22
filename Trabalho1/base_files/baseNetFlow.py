@@ -1,10 +1,28 @@
 # -*- coding: utf-8 -*-
+from __future__ import print_function
 
 import sys
 import socket
 import struct
 import argparse
 from netaddr import IPNetwork, IPAddress
+
+
+def printMatrix(m):
+    print ("|||(src/dst)||||", end="")
+    for j in m.keys():
+        print ("|--%s--" % j, end="")
+    print ("|", end="\n")
+
+    for i in m.keys():
+        print ("|--%s--| " % i, end="")
+        for j in m.keys():
+            print (m[i][j], end="")
+            print ("       ", end="")
+        print ("", end="\n")
+
+
+
 
 def int_to_ipv4(addr):
     return "%d.%d.%d.%d" % \
@@ -97,6 +115,16 @@ def main():
         print("No valid router IP address.")
         sys.exit()
 
+    matrix = {}
+    for i in nets:
+        matrix[str(i)] = {}
+        for j in nets:
+            matrix[str(i)][str(j)] = [0,0,0]
+
+    printMatrix(matrix)
+
+
+
     udp_port=args.port
     sock = socket.socket(socket.AF_INET,socket.SOCK_DGRAM) # UDP
     sock.bind(('0.0.0.0', udp_port))
@@ -104,13 +132,22 @@ def main():
 
     try:
         while 1:
-
-
-
             data, addr = sock.recvfrom(8192)        # buffer size is 8192 bytes
             version,flows=getNetFlowData(data)      #version=0 reports an error!
             print('Version: %d'%version)
             print(flows)
+
+            for n in nets:
+                if IPAddress(flows[0]['src_addr']) in n:
+                    for i in nets:
+                        if IPAddress(flows[0]['dst_addr']) in i:
+                            matrix[str(i)][str(n)][0] += 1
+                            matrix[str(i)][str(n)][1] += flows[0]['flow_pkts']
+                            matrix[str(i)][str(n)][2] += flows[0]['flow_octets']
+
+            printMatrix(matrix)
+
+
     except KeyboardInterrupt:
         sock.close()
         print("\nDone!")
