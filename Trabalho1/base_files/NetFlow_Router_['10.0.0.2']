@@ -1,0 +1,65 @@
+[IPNetwork('10.0.2.0/24'), IPNetwork('10.0.3.0/24'), IPNetwork('10.0.4.0/24')]
+[IPAddress('10.0.0.2')]
+['--others---', '10.0.2.0/24', '10.0.3.0/24', '10.0.4.0/24']
+|||(src/dst)|||||----others-----|--10.0.2.0/24--|--10.0.3.0/24--|--10.0.4.0/24--|
+|----others-----| [0, 0, 0]       [0, 0, 0]       [0, 0, 0]       [0, 0, 0]       
+|--10.0.2.0/24--| [0, 0, 0]       [0, 0, 0]       [0, 0, 0]       [0, 0, 0]       
+|--10.0.3.0/24--| [0, 0, 0]       [0, 0, 0]       [0, 0, 0]       [0, 0, 0]       
+|--10.0.4.0/24--| [0, 0, 0]       [0, 0, 0]       [0, 0, 0]       [0, 0, 0]       
+listening on '0.0.0.0':9996
+NetFlow version 1:
+2
+Version: 1
+{0: {'in_idx': 4, 'src_addr': '10.0.2.100', 'ToS': 0, 'out_idx': 1, 'scr_port': 0, 'start': 5641760, 'flow_pkts': 5, 'next_hop': '10.1.2.1', 'flags': 16, 'dst_port': 2048, 'flow_octets': 420, 'protocol': 1, 'finish': 5645856, 'dst_addr': '10.0.1.100'}, 1: {'in_idx': 1, 'src_addr': '10.0.1.100', 'ToS': 0, 'out_idx': 4, 'scr_port': 0, 'start': 5641776, 'flow_pkts': 5, 'next_hop': '10.0.2.100', 'flags': 16, 'dst_port': 0, 'flow_octets': 420, 'protocol': 1, 'finish': 5645888, 'dst_addr': '10.0.2.100'}}
+NAO
+NOT
+|||(src/dst)|||||----others-----|--10.0.2.0/24--|--10.0.3.0/24--|--10.0.4.0/24--|
+|----others-----| [0, 0, 0]       [0, 0, 0]       [0, 0, 0]       [0, 0, 0]       
+|--10.0.2.0/24--| [1, 5, 420]       [0, 0, 0]       [0, 0, 0]       [0, 0, 0]       
+|--10.0.3.0/24--| [0, 0, 0]       [0, 0, 0]       [0, 0, 0]       [0, 0, 0]       
+|--10.0.4.0/24--| [0, 0, 0]       [0, 0, 0]       [0, 0, 0]       [0, 0, 0]       
+NetFlow version 1:
+2
+Version: 1
+{0: {'in_idx': 1, 'src_addr': '10.1.2.1', 'ToS': 0, 'out_idx': 4, 'scr_port': 0, 'start': 5679544, 'flow_pkts': 5, 'next_hop': '10.0.2.100', 'flags': 16, 'dst_port': 2048, 'flow_octets': 500, 'protocol': 1, 'finish': 5682628, 'dst_addr': '10.0.2.100'}, 1: {'in_idx': 4, 'src_addr': '10.0.2.100', 'ToS': 0, 'out_idx': 1, 'scr_port': 0, 'start': 5682556, 'flow_pkts': 5, 'next_hop': '10.1.2.1', 'flags': 16, 'dst_port': 0, 'flow_octets': 500, 'protocol': 1, 'finish': 5682640, 'dst_addr': '10.1.2.1'}}
+SIM
+|||(src/dst)|||||----others-----|--10.0.2.0/24--|--10.0.3.0/24--|--10.0.4.0/24--|
+|----others-----| [0, 0, 0]       [1, 5, 500]       [0, 0, 0]       [0, 0, 0]       
+|--10.0.2.0/24--| [1, 5, 420]       [0, 0, 0]       [0, 0, 0]       [0, 0, 0]       
+|--10.0.3.0/24--| [0, 0, 0]       [0, 0, 0]       [0, 0, 0]       [0, 0, 0]       
+|--10.0.4.0/24--| [0, 0, 0]       [0, 0, 0]       [0, 0, 0]       [0, 0, 0]       
+NetFlow version 1:
+4
+Version: 1
+{0: {'in_idx': 2, 'src_addr': '10.0.4.100', 'ToS': 0, 'out_idx': 3, 'scr_port': 0, 'start': 5826332, 'flow_pkts': 5, 'next_hop': '10.0.3.100', 'flags': 16, 'dst_port': 2048, 'flow_octets': 420, 'protocol': 1, 'finish': 5832368, 'dst_addr': '10.0.3.100'}, 1: {'in_idx': 2, 'src_addr': '10.0.4.100', 'ToS': 0, 'out_idx': 3, 'scr_port': 0, 'start': 5826332, 'flow_pkts': 5, 'next_hop': '10.0.3.100', 'flags': 16, 'dst_port': 2048, 'flow_octets': 420, 'protocol': 1, 'finish': 5832368, 'dst_addr': '10.0.3.100'}, 2: {'in_idx': 3, 'src_addr': '10.0.3.100', 'ToS': 0, 'out_idx': 2, 'scr_port': 0, 'start': 5829336, 'flow_pkts': 5, 'next_hop': '10.0.4.100', 'flags': 16, 'dst_port': 0, 'flow_octets': 420, 'protocol': 1, 'finish': 5832380, 'dst_addr': '10.0.4.100'}, 3: {'in_idx': 3, 'src_addr': '10.0.3.100', 'ToS': 0, 'out_idx': 2, 'scr_port': 0, 'start': 5829336, 'flow_pkts': 5, 'next_hop': '10.0.4.100', 'flags': 16, 'dst_port': 0, 'flow_octets': 420, 'protocol': 1, 'finish': 5832380, 'dst_addr': '10.0.4.100'}}
+NAO
+IN
+|||(src/dst)|||||----others-----|--10.0.2.0/24--|--10.0.3.0/24--|--10.0.4.0/24--|
+|----others-----| [0, 0, 0]       [1, 5, 500]       [0, 0, 0]       [0, 0, 0]       
+|--10.0.2.0/24--| [1, 5, 420]       [0, 0, 0]       [0, 0, 0]       [0, 0, 0]       
+|--10.0.3.0/24--| [0, 0, 0]       [0, 0, 0]       [0, 0, 0]       [0, 0, 0]       
+|--10.0.4.0/24--| [0, 0, 0]       [0, 0, 0]       [1, 5, 420]       [0, 0, 0]       
+NetFlow version 1:
+4
+Version: 1
+{0: {'in_idx': 2, 'src_addr': '10.0.4.100', 'ToS': 0, 'out_idx': 4, 'scr_port': 0, 'start': 5867656, 'flow_pkts': 5, 'next_hop': '10.0.2.100', 'flags': 16, 'dst_port': 2048, 'flow_octets': 420, 'protocol': 1, 'finish': 5873724, 'dst_addr': '10.0.2.100'}, 1: {'in_idx': 2, 'src_addr': '10.0.4.100', 'ToS': 0, 'out_idx': 4, 'scr_port': 0, 'start': 5867656, 'flow_pkts': 5, 'next_hop': '10.0.2.100', 'flags': 16, 'dst_port': 2048, 'flow_octets': 420, 'protocol': 1, 'finish': 5873724, 'dst_addr': '10.0.2.100'}, 2: {'in_idx': 4, 'src_addr': '10.0.2.100', 'ToS': 0, 'out_idx': 2, 'scr_port': 0, 'start': 5870676, 'flow_pkts': 5, 'next_hop': '10.0.4.100', 'flags': 16, 'dst_port': 0, 'flow_octets': 420, 'protocol': 1, 'finish': 5873728, 'dst_addr': '10.0.4.100'}, 3: {'in_idx': 4, 'src_addr': '10.0.2.100', 'ToS': 0, 'out_idx': 2, 'scr_port': 0, 'start': 5870676, 'flow_pkts': 5, 'next_hop': '10.0.4.100', 'flags': 16, 'dst_port': 0, 'flow_octets': 420, 'protocol': 1, 'finish': 5873728, 'dst_addr': '10.0.4.100'}}
+NAO
+IN
+|||(src/dst)|||||----others-----|--10.0.2.0/24--|--10.0.3.0/24--|--10.0.4.0/24--|
+|----others-----| [0, 0, 0]       [1, 5, 500]       [0, 0, 0]       [0, 0, 0]       
+|--10.0.2.0/24--| [1, 5, 420]       [0, 0, 0]       [0, 0, 0]       [0, 0, 0]       
+|--10.0.3.0/24--| [0, 0, 0]       [0, 0, 0]       [0, 0, 0]       [0, 0, 0]       
+|--10.0.4.0/24--| [0, 0, 0]       [1, 5, 420]       [1, 5, 420]       [0, 0, 0]       
+NetFlow version 1:
+4
+Version: 1
+{0: {'in_idx': 3, 'src_addr': '10.0.3.100', 'ToS': 0, 'out_idx': 2, 'scr_port': 0, 'start': 6182376, 'flow_pkts': 5, 'next_hop': '10.0.4.100', 'flags': 16, 'dst_port': 2048, 'flow_octets': 420, 'protocol': 1, 'finish': 6188408, 'dst_addr': '10.0.4.100'}, 1: {'in_idx': 3, 'src_addr': '10.0.3.100', 'ToS': 0, 'out_idx': 2, 'scr_port': 0, 'start': 6182376, 'flow_pkts': 5, 'next_hop': '10.0.4.100', 'flags': 16, 'dst_port': 2048, 'flow_octets': 420, 'protocol': 1, 'finish': 6188408, 'dst_addr': '10.0.4.100'}, 2: {'in_idx': 2, 'src_addr': '10.0.4.100', 'ToS': 0, 'out_idx': 3, 'scr_port': 0, 'start': 6185368, 'flow_pkts': 5, 'next_hop': '10.0.3.100', 'flags': 16, 'dst_port': 0, 'flow_octets': 420, 'protocol': 1, 'finish': 6188420, 'dst_addr': '10.0.3.100'}, 3: {'in_idx': 2, 'src_addr': '10.0.4.100', 'ToS': 0, 'out_idx': 3, 'scr_port': 0, 'start': 6185368, 'flow_pkts': 5, 'next_hop': '10.0.3.100', 'flags': 16, 'dst_port': 0, 'flow_octets': 420, 'protocol': 1, 'finish': 6188420, 'dst_addr': '10.0.3.100'}}
+NAO
+IN
+|||(src/dst)|||||----others-----|--10.0.2.0/24--|--10.0.3.0/24--|--10.0.4.0/24--|
+|----others-----| [0, 0, 0]       [1, 5, 500]       [0, 0, 0]       [0, 0, 0]       
+|--10.0.2.0/24--| [1, 5, 420]       [0, 0, 0]       [0, 0, 0]       [0, 0, 0]       
+|--10.0.3.0/24--| [0, 0, 0]       [0, 0, 0]       [0, 0, 0]       [1, 5, 420]       
+|--10.0.4.0/24--| [0, 0, 0]       [1, 5, 420]       [1, 5, 420]       [0, 0, 0]       
+
+Done!
