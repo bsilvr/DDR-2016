@@ -45,15 +45,15 @@ def pkt_callback(pkt):
 						downloadValues.append(0)
 						targetDownload.write("0")
 						targetUpload.write("0")
-						targetDownload.write(" ")
-						targetUpload.write(" ")
+						targetDownload.write("\n")
+						targetUpload.write("\n")
 						i=i+0.1
 					
 				downloadValues.append(float(downloadTick))
 				targetDownload.write(str(downloadTick))
-				targetDownload.write(" ")
+				targetDownload.write("\n")
 				targetUpload.write(str(uploadTick))
-				targetUpload.write(" ")
+				targetUpload.write("\n")
    
 				downloadTick = 0
 				uploadTick = 0
