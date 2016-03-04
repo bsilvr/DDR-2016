@@ -20,11 +20,12 @@ def hellingerDist(pdf1, pdf2):
 
 plt.ion()
 # -1- #
-data1=np.loadtxt('data1')
-#for dataset 0 (from 0 to 39)
-plt.figure(1)
-plt.plot(data1[:,0],marker='s',c='blue',label='dataset 0')
+data1=np.loadtxt('../dataFiles/data1')
+# for i in range(0, 39):
+plt.figure(23)
+plt.plot(data1[:,23],marker='s',c='blue',label='dataset 0')
 plt.show()
+waitforEnter()
 
 # -2- #
 M=np.mean(data1,axis=0)
@@ -35,23 +36,25 @@ K=stats.kurtosis(data1)
 p=range(5,101,1)
 Pr=np.percentile(data1,p,axis=0)
 
-plt.figure(2)
-plt.subplot(5,1,1) 
+plt.figure(40)
+plt.subplot(5,1,1)
 plt.plot(M)
 plt.ylabel('mean')
-plt.subplot(5,1,2) 
+plt.subplot(5,1,2)
 plt.plot(Md)
 plt.ylabel('median')
-plt.subplot(5,1,3) 
+plt.subplot(5,1,3)
 plt.plot(V)
 plt.ylabel('variance')
-plt.subplot(5,1,4) 
+plt.subplot(5,1,4)
 plt.plot(S)
 plt.ylabel('skewness')
-plt.subplot(5,1,5) 
+plt.subplot(5,1,5)
 plt.plot(K)
 plt.ylabel('kurtosis')
 plt.show()
+
+waitforEnter()
 
 # -4- #
 #for dataset 0 (from 0 to 39)
@@ -59,16 +62,18 @@ pdf, bins = np.histogram(data1[:,0],bins=50,density=True)
 dbin=np.diff(bins)[0]
 cdf=np.cumsum(pdf)*dbin
 x=bins[:-1]
-plt.figure(3)
+plt.figure(41)
 plt.plot(x,pdf,marker='s',c='blue',label='dataset 0 PDF')
 plt.show()
-plt.figure(4)
+plt.figure(42)
 plt.plot(x,cdf,marker='s',c='blue',label='dataset 0 CDF')
 plt.show()
 
+waitforEnter()
+
 # -5- #
 #Q-Q plot for dataset 0 and dataset 1
-plt.figure(4)
+plt.figure(43)
 plt.clf()
 p=range(5,101,1)
 Pr0=np.percentile(data1[:,0],p)
@@ -77,8 +82,10 @@ plt.scatter(Pr0,Pr1,marker='o',c='blue')
 lp=[0,max(Pr0[-1],Pr1[-1])]
 plt.plot(lp,lp,c='red')
 plt.show()
+
+waitforEnter()
 #P-P plot for dataset 0 and dataset 1
-plt.figure(5)
+plt.figure(44)
 plt.clf()
 pdf0, bins = np.histogram(data1[:,0],bins=50,density=True)
 dbin=np.diff(bins)[0]
@@ -92,9 +99,11 @@ lp=[min(cdf0[0],cdf1[0]),1]
 plt.plot(lp,lp,c='red')
 plt.show()
 
+waitforEnter()
+
 # -7- #
 #for dataset 0
-stats.kstest(data1[:,0],'expon') 
+stats.kstest(data1[:,0],'expon')
 stats.kstest(data1[:,0],'norm')
 #for dataset 0 and dataset 1
 stats.ks_2samp(data1[:,0],data1[:,1])
@@ -102,16 +111,18 @@ stats.ks_2samp(data1[:,0],data1[:,1])
 stats.ks_2samp(data1[:,0],data1[:,30])
 
 # -8- #
-data2=np.loadtxt('data2')
-plt.figure(6)
+data2=np.loadtxt('../dataFiles/data2')
+plt.figure(45)
 pdf,x,y=np.histogram2d(data1[:,0],data2[:,0],bins=10)
 xx,yy = np.meshgrid(x, y)
 plt.pcolormesh(xx, yy, pdf)
 plt.show()
 
+waitforEnter()
+
 # -9- #
-plt.figure(7)
-data1All=np.loadtxt('data1All')
+plt.figure(46)
+data1All=np.loadtxt('../dataFiles/data1All')
 for a in range(20,501,20):
 	plt.clf()
 	Agg=np.sum(data1All[:,0:a],axis=1)
@@ -122,18 +133,21 @@ for a in range(20,501,20):
 	plt.plot(x,mlab.normpdf(x,m,std),'r',label='inferred Gaussian PDF')
 	plt.show()
 	plt.legend()
-	waitforEnter()
+
+waitforEnter()
 
 # -10- #
-plt.figure(8)
-traff=np.loadtxt('traff')
+plt.figure(47)
+traff=np.loadtxt('../dataFiles/traff')
 C=abs(np.corrcoef(traff,rowvar=0))
 plt.pcolormesh(C)
 plt.show()
 
+waitforEnter()
+
 # -11- #
 # for dataset 2
-plt.figure(9)
+plt.figure(48)
 x=data1[:,2]
 lag=np.arange(0,100,1)
 xcorr=np.zeros(100)
@@ -143,9 +157,11 @@ for l in lag[1:]:
 plt.plot(lag,xcorr)
 plt.show()
 
+waitforEnter()
+
 # -12- #
 #for dataset 2 (with modulus-squared of FFT)
-plt.figure(10)
+plt.figure(49)
 x=data1[:,2]
 fft=np.fft.fft(x)
 psd=abs(fft)**2
@@ -156,19 +172,23 @@ f,psd=signal.periodogram(x)
 plt.plot(1/f[:50],psd[:50])
 plt.show()
 
+waitforEnter()
+
 # -13- #
 import scalogram
 x=data1[:,2]
 scales=np.arange(1,50)
 plt.ion()
-plt.figure(11)
+plt.figure(50)
 cwt=scalogram.CWTfft(x, scales)
 plt.imshow(abs(cwt), cmap=plt.cm.Blues, aspect='auto')
 plt.show()
-plt.figure(12)
+plt.figure(51)
 S,scales=scalogram.scalogramCWT(x,scales)
 plt.plot(scales,S)
 plt.show()
+
+waitforEnter()
 
 # -14- #
 #features
@@ -190,7 +210,7 @@ features=np.c_[M1,M2,Md1,Md2,V1,V2,S1,S2,K1,K2,Pr1,Pr2]
 from sklearn.decomposition import PCA
 pca = PCA(n_components=2)
 rcp = pca.fit(features).transform(features)
-plt.figure(13)
+plt.figure(52)
 plt.scatter(rcp[0:19,0], rcp[0:19,1],marker='o',c='r',label='datasets 0-19')
 plt.scatter(rcp[20:,0], rcp[20:,1],marker='s',c='b',label='datasets 20-39')
 plt.legend()
@@ -213,7 +233,7 @@ hy=(y_max-y_min)/N
 xx, yy = np.meshgrid(np.arange(x_min, x_max, hx), np.arange(y_min, y_max, hy))
 Z = kmeans.predict(np.c_[xx.ravel(), yy.ravel()])
 Z = Z.reshape(xx.shape)
-plt.figure(14)
+plt.figure(53)
 plt.imshow(Z, interpolation='nearest',extent=(xx.min(), xx.max(),yy.min(), yy.max()),cmap=plt.cm.Blues,aspect='auto', origin='lower',alpha=0.7)
 plt.plot(rcp[:, 0], rcp[:, 1], 'ko')
 # Plot the centroids as a white X
@@ -225,6 +245,8 @@ plt.xticks(())
 plt.yticks(())
 plt.show()
 
+waitforEnter()
+
 # -16- #
 from sklearn.cluster import DBSCAN
 rcp = PCA(n_components=2).fit_transform(features)
@@ -234,7 +256,7 @@ dbscan.fit(rcp)
 L=dbscan.labels_
 print(L)
 colors = plt.cm.Blues(np.linspace(0, 1, len(set(L))))
-plt.figure(15)
+plt.figure(54)
 for l in set(L):
 	p=(L==l)
 	if l==-1:
@@ -243,6 +265,8 @@ for l in set(L):
 		color=colors[l]
 	plt.plot(rcp[p,0],rcp[p,1],'o',c=color,markersize=10)
 plt.show()
+
+waitforEnter()
 
 # -17- #
 from sklearn.covariance import EllipticEnvelope
@@ -256,11 +280,13 @@ Anom=pred>threshold
 print(Anom)
 Z = clf.decision_function(np.c_[xx.ravel(), yy.ravel()])
 Z = Z.reshape(xx.shape)
-plt.figure(16)
+plt.figure(55)
 plt.contourf(xx, yy, Z, levels=np.linspace(Z.min(), threshold, 7),cmap=plt.cm.Blues_r)
 plt.contour(xx, yy, Z, levels=[threshold],linewidths=2, colors='red')
 plt.plot(rcp[:, 0], rcp[:, 1], 'ko')
 plt.show()
+
+waitforEnter()
 
 # -18- #
 x=data1[:,2]
@@ -293,7 +319,7 @@ def expG(t,Y0,A0,R):
 t=np.arange(0,len(Xout))
 paramsL, cov = curve_fit(linearG,t,Xout)
 paramsE, cov = curve_fit(expG,t,Xout,[500,1,.01])
-plt.figure(17)
+plt.figure(56)
 plt.plot(t,Xout,'k')
 plt.plot(t,linearG(t,paramsL[0],paramsL[1]),'b')
 plt.plot(t,expG(t,paramsE[0],paramsE[1],paramsE[2]),'r')
