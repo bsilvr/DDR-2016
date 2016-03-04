@@ -34,7 +34,7 @@ def main():
     parser.add_argument('-s', '--sinterval', type=int, help='sampling interval (seconds)',default=5)
     args=parser.parse_args()
 
-    sys.stdout = Logger("router_" + args.router)
+    sys.stdout = Logger("SNMP_Router_" + args.router)
 
     #Creates SNMP manager for router with address args.router
     m=M(args.router,'private',3, secname='uDDR',authprotocol="MD5", authpassword="authpass",privprotocol="AES", privpassword="privpass")
@@ -45,27 +45,27 @@ def main():
     for addr, i in m.ipAddressIfIndex.items():
         if not i in ifWithAddr:
             ifWithAddr.update({i:IPfromOctetString(addr[0],addr[1])})
-            
+
 
     t = 0
-    
+
     fig = plt.figure(num=None, figsize=(10, 7.5), dpi=80)
     plt.subplots_adjust(wspace=0.25)
     plt.subplots_adjust(hspace=0.25)
     plt.ion()
-    
+
     try:
         inPkts = {}
         inPktsDiference = {}
-        outPkts = {}  
+        outPkts = {}
         outPktsDiference = {}
         inOcts = {}
         inOctsDiference = {}
         outOcts = {}
         outOctsDiference = {}
-        colors = {}  
+        colors = {}
         colormap = ['r.-','y.-','g.-','b.-','m.-']
-        counter = 0 
+        counter = 0
         patches=[]
         for i, name in m.ifDescr.items():
             if i in ifWithAddr:
@@ -77,7 +77,7 @@ def main():
                 inOctsDiference.update({name:[]})
                 outOcts.update({name:[]})
                 outOctsDiference.update({name:[]})
-                
+
                 colors.update({name:colormap[counter]})
                 counter +=1
                 if counter >= len(colormap):
@@ -116,7 +116,7 @@ def main():
                         ifQstats.update({i:pkts})
 
             x = np.arange(0, t+args.sinterval, 5)
-            
+
             order = []
 
             aux = 0
@@ -140,11 +140,11 @@ def main():
                             inPktsDiference[name][0] = 0
                         else:
                             inPktsDiference[name][counter] = inPkts[name][counter]-inPkts[name][counter-1]
-                        
-                        plt.plot(x, inPktsDiference[name], colors[name])    
+
+                        plt.plot(x, inPktsDiference[name], colors[name])
                     else:
                         plt.plot(x, 0, colors[name])
-                    
+
                     #Plot out Packets
                     plt.subplot(2, 2, 2)
                     plt.title('Out Packets')
@@ -156,11 +156,11 @@ def main():
                             outPktsDiference[name][0] = 0
                         else:
                             outPktsDiference[name][counter] = outPkts[name][counter]-outPkts[name][counter-1]
-                        
-                        plt.plot(x, outPktsDiference[name], colors[name])    
+
+                        plt.plot(x, outPktsDiference[name], colors[name])
                     else:
                         plt.plot(x, 0, colors[name])
-                    
+
                     #Plot in Octets
                     plt.subplot(2, 2, 3)
                     plt.title('In Octets')
@@ -174,11 +174,11 @@ def main():
                             inOctsDiference[name][0] = 0
                         else:
                             inOctsDiference[name][counter] = inOcts[name][counter]-inOcts[name][counter-1]
-                        
-                        plt.plot(x, inOctsDiference[name], colors[name])    
+
+                        plt.plot(x, inOctsDiference[name], colors[name])
                     else:
                         plt.plot(x, 0, colors[name])
-                    
+
                     #Plot out Octets
                     plt.subplot(2, 2, 0)
                     plt.title('Out Octets')
@@ -191,15 +191,15 @@ def main():
                             outOctsDiference[name][0] = 0
                         else:
                             outOctsDiference[name][counter] = outOcts[name][counter]-outOcts[name][counter-1]
-                        
-                        plt.plot(x, outOctsDiference[name], colors[name])    
+
+                        plt.plot(x, outOctsDiference[name], colors[name])
                     else:
                         plt.plot(x, 0, colors[name])
-                    
+
                     aux+=1
-                        
+
             print("========================")
-            counter+=1       
+            counter+=1
             plt.subplot(2, 2, 1)
             plt.legend(order, ncol=4, loc='upper center', bbox_to_anchor=[1.1, 1.3], columnspacing=1.0, labelspacing=0.0,handletextpad=0.0, handlelength=1.5, fancybox=True, shadow=True)
 
@@ -207,7 +207,7 @@ def main():
 
             time.sleep(args.sinterval)
             t += args.sinterval
-            
+
 
     except KeyboardInterrupt:
         print "Finished after %d seconds..." % t
