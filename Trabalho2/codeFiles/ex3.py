@@ -17,11 +17,11 @@ def waitforEnter():
 
 plt.ion()
 # -1- #
-data1=np.loadtxt('../dataFiles/youtube')
+data1=np.loadtxt('../dataFiles/youtube3_1seg')
 print data1
 #for i in range(0, 39):
 plt.figure(1)
-plt.plot(data1[:],marker='s',c='blue',label='dataset 0')
+plt.plot(data1[:300],marker='s',c='blue',label='dataset 0')
 plt.show()
 waitforEnter()
 
@@ -39,7 +39,26 @@ print "STD: %s" % str(V)
 print "Skew: %s" % str(S)
 print "Kurtosis: %s" % str(K)
 
+waitforEnter()
+
+
+pdf, bins = np.histogram(data1[:],bins=50,density=True)
+dbin=np.diff(bins)[0]
+cdf=np.cumsum(pdf)*dbin
+x=bins[:-1]
+plt.figure(2)
+plt.plot(x,pdf,marker='s',c='blue',label='dataset 0 PDF')
+plt.yscale('log')
+plt.show()
+plt.figure(3)
+plt.plot(x,cdf,marker='s',c='blue',label='dataset 0 CDF')
+plt.show()
 
 
 
 waitforEnter()
+
+
+
+
+

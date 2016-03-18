@@ -15,135 +15,209 @@ def waitforEnter():
 		input("Press ENTER to continue.")
 
 def hellingerDist(pdf1, pdf2):
-	return np.sqrt(np.sum((np.sqrt(p) - np.sqrt(q)) ** 2)) / np.sqrt(2)
+	return np.sqrt(np.sum((np.sqrt(pdf1) - np.sqrt(pdf2)) ** 2)) / np.sqrt(2)
 
 
 plt.ion()
 # -1- #
 data1=np.loadtxt('../dataFiles/data1')
-# for i in range(0, 39):
-plt.figure(23)
-plt.plot(data1[:,23],marker='s',c='blue',label='dataset 0')
-plt.show()
-waitforEnter()
+youtube=np.loadtxt('../dataFiles/youtube3_1seg')
 
-# -2- #
-M=np.mean(data1,axis=0)
-Md=np.median(data1,axis=0)
-V=np.var(data1,axis=0)
-S=stats.skew(data1)
-K=stats.kurtosis(data1)
-p=range(5,101,1)
-Pr=np.percentile(data1,p,axis=0)
+# # for i in range(0, 39):
+# plt.figure(23)
+# plt.plot(data1[:,23],marker='s',c='blue',label='dataset 0')
+# plt.show()
 
-plt.figure(40)
-plt.subplot(5,1,1)
-plt.plot(M)
-plt.ylabel('mean')
-plt.subplot(5,1,2)
-plt.plot(Md)
-plt.ylabel('median')
-plt.subplot(5,1,3)
-plt.plot(V)
-plt.ylabel('variance')
-plt.subplot(5,1,4)
-plt.plot(S)
-plt.ylabel('skewness')
-plt.subplot(5,1,5)
-plt.plot(K)
-plt.ylabel('kurtosis')
-plt.show()
+# plt.figure(10)
+# plt.plot(data1[:,10],marker='s',c='blue',label='dataset 0')
+# plt.show()
+# #waitforEnter()
 
-waitforEnter()
+# # -2- #
+# M=np.mean(data1,axis=0)
+# Md=np.median(data1,axis=0)
+# V=np.var(data1,axis=0)
+# S=stats.skew(data1)
+# K=stats.kurtosis(data1)
+# p=range(5,101,1)
+# Pr=np.percentile(data1,p,axis=0)
 
-# -4- #
-#for dataset 0 (from 0 to 39)
-pdf, bins = np.histogram(data1[:,0],bins=50,density=True)
-dbin=np.diff(bins)[0]
-cdf=np.cumsum(pdf)*dbin
-x=bins[:-1]
-plt.figure(41)
-plt.plot(x,pdf,marker='s',c='blue',label='dataset 0 PDF')
-plt.show()
-plt.figure(42)
-plt.plot(x,cdf,marker='s',c='blue',label='dataset 0 CDF')
-plt.show()
+# plt.figure(40)
+# plt.subplot(5,1,1)
+# plt.plot(M)
+# plt.ylabel('mean')
+# plt.subplot(5,1,2)
+# plt.plot(Md)
+# plt.ylabel('median')
+# plt.subplot(5,1,3)
+# plt.plot(V)
+# plt.ylabel('variance')
+# plt.subplot(5,1,4)
+# plt.plot(S)
+# plt.ylabel('skewness')
+# plt.subplot(5,1,5)
+# plt.plot(K)
+# plt.ylabel('kurtosis')
+# plt.show()
 
-waitforEnter()
+# #waitforEnter()
 
-# -5- #
-#Q-Q plot for dataset 0 and dataset 1
-plt.figure(43)
-plt.clf()
-p=range(5,101,1)
-Pr0=np.percentile(data1[:,0],p)
-Pr1=np.percentile(data1[:,1],p)
-plt.scatter(Pr0,Pr1,marker='o',c='blue')
-lp=[0,max(Pr0[-1],Pr1[-1])]
-plt.plot(lp,lp,c='red')
-plt.show()
+# # -4- #
+# for i in range(0,39):
+# 	if i < 20:
+# 		pdf, bins = np.histogram(data1[:,i],bins=50,density=True)
+# 		dbin=np.diff(bins)[0]
+# 		cdf=np.cumsum(pdf)*dbin
+# 		x=bins[:-1]
+# 		plt.figure(41)
+# 		plt.plot(x,pdf,marker='s',c='blue',label='dataset 0 PDF')
+# 		plt.yscale('log')
+# 		plt.show()
+# 		plt.figure(42)
+# 		plt.plot(x,cdf,marker='s',c='blue',label='dataset 0 CDF')
+# 		plt.show()
+# 	else:
+# 		pdf, bins = np.histogram(data1[:,i],bins=50,density=True)
+# 		dbin=np.diff(bins)[0]
+# 		cdf=np.cumsum(pdf)*dbin
+# 		x=bins[:-1]
+# 		plt.figure(41)
+# 		plt.plot(x,pdf,marker='s',c='red',label='dataset 0 PDF')
+# 		plt.yscale('log')
+# 		plt.show()
+# 		plt.figure(42)
+# 		plt.plot(x,cdf,marker='s',c='red',label='dataset 0 CDF')
+# 		plt.show()
 
-waitforEnter()
-#P-P plot for dataset 0 and dataset 1
-plt.figure(44)
-plt.clf()
-pdf0, bins = np.histogram(data1[:,0],bins=50,density=True)
-dbin=np.diff(bins)[0]
-cdf0=np.cumsum(pdf0)*dbin
-#bins/xvalues of the CDF should be the same
-pdf1, bins = np.histogram(data1[:,1],bins=bins,density=True)
-dbin=np.diff(bins)[0]
-cdf1=np.cumsum(pdf1)*dbin
-plt.scatter(cdf0,cdf1,marker='o',c='blue')
-lp=[min(cdf0[0],cdf1[0]),1]
-plt.plot(lp,lp,c='red')
-plt.show()
+# pdf, bins = np.histogram(youtube[:],bins=50,density=True)
+# dbin=np.diff(bins)[0]
+# cdf=np.cumsum(pdf)*dbin
+# x=bins[:-1]
+# plt.figure(41)
+# plt.plot(x,pdf,marker='s',c='green',label='dataset 0 PDF')
+# plt.yscale('log')
+# plt.show()
+# plt.figure(42)
+# plt.plot(x,cdf,marker='s',c='green',label='dataset 0 CDF')
+# plt.show()
 
-waitforEnter()
+# #waitforEnter()
 
-# -7- #
-#for dataset 0
-stats.kstest(data1[:,0],'expon')
-stats.kstest(data1[:,0],'norm')
-#for dataset 0 and dataset 1
-stats.ks_2samp(data1[:,0],data1[:,1])
-#for dataset 0 and dataset 30
-stats.ks_2samp(data1[:,0],data1[:,30])
+# # -5- #
+# #Q-Q plot for dataset 0 and dataset 1
+# plt.figure(43)
+# plt.clf()
+# p=range(5,101,1)
+# Pr0=np.percentile(data1[:,0],p)
+# Pr1=np.percentile(youtube[:],p)
+# plt.scatter(Pr0,Pr1,marker='o',c='blue')
+# lp=[0,max(Pr0[-1],Pr1[-1])]
+# plt.plot(lp,lp,c='red')
+# plt.show()
 
-# -8- #
-data2=np.loadtxt('../dataFiles/data2')
-plt.figure(45)
-pdf,x,y=np.histogram2d(data1[:,0],data2[:,0],bins=10)
-xx,yy = np.meshgrid(x, y)
-plt.pcolormesh(xx, yy, pdf)
-plt.show()
+# #waitforEnter()
+# #P-P plot for dataset 0 and dataset 1
+# plt.figure(44)
+# plt.clf()
+# pdf0, bins = np.histogram(data1[:,0],bins=50,density=True)
+# dbin=np.diff(bins)[0]
+# cdf0=np.cumsum(pdf0)*dbin
+# #bins/xvalues of the CDF should be the same
+# pdf1, bins = np.histogram(youtube[:],bins=bins,density=True)
+# dbin=np.diff(bins)[0]
+# cdf1=np.cumsum(pdf1)*dbin
+# plt.scatter(cdf0,cdf1,marker='o',c='blue')
+# lp=[min(cdf0[0],cdf1[0]),1]
+# plt.plot(lp,lp,c='red')
+# plt.show()
 
-waitforEnter()
+# #waitforEnter()
+
+# # -6- #
+# pdf0, bins = np.histogram(data1[:,0],bins=50,density=True)
+# pdf1, bins = np.histogram(data1[:,1],bins=bins,density=True)
+# print "hellingerDist serv0_1: " + str(hellingerDist(pdf0, pdf1))
+
+# pdf0, bins = np.histogram(data1[:,0],bins=50,density=True)
+# pdf1, bins = np.histogram(data1[:,20],bins=bins,density=True)
+# print "hellingerDist serv0_20: " + str(hellingerDist(pdf0, pdf1))
+
+# pdf0, bins = np.histogram(data1[:,0],bins=50,density=True)
+# pdf1, bins = np.histogram(youtube[:],bins=bins,density=True)
+# print "hellingerDist serv0_youtube: " + str(hellingerDist(pdf0, pdf1))
+
+# pdf0, bins = np.histogram(data1[:,20],bins=50,density=True)
+# pdf1, bins = np.histogram(youtube[:],bins=bins,density=True)
+# print "hellingerDist serv20_youtube: " + str(hellingerDist(pdf0, pdf1))
+# print "-----------------------------------------------------------------"
+
+# for i in range(0,40):
+#     pdf0, bins = np.histogram(data1[:,i],bins=50,density=True)
+#     pdf1, bins = np.histogram(youtube[:],bins=bins,density=True)
+#     hel_dist = hellingerDist(pdf0, pdf1)
+
+#     plt.figure(23)
+#     plt.plot(i, hel_dist,marker='s',c='blue',label='dataset 0')
+#     plt.show()
+
+# waitforEnter()
+
+# # -7- #
+# #for dataset 0
+# print stats.kstest(data1[:,0],'expon')
+# print stats.kstest(data1[:,0],'norm')
+# print "---------------------"
+# #for dataset 0 and dataset 1
+# print "(0-1) " + str(stats.ks_2samp(data1[:,0],data1[:,1]))
+# #for dataset 0 and dataset 30
+# print "(0-30) " + str(stats.ks_2samp(data1[:,0],data1[:,30])
+
+# #for dataset 0 and youtube
+# print "(0-youtube)" + str(stats.ks_2samp(data1[:,0],youtube[:]))
+# #for dataset 30 and youtube
+# print "(30-youtube) " + str(stats.ks_2samp(data1[:,30],youtube[:]))
+
+# waitforEnter()
+
+# # -8- #
+# data2=np.loadtxt('../dataFiles/data2')
+# plt.figure(45)
+# pdf,x,y=np.histogram2d(data1[:,0],data2[:,0],bins=10)
+# xx,yy = np.meshgrid(x, y)
+# plt.pcolormesh(xx, yy, pdf)
+# plt.show()
+
+# plt.figure(145)
+# pdf,x,y=np.histogram2d(data1[:,20],data2[:,20],bins=10)
+# xx,yy = np.meshgrid(x, y)
+# plt.pcolormesh(xx, yy, pdf)
+# plt.show()
+
+# waitforEnter()
 
 # -9- #
-plt.figure(46)
-data1All=np.loadtxt('../dataFiles/data1All')
-for a in range(20,501,20):
-	plt.clf()
-	Agg=np.sum(data1All[:,0:a],axis=1)
-	pdf,x=np.histogram(Agg,bins=20,density=True)
-	m=np.mean(Agg)
-	std=np.std(Agg)		#standard deviation = sqrt( variance )
-	plt.plot(x[:-1],pdf,'k',label='empirical PDF ('+str(a)+' users)')
-	plt.plot(x,mlab.normpdf(x,m,std),'r',label='inferred Gaussian PDF')
-	plt.show()
-	plt.legend()
-
-waitforEnter()
+# plt.figure(46)
+# data1All=np.loadtxt('../dataFiles/data1All')
+# for a in range(20,501,20):
+#     plt.clf()
+#     Agg=np.sum(data1All[:,0:a],axis=1)
+#     pdf,x=np.histogram(Agg,bins=20,density=True)
+#     m=np.mean(Agg)
+#     std=np.std(Agg)		#standard deviation = sqrt( variance )
+#     plt.plot(x[:-1],pdf,'k',label='empirical PDF ('+str(a)+' users)')
+#     plt.plot(x,mlab.normpdf(x,m,std),'r',label='inferred Gaussian PDF')
+#     plt.show()
+#     plt.legend()
+#     waitforEnter()
 
 # -10- #
-plt.figure(47)
-traff=np.loadtxt('../dataFiles/traff')
-C=abs(np.corrcoef(traff,rowvar=0))
-plt.pcolormesh(C)
-plt.show()
+# plt.figure(47)
+# traff=np.loadtxt('../dataFiles/traff')
+# C=abs(np.corrcoef(traff,rowvar=0))
+# plt.pcolormesh(C)
+# plt.show()
 
-waitforEnter()
+# waitforEnter()
 
 # -11- #
 # for dataset 2
