@@ -221,17 +221,17 @@ youtube=np.loadtxt('../dataFiles/youtube3_1seg')
 
 # -11- #
 # for dataset 2
-plt.figure(48)
-x=data1[:,2]
-lag=np.arange(0,100,1)
-xcorr=np.zeros(100)
-xcorr[0]=np.correlate(x,x)
-for l in lag[1:]:
-	xcorr[l]=np.correlate(x[:-l],x[l:])
-plt.plot(lag,xcorr)
-plt.show()
+# plt.figure(48)
+# x=data1[:,2]
+# lag=np.arange(0,100,1)
+# xcorr=np.zeros(100)
+# xcorr[0]=np.correlate(x,x)
+# for l in lag[1:]:
+# 	xcorr[l]=np.correlate(x[:-l],x[l:])
+# plt.plot(lag,xcorr)
+# plt.show()
 
-waitforEnter()
+# waitforEnter()
 
 # -12- #
 #for dataset 2 (with modulus-squared of FFT)
