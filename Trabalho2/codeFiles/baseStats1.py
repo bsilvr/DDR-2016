@@ -22,18 +22,19 @@ plt.ion()
 # -1- #
 data1=np.loadtxt('../dataFiles/data1')
 youtube=np.loadtxt('../dataFiles/youtube3_1seg')
+data2 = np.loadtxt('../dataFiles/data2')
 
 # # for i in range(0, 39):
 # plt.figure(23)
-# plt.plot(data1[:,23],marker='s',c='blue',label='dataset 0')
+# plt.plot(data1[:,0],marker='s',c='blue',label='dataset 0')
 # plt.show()
 
 # plt.figure(10)
-# plt.plot(data1[:,10],marker='s',c='blue',label='dataset 0')
+# plt.plot(data1[:,20],marker='s',c='blue',label='dataset 0')
 # plt.show()
-# #waitforEnter()
+# waitforEnter()
 
-# # -2- #
+# -2- #
 # M=np.mean(data1,axis=0)
 # Md=np.median(data1,axis=0)
 # V=np.var(data1,axis=0)
@@ -60,7 +61,7 @@ youtube=np.loadtxt('../dataFiles/youtube3_1seg')
 # plt.ylabel('kurtosis')
 # plt.show()
 
-# #waitforEnter()
+#waitforEnter()
 
 # # -4- #
 # for i in range(0,39):
@@ -221,7 +222,7 @@ youtube=np.loadtxt('../dataFiles/youtube3_1seg')
 
 # -11- #
 # for dataset 2
-# plt.figure(48)
+# plt.figure(11)
 # x=data1[:,2]
 # lag=np.arange(0,100,1)
 # xcorr=np.zeros(100)
@@ -233,36 +234,75 @@ youtube=np.loadtxt('../dataFiles/youtube3_1seg')
 
 # waitforEnter()
 
+# plt.figure(111)
+# x=data1[:,20]
+# lag=np.arange(0,100,1)
+# xcorr=np.zeros(100)
+# xcorr[0]=np.correlate(x,x)
+# for l in lag[1:]:
+#     xcorr[l]=np.correlate(x[:-l],x[l:])
+# plt.plot(lag,xcorr)
+# plt.show()
+
+# waitforEnter()
+
 # -12- #
 #for dataset 2 (with modulus-squared of FFT)
-plt.figure(49)
-x=data1[:,2]
-fft=np.fft.fft(x)
-psd=abs(fft)**2
-plt.plot(psd[:50])
-plt.show()
-# for dataset 2 (with Welch's method )
-f,psd=signal.periodogram(x)
-plt.plot(1/f[:50],psd[:50])
-plt.show()
+# plt.figure(12)
+# x=data1[:,2]
+# fft=np.fft.fft(x)
+# psd=abs(fft)**2
+# plt.plot(psd[:50])
+# plt.show()
+# # for dataset 2 (with Welch's method )
+# f,psd=signal.periodogram(x)
+# plt.plot(1/f[:50],psd[:50])
+# plt.show()
 
-waitforEnter()
+# waitforEnter()
+
+# plt.figure(121)
+# x=data1[:,20]
+# fft=np.fft.fft(x)
+# psd=abs(fft)**2
+# plt.plot(psd[:50])
+# plt.show()
+# # for dataset 2 (with Welch's method )
+# f,psd=signal.periodogram(x)
+# plt.plot(1/f[:50],psd[:50])
+# plt.show()
+
+# waitforEnter()
 
 # -13- #
-import scalogram
-x=data1[:,2]
-scales=np.arange(1,50)
-plt.ion()
-plt.figure(50)
-cwt=scalogram.CWTfft(x, scales)
-plt.imshow(abs(cwt), cmap=plt.cm.Blues, aspect='auto')
-plt.show()
-plt.figure(51)
-S,scales=scalogram.scalogramCWT(x,scales)
-plt.plot(scales,S)
-plt.show()
+# import scalogram
+# x=data1[:,2]
+# scales=np.arange(1,50)
+# plt.ion()
+# plt.figure(50)
+# cwt=scalogram.CWTfft(x, scales)
+# plt.imshow(abs(cwt), cmap=plt.cm.Blues, aspect='auto')
+# plt.show()
+# plt.figure(51)
+# S,scales=scalogram.scalogramCWT(x,scales)
+# plt.plot(scales,S)
+# plt.show()
 
-waitforEnter()
+# waitforEnter()
+
+# x=data1[:,20]
+# scales=np.arange(1,50)
+# plt.ion()
+# plt.figure(501)
+# cwt=scalogram.CWTfft(x, scales)
+# plt.imshow(abs(cwt), cmap=plt.cm.Blues, aspect='auto')
+# plt.show()
+# plt.figure(511)
+# S,scales=scalogram.scalogramCWT(x,scales)
+# plt.plot(scales,S)
+# plt.show()
+
+# waitforEnter()
 
 # -14- #
 #features
@@ -284,42 +324,99 @@ features=np.c_[M1,M2,Md1,Md2,V1,V2,S1,S2,K1,K2,Pr1,Pr2]
 from sklearn.decomposition import PCA
 pca = PCA(n_components=2)
 rcp = pca.fit(features).transform(features)
-plt.figure(52)
-plt.scatter(rcp[0:19,0], rcp[0:19,1],marker='o',c='r',label='datasets 0-19')
-plt.scatter(rcp[20:,0], rcp[20:,1],marker='s',c='b',label='datasets 20-39')
-plt.legend()
-plt.show()
+# plt.figure(52)
+# plt.scatter(rcp[0:19,0], rcp[0:19,1],marker='o',c='r',label='datasets 0-19')
+# plt.scatter(rcp[20:,0], rcp[20:,1],marker='s',c='b',label='datasets 20-39')
+# plt.legend()
+# plt.show()
 
+#waitforEnter()
 
 # -15- #
-from sklearn.cluster import KMeans
-rcp = PCA(n_components=2).fit_transform(features)
-#K-means assuming 2 clusters
-kmeans = KMeans(init='k-means++', n_clusters=2)
-kmeans.fit(rcp)
-kmeans.labels_
-#vizualization plot
-x_min, x_max = 1.5*rcp[:, 0].min(), 1.5*rcp[:, 0].max()
-y_min, y_max = 1.5*rcp[:, 1].min(), 1.5*rcp[:, 1].max()
-N=20
-hx=(x_max-x_min)/N
-hy=(y_max-y_min)/N
-xx, yy = np.meshgrid(np.arange(x_min, x_max, hx), np.arange(y_min, y_max, hy))
-Z = kmeans.predict(np.c_[xx.ravel(), yy.ravel()])
-Z = Z.reshape(xx.shape)
-plt.figure(53)
-plt.imshow(Z, interpolation='nearest',extent=(xx.min(), xx.max(),yy.min(), yy.max()),cmap=plt.cm.Blues,aspect='auto', origin='lower',alpha=0.7)
-plt.plot(rcp[:, 0], rcp[:, 1], 'ko')
-# Plot the centroids as a white X
-centroids = kmeans.cluster_centers_
-plt.scatter(centroids[:, 0], centroids[:, 1],marker='x', color='r')
-plt.xlim(xx.min(), xx.max())
-plt.ylim(yy.min(), yy.max())
-plt.xticks(())
-plt.yticks(())
-plt.show()
+# from sklearn.cluster import KMeans
+# rcp = PCA(n_components=2).fit_transform(features)
+# #K-means assuming 2 clusters
+# kmeans = KMeans(init='k-means++', n_clusters=2)
+# kmeans.fit(rcp)
+# kmeans.labels_
+# #vizualization plot
+# x_min, x_max = 1.5*rcp[:, 0].min(), 1.5*rcp[:, 0].max()
+# y_min, y_max = 1.5*rcp[:, 1].min(), 1.5*rcp[:, 1].max()
+# N=20
+# hx=(x_max-x_min)/N
+# hy=(y_max-y_min)/N
+# xx, yy = np.meshgrid(np.arange(x_min, x_max, hx), np.arange(y_min, y_max, hy))
+# Z = kmeans.predict(np.c_[xx.ravel(), yy.ravel()])
+# Z = Z.reshape(xx.shape)
+# plt.figure(53)
+# plt.imshow(Z, interpolation='nearest',extent=(xx.min(), xx.max(),yy.min(), yy.max()),cmap=plt.cm.Blues,aspect='auto', origin='lower',alpha=0.7)
+# plt.plot(rcp[:, 0], rcp[:, 1], 'ko')
+# # Plot the centroids as a white X
+# centroids = kmeans.cluster_centers_
+# plt.scatter(centroids[:, 0], centroids[:, 1],marker='x', color='r')
+# plt.xlim(xx.min(), xx.max())
+# plt.ylim(yy.min(), yy.max())
+# plt.xticks(())
+# plt.yticks(())
+# plt.show()
 
-waitforEnter()
+# waitforEnter()
+
+# rcp = PCA(n_components=2).fit_transform(features)
+# #K-means assuming 2 clusters
+# kmeans = KMeans(init='k-means++', n_clusters=3)
+# kmeans.fit(rcp)
+# kmeans.labels_
+# #vizualization plot
+# x_min, x_max = 1.5*rcp[:, 0].min(), 1.5*rcp[:, 0].max()
+# y_min, y_max = 1.5*rcp[:, 1].min(), 1.5*rcp[:, 1].max()
+# N=20
+# hx=(x_max-x_min)/N
+# hy=(y_max-y_min)/N
+# xx, yy = np.meshgrid(np.arange(x_min, x_max, hx), np.arange(y_min, y_max, hy))
+# Z = kmeans.predict(np.c_[xx.ravel(), yy.ravel()])
+# Z = Z.reshape(xx.shape)
+# plt.figure(531)
+# plt.imshow(Z, interpolation='nearest',extent=(xx.min(), xx.max(),yy.min(), yy.max()),cmap=plt.cm.Blues,aspect='auto', origin='lower',alpha=0.7)
+# plt.plot(rcp[:, 0], rcp[:, 1], 'ko')
+# # Plot the centroids as a white X
+# centroids = kmeans.cluster_centers_
+# plt.scatter(centroids[:, 0], centroids[:, 1],marker='x', color='r')
+# plt.xlim(xx.min(), xx.max())
+# plt.ylim(yy.min(), yy.max())
+# plt.xticks(())
+# plt.yticks(())
+# plt.show()
+
+# waitforEnter()
+
+# rcp = PCA(n_components=2).fit_transform(features)
+# #K-means assuming 2 clusters
+# kmeans = KMeans(init='k-means++', n_clusters=4)
+# kmeans.fit(rcp)
+# kmeans.labels_
+# #vizualization plot
+# x_min, x_max = 1.5*rcp[:, 0].min(), 1.5*rcp[:, 0].max()
+# y_min, y_max = 1.5*rcp[:, 1].min(), 1.5*rcp[:, 1].max()
+# N=20
+# hx=(x_max-x_min)/N
+# hy=(y_max-y_min)/N
+# xx, yy = np.meshgrid(np.arange(x_min, x_max, hx), np.arange(y_min, y_max, hy))
+# Z = kmeans.predict(np.c_[xx.ravel(), yy.ravel()])
+# Z = Z.reshape(xx.shape)
+# plt.figure(532)
+# plt.imshow(Z, interpolation='nearest',extent=(xx.min(), xx.max(),yy.min(), yy.max()),cmap=plt.cm.Blues,aspect='auto', origin='lower',alpha=0.7)
+# plt.plot(rcp[:, 0], rcp[:, 1], 'ko')
+# # Plot the centroids as a white X
+# centroids = kmeans.cluster_centers_
+# plt.scatter(centroids[:, 0], centroids[:, 1],marker='x', color='r')
+# plt.xlim(xx.min(), xx.max())
+# plt.ylim(yy.min(), yy.max())
+# plt.xticks(())
+# plt.yticks(())
+# plt.show()
+
+# waitforEnter()
 
 # -16- #
 from sklearn.cluster import DBSCAN
@@ -338,6 +435,40 @@ for l in set(L):
 	else:
 		color=colors[l]
 	plt.plot(rcp[p,0],rcp[p,1],'o',c=color,markersize=10)
+plt.show()
+
+rcp = PCA(n_components=2).fit_transform(features)
+#DBSCAN assuming a neighborhood maximum distance of 1e11
+dbscan = DBSCAN(eps=1e10)
+dbscan.fit(rcp)
+L=dbscan.labels_
+print(L)
+colors = plt.cm.Blues(np.linspace(0, 1, len(set(L))))
+plt.figure(541)
+for l in set(L):
+    p=(L==l)
+    if l==-1:
+        color='r'
+    else:
+        color=colors[l]
+    plt.plot(rcp[p,0],rcp[p,1],'o',c=color,markersize=10)
+plt.show()
+
+rcp = PCA(n_components=2).fit_transform(features)
+#DBSCAN assuming a neighborhood maximum distance of 1e11
+dbscan = DBSCAN(eps=1e8)
+dbscan.fit(rcp)
+L=dbscan.labels_
+print(L)
+colors = plt.cm.Blues(np.linspace(0, 1, len(set(L))))
+plt.figure(542)
+for l in set(L):
+    p=(L==l)
+    if l==-1:
+        color='r'
+    else:
+        color=colors[l]
+    plt.plot(rcp[p,0],rcp[p,1],'o',c=color,markersize=10)
 plt.show()
 
 waitforEnter()
@@ -378,7 +509,7 @@ yd=np.random.choice(bins[:-1],(300,20),p=probs)
 # -20- #
 import json
 from scipy.optimize import curve_fit
-with open('ams-ix-traffic.json') as data_file:
+with open('../dataFiles/ams-ix-traffic.json') as data_file:
 	data=json.load(data_file)
 Xout=[]
 for monthT in data:
