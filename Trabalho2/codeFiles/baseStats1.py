@@ -320,10 +320,10 @@ S2=stats.skew(data2)
 K2=stats.kurtosis(data2)
 Pr2=np.array(np.percentile(data2,p,axis=0)).T
 features=np.c_[M1,M2,Md1,Md2,V1,V2,S1,S2,K1,K2,Pr1,Pr2]
-#PCA
+# #PCA
 from sklearn.decomposition import PCA
-pca = PCA(n_components=2)
-rcp = pca.fit(features).transform(features)
+# pca = PCA(n_components=2)
+# rcp = pca.fit(features).transform(features)
 # plt.figure(52)
 # plt.scatter(rcp[0:19,0], rcp[0:19,1],marker='o',c='r',label='datasets 0-19')
 # plt.scatter(rcp[20:,0], rcp[20:,1],marker='s',c='b',label='datasets 20-39')
@@ -364,10 +364,10 @@ rcp = pca.fit(features).transform(features)
 
 # rcp = PCA(n_components=2).fit_transform(features)
 # #K-means assuming 2 clusters
-# kmeans = KMeans(init='k-means++', n_clusters=3)
+# kmeans = KMeans(init='k-means++', n_clusters=2)
 # kmeans.fit(rcp)
 # kmeans.labels_
-# #vizualization plot
+#vizualization plot
 # x_min, x_max = 1.5*rcp[:, 0].min(), 1.5*rcp[:, 0].max()
 # y_min, y_max = 1.5*rcp[:, 1].min(), 1.5*rcp[:, 1].max()
 # N=20
@@ -379,7 +379,7 @@ rcp = pca.fit(features).transform(features)
 # plt.figure(531)
 # plt.imshow(Z, interpolation='nearest',extent=(xx.min(), xx.max(),yy.min(), yy.max()),cmap=plt.cm.Blues,aspect='auto', origin='lower',alpha=0.7)
 # plt.plot(rcp[:, 0], rcp[:, 1], 'ko')
-# # Plot the centroids as a white X
+# Plot the centroids as a white X
 # centroids = kmeans.cluster_centers_
 # plt.scatter(centroids[:, 0], centroids[:, 1],marker='x', color='r')
 # plt.xlim(xx.min(), xx.max())
@@ -420,78 +420,78 @@ rcp = pca.fit(features).transform(features)
 
 # -16- #
 from sklearn.cluster import DBSCAN
-rcp = PCA(n_components=2).fit_transform(features)
-#DBSCAN assuming a neighborhood maximum distance of 1e11
-dbscan = DBSCAN(eps=1e11)
-dbscan.fit(rcp)
-L=dbscan.labels_
-print(L)
-colors = plt.cm.Blues(np.linspace(0, 1, len(set(L))))
-plt.figure(54)
-for l in set(L):
-	p=(L==l)
-	if l==-1:
-		color='r'
-	else:
-		color=colors[l]
-	plt.plot(rcp[p,0],rcp[p,1],'o',c=color,markersize=10)
-plt.show()
+# rcp = PCA(n_components=2).fit_transform(features)
+# #DBSCAN assuming a neighborhood maximum distance of 1e11
+# dbscan = DBSCAN(eps=1e11)
+# dbscan.fit(rcp)
+# L=dbscan.labels_
+# print(L)
+# colors = plt.cm.Blues(np.linspace(0, 1, len(set(L))))
+# plt.figure(54)
+# for l in set(L):
+# 	p=(L==l)
+# 	if l==-1:
+# 		color='r'
+# 	else:
+# 		color=colors[l]
+# 	plt.plot(rcp[p,0],rcp[p,1],'o',c=color,markersize=10)
+# plt.show()
 
-rcp = PCA(n_components=2).fit_transform(features)
-#DBSCAN assuming a neighborhood maximum distance of 1e11
-dbscan = DBSCAN(eps=1e10)
-dbscan.fit(rcp)
-L=dbscan.labels_
-print(L)
-colors = plt.cm.Blues(np.linspace(0, 1, len(set(L))))
-plt.figure(541)
-for l in set(L):
-    p=(L==l)
-    if l==-1:
-        color='r'
-    else:
-        color=colors[l]
-    plt.plot(rcp[p,0],rcp[p,1],'o',c=color,markersize=10)
-plt.show()
+# rcp = PCA(n_components=2).fit_transform(features)
+# #DBSCAN assuming a neighborhood maximum distance of 1e10
+# dbscan = DBSCAN(eps=1e10)
+# dbscan.fit(rcp)
+# L=dbscan.labels_
+# print(L)
+# colors = plt.cm.Blues(np.linspace(0, 1, len(set(L))))
+# plt.figure(541)
+# for l in set(L):
+#     p=(L==l)
+#     if l==-1:
+#         color='r'
+#     else:
+#         color=colors[l]
+#     plt.plot(rcp[p,0],rcp[p,1],'o',c=color,markersize=10)
+# plt.show()
 
-rcp = PCA(n_components=2).fit_transform(features)
-#DBSCAN assuming a neighborhood maximum distance of 1e11
-dbscan = DBSCAN(eps=1e8)
-dbscan.fit(rcp)
-L=dbscan.labels_
-print(L)
-colors = plt.cm.Blues(np.linspace(0, 1, len(set(L))))
-plt.figure(542)
-for l in set(L):
-    p=(L==l)
-    if l==-1:
-        color='r'
-    else:
-        color=colors[l]
-    plt.plot(rcp[p,0],rcp[p,1],'o',c=color,markersize=10)
-plt.show()
+# rcp = PCA(n_components=2).fit_transform(features)
+# #DBSCAN assuming a neighborhood maximum distance of 1e8
+# dbscan = DBSCAN(eps=1e8)
+# dbscan.fit(rcp)
+# L=dbscan.labels_
+# print(L)
+# colors = plt.cm.Blues(np.linspace(0, 1, len(set(L))))
+# plt.figure(542)
+# for l in set(L):
+#     p=(L==l)
+#     if l==-1:
+#         color='r'
+#     else:
+#         color=colors[l]
+#     plt.plot(rcp[p,0],rcp[p,1],'o',c=color,markersize=10)
+# plt.show()
 
-waitforEnter()
+# waitforEnter()
 
 # -17- #
-from sklearn.covariance import EllipticEnvelope
-anom_perc=20
-clf=EllipticEnvelope(contamination=.1)
-clf.fit(rcp)
-clf.decision_function(rcp).ravel()
-pred=clf.decision_function(rcp).ravel()
-threshold = stats.scoreatpercentile(pred,anom_perc)
-Anom=pred>threshold
-print(Anom)
-Z = clf.decision_function(np.c_[xx.ravel(), yy.ravel()])
-Z = Z.reshape(xx.shape)
-plt.figure(55)
-plt.contourf(xx, yy, Z, levels=np.linspace(Z.min(), threshold, 7),cmap=plt.cm.Blues_r)
-plt.contour(xx, yy, Z, levels=[threshold],linewidths=2, colors='red')
-plt.plot(rcp[:, 0], rcp[:, 1], 'ko')
-plt.show()
+# from sklearn.covariance import EllipticEnvelope
+# anom_perc=20
+# clf=EllipticEnvelope(contamination=.1)
+# clf.fit(rcp)
+# clf.decision_function(rcp).ravel()
+# pred=clf.decision_function(rcp).ravel()
+# threshold = stats.scoreatpercentile(pred,anom_perc)
+# Anom=pred>threshold
+# print(Anom)
+# Z = clf.decision_function(np.c_[xx.ravel(), yy.ravel()])
+# Z = Z.reshape(xx.shape)
+# plt.figure(55)
+# plt.contourf(xx, yy, Z, levels=np.linspace(Z.min(), threshold, 7),cmap=plt.cm.Blues_r)
+# plt.contour(xx, yy, Z, levels=[threshold],linewidths=2, colors='red')
+# plt.plot(rcp[:, 0], rcp[:, 1], 'ko')
+# plt.show()
 
-waitforEnter()
+# waitforEnter()
 
 # -18- #
 x=data1[:,2]
@@ -505,6 +505,126 @@ ye=np.random.exponential(M,(300,20))
 yg=np.random.normal(M,V**0.5,(300,20))
 #Empirical discrete
 yd=np.random.choice(bins[:-1],(300,20),p=probs)
+
+
+plt.figure(54)
+plt.plot(range(0,300,1), x, marker='s', c="blue")
+plt.show()
+plt.figure(53)
+plt.plot(range(0,300,1), ye, marker='s', c="red")
+plt.show()
+plt.figure(52)
+plt.plot(range(0,300,1), yg, marker='s', c="green")
+plt.show()
+plt.figure(51)
+plt.plot(range(0,300,1), yd, marker='s', c="black")
+plt.show()
+
+# waitforEnter()
+
+YE,binsYE=np.histogram(ye,bins=20)
+NO,binsNO=np.histogram(yg,bins=20)
+CH,binsCH=np.histogram(yd,bins=20)
+
+
+plt.figure(55)
+plt.plot(bins[:-1], H, marker='s', c="blue")
+plt.plot(binsYE[:-1], YE, marker='s', c="red")
+plt.plot(binsNO[:-1], NO, marker='s', c="green")
+plt.plot(binsCH[:-1], CH, marker='s', c="black")
+
+plt.show()
+
+
+waitforEnter()
+
+# -19- #
+# x=data1[:,2]
+
+# ones = []
+# zeros = []
+
+# previous = 0
+# current = 0
+# for i in x:
+#     if i == 0:
+#         if previous == 0:
+#             current += 1
+#         elif previous == 1:
+#             ones.append(current)
+#             current = 1
+#             previous = 0
+#     elif i > 50:
+#         if previous == 0:
+#             zeros.append(current)
+#             current = 1
+#             previous = 1
+#         elif previous == 1:
+#             current += 1
+
+# if previous == 0:
+#     zeros.append(current)
+# elif previous == 1:
+#     ones.append(current)
+
+# M_ones=np.mean(ones)
+# M_zeros=np.mean(zeros)
+
+# ye_ones=np.random.exponential(M_ones,(300,20))
+# ye_zeros=np.random.exponential(M_zeros,(300,20))
+
+# plt.figure(54)
+# plt.plot(range(0,300,1), ye_ones, marker='s', c="blue")
+# plt.show()
+# plt.figure(53)
+# plt.plot(range(0,300,1), ye_zeros, marker='s', c="red")
+# plt.show()
+
+# H,bins=np.histogram(x,bins=20)
+# probs=1.0*H/np.sum(H)
+
+# yd=np.random.choice(bins[:-1],(300,20),p=probs)
+
+# t = []
+# for i in range(0,300):
+#     for j in range(0,20):
+#         if yd[i][j] > 50:
+#             t.append(yd[i][j])
+#         if len(t) == 300:
+#             break;
+#     if len(t) == 300:
+#         break;
+
+# traf = []
+# previous = 1
+# cur = 0
+# length = int(np.random.exponential(M_ones,(1,1))[0][0])
+# i = 0
+# while (len(traf) != 300):
+#     if previous == 1:
+#         if cur < length:
+#             traf.append(t[i])
+#             cur += 1
+#             i +=1
+#         elif cur == length:
+#             cur = 0
+#             previous = 0
+#             length = int(np.random.exponential(M_zeros,(1,1))[0][0])
+#     elif previous == 0:
+#         if cur < length:
+#             traf.append(0)
+#             cur += 1
+#             i +=1
+#         elif cur == length:
+#             cur = 0
+#             previous = 1
+#             length = int(np.random.exponential(M_ones,(1,1))[0][0])
+
+# plt.figure(10)
+# plt.plot(traf,marker='s',c='blue',label='dataset 0')
+# plt.show()
+
+# waitforEnter()
 
 # -20- #
 import json
@@ -527,6 +647,21 @@ paramsE, cov = curve_fit(expG,t,Xout,[500,1,.01])
 plt.figure(56)
 plt.plot(t,Xout,'k')
 plt.plot(t,linearG(t,paramsL[0],paramsL[1]),'b')
+plt.plot(t,expG(t,paramsE[0],paramsE[1],paramsE[2]),'r')
+plt.show()
+
+t=np.arange(0,250)
+
+exp = expG(t,paramsE[0],paramsE[1],paramsE[2])
+print exp
+
+for i in range(0,250):
+    if exp[i] > 1500000:
+        break
+
+print "Trafego atinge 1.5Ebytes em " + str(i - 180) + " meses."
+
+plt.figure(57)
 plt.plot(t,expG(t,paramsE[0],paramsE[1],paramsE[2]),'r')
 plt.show()
 
