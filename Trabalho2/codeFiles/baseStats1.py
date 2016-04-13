@@ -7,6 +7,8 @@ import time
 import sys
 import warnings
 warnings.filterwarnings('ignore')
+from sklearn.cluster import DBSCAN
+from sklearn.decomposition import PCA
 
 def waitforEnter():
 	if sys.version_info[0] == 2:
@@ -24,15 +26,15 @@ data1=np.loadtxt('../dataFiles/data1')
 youtube=np.loadtxt('../dataFiles/youtube3_1seg')
 data2 = np.loadtxt('../dataFiles/data2')
 
-# # for i in range(0, 39):
-# plt.figure(23)
-# plt.plot(data1[:,0],marker='s',c='blue',label='dataset 0')
-# plt.show()
+# for i in range(0, 39):
+plt.figure(23)
+plt.plot(data1[:,0],marker='s',c='blue',label='dataset 0')
+plt.show()
 
-# plt.figure(10)
-# plt.plot(data1[:,20],marker='s',c='blue',label='dataset 0')
-# plt.show()
-# waitforEnter()
+plt.figure(10)
+plt.plot(data1[:,20],marker='s',c='blue',label='dataset 0')
+plt.show()
+waitforEnter()
 
 # -2- #
 # M=np.mean(data1,axis=0)
@@ -321,7 +323,7 @@ K2=stats.kurtosis(data2)
 Pr2=np.array(np.percentile(data2,p,axis=0)).T
 features=np.c_[M1,M2,Md1,Md2,V1,V2,S1,S2,K1,K2,Pr1,Pr2]
 # #PCA
-from sklearn.decomposition import PCA
+# from sklearn.decomposition import PCA
 # pca = PCA(n_components=2)
 # rcp = pca.fit(features).transform(features)
 # plt.figure(52)
@@ -419,7 +421,7 @@ from sklearn.decomposition import PCA
 # waitforEnter()
 
 # -16- #
-from sklearn.cluster import DBSCAN
+# from sklearn.cluster import DBSCAN
 # rcp = PCA(n_components=2).fit_transform(features)
 # #DBSCAN assuming a neighborhood maximum distance of 1e11
 # dbscan = DBSCAN(eps=1e11)
@@ -494,49 +496,49 @@ from sklearn.cluster import DBSCAN
 # waitforEnter()
 
 # -18- #
-x=data1[:,2]
-M=np.mean(x)
-V=np.var(x)
-H,bins=np.histogram(x,bins=20)
-probs=1.0*H/np.sum(H)
-#Exponential
-ye=np.random.exponential(M,(300,20))
-#Gaussian/Normal
-yg=np.random.normal(M,V**0.5,(300,20))
-#Empirical discrete
-yd=np.random.choice(bins[:-1],(300,20),p=probs)
+# x=data1[:,2]
+# M=np.mean(x)
+# V=np.var(x)
+# H,bins=np.histogram(x,bins=20)
+# probs=1.0*H/np.sum(H)
+# #Exponential
+# ye=np.random.exponential(M,(300,20))
+# #Gaussian/Normal
+# yg=np.random.normal(M,V**0.5,(300,20))
+# #Empirical discrete
+# yd=np.random.choice(bins[:-1],(300,20),p=probs)
 
 
-plt.figure(54)
-plt.plot(range(0,300,1), x, marker='s', c="blue")
-plt.show()
-plt.figure(53)
-plt.plot(range(0,300,1), ye, marker='s', c="red")
-plt.show()
-plt.figure(52)
-plt.plot(range(0,300,1), yg, marker='s', c="green")
-plt.show()
-plt.figure(51)
-plt.plot(range(0,300,1), yd, marker='s', c="black")
-plt.show()
+# plt.figure(54)
+# plt.plot(range(0,300,1), x, marker='s', c="blue")
+# plt.show()
+# plt.figure(53)
+# plt.plot(range(0,300,1), ye, marker='s', c="red")
+# plt.show()
+# plt.figure(52)
+# plt.plot(range(0,300,1), yg, marker='s', c="green")
+# plt.show()
+# plt.figure(51)
+# plt.plot(range(0,300,1), yd, marker='s', c="black")
+# plt.show()
+
+# # waitforEnter()
+
+# YE,binsYE=np.histogram(ye,bins=20)
+# NO,binsNO=np.histogram(yg,bins=20)
+# CH,binsCH=np.histogram(yd,bins=20)
+
+
+# plt.figure(55)
+# plt.plot(bins[:-1], H, marker='s', c="blue")
+# plt.plot(binsYE[:-1], YE, marker='s', c="red")
+# plt.plot(binsNO[:-1], NO, marker='s', c="green")
+# plt.plot(binsCH[:-1], CH, marker='s', c="black")
+
+# plt.show()
+
 
 # waitforEnter()
-
-YE,binsYE=np.histogram(ye,bins=20)
-NO,binsNO=np.histogram(yg,bins=20)
-CH,binsCH=np.histogram(yd,bins=20)
-
-
-plt.figure(55)
-plt.plot(bins[:-1], H, marker='s', c="blue")
-plt.plot(binsYE[:-1], YE, marker='s', c="red")
-plt.plot(binsNO[:-1], NO, marker='s', c="green")
-plt.plot(binsCH[:-1], CH, marker='s', c="black")
-
-plt.show()
-
-
-waitforEnter()
 
 # -19- #
 # x=data1[:,2]
@@ -547,7 +549,7 @@ waitforEnter()
 # previous = 0
 # current = 0
 # for i in x:
-#     if i == 0:
+#     if i <= 50:
 #         if previous == 0:
 #             current += 1
 #         elif previous == 1:
@@ -585,6 +587,10 @@ waitforEnter()
 
 # yd=np.random.choice(bins[:-1],(300,20),p=probs)
 
+# plt.figure(54)
+# plt.plot(range(0,300,1), yd, marker='s', c="green")
+# plt.show()
+
 # t = []
 # for i in range(0,300):
 #     for j in range(0,20):
@@ -593,7 +599,7 @@ waitforEnter()
 #         if len(t) == 300:
 #             break;
 #     if len(t) == 300:
-#         break;
+#         break
 
 # traf = []
 # previous = 1
@@ -624,66 +630,53 @@ waitforEnter()
 # plt.plot(traf,marker='s',c='blue',label='dataset 0')
 # plt.show()
 
+# H_sint,bins=np.histogram(traf,bins=20)
+
+# plt.figure(11)
+# plt.plot(H,marker='s',c='blue',label='PDF Original')
+# plt.plot(H_sint,marker='s',c='red',label='PDF Synthetic')
+# plt.show()
+
 # waitforEnter()
 
 # -20- #
-import json
-from scipy.optimize import curve_fit
-with open('../dataFiles/ams-ix-traffic.json') as data_file:
-	data=json.load(data_file)
-Xout=[]
-for monthT in data:
-	Xout.append(monthT['out_traffic'])
+# import json
+# from scipy.optimize import curve_fit
+# with open('../dataFiles/ams-ix-traffic.json') as data_file:
+# 	data=json.load(data_file)
+# Xout=[]
+# for monthT in data:
+# 	Xout.append(monthT['out_traffic'])
 
-def linearG(t,Y0,R):
-	return Y0+R*t
+# def linearG(t,Y0,R):
+# 	return Y0+R*t
 
-def expG(t,Y0,A0,R):
-	return Y0+A0*np.exp(R*t)
+# def expG(t,Y0,A0,R):
+# 	return Y0+A0*np.exp(R*t)
 
-t=np.arange(0,len(Xout))
-paramsL, cov = curve_fit(linearG,t,Xout)
-paramsE, cov = curve_fit(expG,t,Xout,[500,1,.01])
-plt.figure(56)
-plt.plot(t,Xout,'k')
-plt.plot(t,linearG(t,paramsL[0],paramsL[1]),'b')
-plt.plot(t,expG(t,paramsE[0],paramsE[1],paramsE[2]),'r')
-plt.show()
+# t=np.arange(0,len(Xout))
+# paramsL, cov = curve_fit(linearG,t,Xout)
+# paramsE, cov = curve_fit(expG,t,Xout,[500,1,.01])
+# plt.figure(56)
+# plt.plot(t,Xout,'k')
+# plt.plot(t,linearG(t,paramsL[0],paramsL[1]),'b')
+# plt.plot(t,expG(t,paramsE[0],paramsE[1],paramsE[2]),'r')
+# plt.show()
 
-t=np.arange(0,250)
+# t=np.arange(0,250)
 
-exp = expG(t,paramsE[0],paramsE[1],paramsE[2])
-print exp
+# exp = expG(t,paramsE[0],paramsE[1],paramsE[2])
+# print exp
 
-for i in range(0,250):
-    if exp[i] > 1500000:
-        break
+# for i in range(0,250):
+#     if exp[i] > 1500000:
+#         break
 
-print "Trafego atinge 1.5Ebytes em " + str(i - 180) + " meses."
+# print "Trafego atinge 1.5Ebytes em " + str(i - 180) + " meses."
 
-plt.figure(57)
-plt.plot(t,expG(t,paramsE[0],paramsE[1],paramsE[2]),'r')
-plt.show()
+# plt.figure(57)
+# plt.plot(t,expG(t,paramsE[0],paramsE[1],paramsE[2]),'r')
+# plt.show()
 
-#End
-waitforEnter()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# #End
+# waitforEnter()
