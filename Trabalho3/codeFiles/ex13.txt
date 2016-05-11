@@ -1,0 +1,1200 @@
+lambdA: 150; lambdB: 150; Queue Size: 64; Routing Speed: 500
+Loss probability: 0.00%
+Average delay: 0.009840 sec
+
+
+lambdA: 150; lambdB: 150; Queue Size: 64; Routing Speed: 750
+Loss probability: 0.00%
+Average delay: 0.006633 sec
+
+
+lambdA: 150; lambdB: 150; Queue Size: 64; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.005425 sec
+
+
+lambdA: 150; lambdB: 150; Queue Size: 96; Routing Speed: 500
+Loss probability: 0.00%
+Average delay: 0.009815 sec
+
+
+lambdA: 150; lambdB: 150; Queue Size: 96; Routing Speed: 750
+Loss probability: 0.00%
+Average delay: 0.006654 sec
+
+
+lambdA: 150; lambdB: 150; Queue Size: 96; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.005416 sec
+
+
+lambdA: 150; lambdB: 150; Queue Size: 128; Routing Speed: 500
+Loss probability: 0.00%
+Average delay: 0.009858 sec
+
+
+lambdA: 150; lambdB: 150; Queue Size: 128; Routing Speed: 750
+Loss probability: 0.00%
+Average delay: 0.006644 sec
+
+
+lambdA: 150; lambdB: 150; Queue Size: 128; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.005401 sec
+
+
+lambdA: 150; lambdB: 150; Queue Size: 192; Routing Speed: 500
+Loss probability: 0.00%
+Average delay: 0.009834 sec
+
+
+lambdA: 150; lambdB: 150; Queue Size: 192; Routing Speed: 750
+Loss probability: 0.00%
+Average delay: 0.006625 sec
+
+
+lambdA: 150; lambdB: 150; Queue Size: 192; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.005424 sec
+
+
+lambdA: 150; lambdB: 150; Queue Size: 256; Routing Speed: 500
+Loss probability: 0.00%
+Average delay: 0.009825 sec
+
+
+lambdA: 150; lambdB: 150; Queue Size: 256; Routing Speed: 750
+Loss probability: 0.00%
+Average delay: 0.006642 sec
+
+
+lambdA: 150; lambdB: 150; Queue Size: 256; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.005416 sec
+
+
+lambdA: 150; lambdB: 300; Queue Size: 64; Routing Speed: 500
+Loss probability: 0.00%
+Average delay: 0.017213 sec
+
+
+lambdA: 150; lambdB: 300; Queue Size: 64; Routing Speed: 750
+Loss probability: 0.00%
+Average delay: 0.007381 sec
+
+
+lambdA: 150; lambdB: 300; Queue Size: 64; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.005804 sec
+
+
+lambdA: 150; lambdB: 300; Queue Size: 96; Routing Speed: 500
+Loss probability: 0.00%
+Average delay: 0.017779 sec
+
+
+lambdA: 150; lambdB: 300; Queue Size: 96; Routing Speed: 750
+Loss probability: 0.00%
+Average delay: 0.007383 sec
+
+
+lambdA: 150; lambdB: 300; Queue Size: 96; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.005815 sec
+
+
+lambdA: 150; lambdB: 300; Queue Size: 128; Routing Speed: 500
+Loss probability: 0.00%
+Average delay: 0.017697 sec
+
+
+lambdA: 150; lambdB: 300; Queue Size: 128; Routing Speed: 750
+Loss probability: 0.00%
+Average delay: 0.007372 sec
+
+
+lambdA: 150; lambdB: 300; Queue Size: 128; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.005808 sec
+
+
+lambdA: 150; lambdB: 300; Queue Size: 192; Routing Speed: 500
+Loss probability: 0.00%
+Average delay: 0.017217 sec
+
+
+lambdA: 150; lambdB: 300; Queue Size: 192; Routing Speed: 750
+Loss probability: 0.00%
+Average delay: 0.007334 sec
+
+
+lambdA: 150; lambdB: 300; Queue Size: 192; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.005806 sec
+
+
+lambdA: 150; lambdB: 300; Queue Size: 256; Routing Speed: 500
+Loss probability: 0.00%
+Average delay: 0.017928 sec
+
+
+lambdA: 150; lambdB: 300; Queue Size: 256; Routing Speed: 750
+Loss probability: 0.00%
+Average delay: 0.007424 sec
+
+
+lambdA: 150; lambdB: 300; Queue Size: 256; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.005808 sec
+
+
+lambdA: 150; lambdB: 450; Queue Size: 64; Routing Speed: 500
+Loss probability: 16.33%
+Average delay: 0.139024 sec
+
+
+lambdA: 150; lambdB: 450; Queue Size: 64; Routing Speed: 750
+Loss probability: 0.00%
+Average delay: 0.009208 sec
+
+
+lambdA: 150; lambdB: 450; Queue Size: 64; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.006389 sec
+
+
+lambdA: 150; lambdB: 450; Queue Size: 96; Routing Speed: 500
+Loss probability: 16.43%
+Average delay: 0.202176 sec
+
+
+lambdA: 150; lambdB: 450; Queue Size: 96; Routing Speed: 750
+Loss probability: 0.00%
+Average delay: 0.009220 sec
+
+
+lambdA: 150; lambdB: 450; Queue Size: 96; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.006376 sec
+
+
+lambdA: 150; lambdB: 450; Queue Size: 128; Routing Speed: 500
+Loss probability: 16.67%
+Average delay: 0.265722 sec
+
+
+lambdA: 150; lambdB: 450; Queue Size: 128; Routing Speed: 750
+Loss probability: 0.00%
+Average delay: 0.009161 sec
+
+
+lambdA: 150; lambdB: 450; Queue Size: 128; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.006389 sec
+
+
+lambdA: 150; lambdB: 450; Queue Size: 192; Routing Speed: 500
+Loss probability: 16.23%
+Average delay: 0.392054 sec
+
+
+lambdA: 150; lambdB: 450; Queue Size: 192; Routing Speed: 750
+Loss probability: 0.00%
+Average delay: 0.009108 sec
+
+
+lambdA: 150; lambdB: 450; Queue Size: 192; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.006369 sec
+
+
+lambdA: 150; lambdB: 450; Queue Size: 256; Routing Speed: 500
+Loss probability: 16.30%
+Average delay: 0.515826 sec
+
+
+lambdA: 150; lambdB: 450; Queue Size: 256; Routing Speed: 750
+Loss probability: 0.00%
+Average delay: 0.009188 sec
+
+
+lambdA: 150; lambdB: 450; Queue Size: 256; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.006367 sec
+
+
+lambdA: 150; lambdB: 600; Queue Size: 64; Routing Speed: 500
+Loss probability: 33.03%
+Average delay: 0.237876 sec
+
+
+lambdA: 150; lambdB: 600; Queue Size: 64; Routing Speed: 750
+Loss probability: 0.69%
+Average delay: 0.050462 sec
+
+
+lambdA: 150; lambdB: 600; Queue Size: 64; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.007404 sec
+
+
+lambdA: 150; lambdB: 600; Queue Size: 96; Routing Speed: 500
+Loss probability: 32.99%
+Average delay: 0.347270 sec
+
+
+lambdA: 150; lambdB: 600; Queue Size: 96; Routing Speed: 750
+Loss probability: 0.46%
+Average delay: 0.069834 sec
+
+
+lambdA: 150; lambdB: 600; Queue Size: 96; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.007446 sec
+
+
+lambdA: 150; lambdB: 600; Queue Size: 128; Routing Speed: 500
+Loss probability: 33.39%
+Average delay: 0.459522 sec
+
+
+lambdA: 150; lambdB: 600; Queue Size: 128; Routing Speed: 750
+Loss probability: 0.18%
+Average delay: 0.077999 sec
+
+
+lambdA: 150; lambdB: 600; Queue Size: 128; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.007487 sec
+
+
+lambdA: 150; lambdB: 600; Queue Size: 192; Routing Speed: 500
+Loss probability: 32.79%
+Average delay: 0.703664 sec
+
+
+lambdA: 150; lambdB: 600; Queue Size: 192; Routing Speed: 750
+Loss probability: 0.51%
+Average delay: 0.150981 sec
+
+
+lambdA: 150; lambdB: 600; Queue Size: 192; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.007487 sec
+
+
+lambdA: 150; lambdB: 600; Queue Size: 256; Routing Speed: 500
+Loss probability: 32.30%
+Average delay: 0.955970 sec
+
+
+lambdA: 150; lambdB: 600; Queue Size: 256; Routing Speed: 750
+Loss probability: 0.34%
+Average delay: 0.145773 sec
+
+
+lambdA: 150; lambdB: 600; Queue Size: 256; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.007466 sec
+
+
+lambdA: 300; lambdB: 150; Queue Size: 64; Routing Speed: 500
+Loss probability: 0.00%
+Average delay: 0.016915 sec
+
+
+lambdA: 300; lambdB: 150; Queue Size: 64; Routing Speed: 750
+Loss probability: 0.00%
+Average delay: 0.007404 sec
+
+
+lambdA: 300; lambdB: 150; Queue Size: 64; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.005809 sec
+
+
+lambdA: 300; lambdB: 150; Queue Size: 96; Routing Speed: 500
+Loss probability: 0.00%
+Average delay: 0.017062 sec
+
+
+lambdA: 300; lambdB: 150; Queue Size: 96; Routing Speed: 750
+Loss probability: 0.00%
+Average delay: 0.007329 sec
+
+
+lambdA: 300; lambdB: 150; Queue Size: 96; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.005808 sec
+
+
+lambdA: 300; lambdB: 150; Queue Size: 128; Routing Speed: 500
+Loss probability: 0.00%
+Average delay: 0.017480 sec
+
+
+lambdA: 300; lambdB: 150; Queue Size: 128; Routing Speed: 750
+Loss probability: 0.00%
+Average delay: 0.007359 sec
+
+
+lambdA: 300; lambdB: 150; Queue Size: 128; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.005794 sec
+
+
+lambdA: 300; lambdB: 150; Queue Size: 192; Routing Speed: 500
+Loss probability: 0.00%
+Average delay: 0.016987 sec
+
+
+lambdA: 300; lambdB: 150; Queue Size: 192; Routing Speed: 750
+Loss probability: 0.00%
+Average delay: 0.007372 sec
+
+
+lambdA: 300; lambdB: 150; Queue Size: 192; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.005817 sec
+
+
+lambdA: 300; lambdB: 150; Queue Size: 256; Routing Speed: 500
+Loss probability: 0.00%
+Average delay: 0.017580 sec
+
+
+lambdA: 300; lambdB: 150; Queue Size: 256; Routing Speed: 750
+Loss probability: 0.00%
+Average delay: 0.007369 sec
+
+
+lambdA: 300; lambdB: 150; Queue Size: 256; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.005816 sec
+
+
+lambdA: 300; lambdB: 300; Queue Size: 64; Routing Speed: 500
+Loss probability: 16.49%
+Average delay: 0.133280 sec
+
+
+lambdA: 300; lambdB: 300; Queue Size: 64; Routing Speed: 750
+Loss probability: 0.00%
+Average delay: 0.009041 sec
+
+
+lambdA: 300; lambdB: 300; Queue Size: 64; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.006309 sec
+
+
+lambdA: 300; lambdB: 300; Queue Size: 96; Routing Speed: 500
+Loss probability: 16.45%
+Average delay: 0.195919 sec
+
+
+lambdA: 300; lambdB: 300; Queue Size: 96; Routing Speed: 750
+Loss probability: 0.00%
+Average delay: 0.009092 sec
+
+
+lambdA: 300; lambdB: 300; Queue Size: 96; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.006337 sec
+
+
+lambdA: 300; lambdB: 300; Queue Size: 128; Routing Speed: 500
+Loss probability: 16.71%
+Average delay: 0.260191 sec
+
+
+lambdA: 300; lambdB: 300; Queue Size: 128; Routing Speed: 750
+Loss probability: 0.00%
+Average delay: 0.009096 sec
+
+
+lambdA: 300; lambdB: 300; Queue Size: 128; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.006317 sec
+
+
+lambdA: 300; lambdB: 300; Queue Size: 192; Routing Speed: 500
+Loss probability: 16.71%
+Average delay: 0.384734 sec
+
+
+lambdA: 300; lambdB: 300; Queue Size: 192; Routing Speed: 750
+Loss probability: 0.00%
+Average delay: 0.009096 sec
+
+
+lambdA: 300; lambdB: 300; Queue Size: 192; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.006308 sec
+
+
+lambdA: 300; lambdB: 300; Queue Size: 256; Routing Speed: 500
+Loss probability: 15.69%
+Average delay: 0.510091 sec
+
+
+lambdA: 300; lambdB: 300; Queue Size: 256; Routing Speed: 750
+Loss probability: 0.00%
+Average delay: 0.009304 sec
+
+
+lambdA: 300; lambdB: 300; Queue Size: 256; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.006294 sec
+
+
+lambdA: 300; lambdB: 450; Queue Size: 64; Routing Speed: 500
+Loss probability: 33.21%
+Average delay: 0.140859 sec
+
+
+lambdA: 300; lambdB: 450; Queue Size: 64; Routing Speed: 750
+Loss probability: 0.92%
+Average delay: 0.052236 sec
+
+
+lambdA: 300; lambdB: 450; Queue Size: 64; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.007391 sec
+
+
+lambdA: 300; lambdB: 450; Queue Size: 96; Routing Speed: 500
+Loss probability: 33.23%
+Average delay: 0.204977 sec
+
+
+lambdA: 300; lambdB: 450; Queue Size: 96; Routing Speed: 750
+Loss probability: 0.50%
+Average delay: 0.075759 sec
+
+
+lambdA: 300; lambdB: 450; Queue Size: 96; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.007354 sec
+
+
+lambdA: 300; lambdB: 450; Queue Size: 128; Routing Speed: 500
+Loss probability: 33.37%
+Average delay: 0.267951 sec
+
+
+lambdA: 300; lambdB: 450; Queue Size: 128; Routing Speed: 750
+Loss probability: 0.36%
+Average delay: 0.091242 sec
+
+
+lambdA: 300; lambdB: 450; Queue Size: 128; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.007362 sec
+
+
+lambdA: 300; lambdB: 450; Queue Size: 192; Routing Speed: 500
+Loss probability: 33.35%
+Average delay: 0.395170 sec
+
+
+lambdA: 300; lambdB: 450; Queue Size: 192; Routing Speed: 750
+Loss probability: 0.80%
+Average delay: 0.190423 sec
+
+
+lambdA: 300; lambdB: 450; Queue Size: 192; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.007339 sec
+
+
+lambdA: 300; lambdB: 450; Queue Size: 256; Routing Speed: 500
+Loss probability: 33.12%
+Average delay: 0.521464 sec
+
+
+lambdA: 300; lambdB: 450; Queue Size: 256; Routing Speed: 750
+Loss probability: 0.00%
+Average delay: 0.138559 sec
+
+
+lambdA: 300; lambdB: 450; Queue Size: 256; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.007378 sec
+
+
+lambdA: 300; lambdB: 600; Queue Size: 64; Routing Speed: 500
+Loss probability: 44.47%
+Average delay: 0.226823 sec
+
+
+lambdA: 300; lambdB: 600; Queue Size: 64; Routing Speed: 750
+Loss probability: 16.60%
+Average delay: 0.090841 sec
+
+
+lambdA: 300; lambdB: 600; Queue Size: 64; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.010906 sec
+
+
+lambdA: 300; lambdB: 600; Queue Size: 96; Routing Speed: 500
+Loss probability: 44.19%
+Average delay: 0.319691 sec
+
+
+lambdA: 300; lambdB: 600; Queue Size: 96; Routing Speed: 750
+Loss probability: 16.85%
+Average delay: 0.133204 sec
+
+
+lambdA: 300; lambdB: 600; Queue Size: 96; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.010822 sec
+
+
+lambdA: 300; lambdB: 600; Queue Size: 128; Routing Speed: 500
+Loss probability: 43.96%
+Average delay: 0.470041 sec
+
+
+lambdA: 300; lambdB: 600; Queue Size: 128; Routing Speed: 750
+Loss probability: 16.83%
+Average delay: 0.175389 sec
+
+
+lambdA: 300; lambdB: 600; Queue Size: 128; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.010946 sec
+
+
+lambdA: 300; lambdB: 600; Queue Size: 192; Routing Speed: 500
+Loss probability: 44.12%
+Average delay: 0.659559 sec
+
+
+lambdA: 300; lambdB: 600; Queue Size: 192; Routing Speed: 750
+Loss probability: 16.53%
+Average delay: 0.259508 sec
+
+
+lambdA: 300; lambdB: 600; Queue Size: 192; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.011407 sec
+
+
+lambdA: 300; lambdB: 600; Queue Size: 256; Routing Speed: 500
+Loss probability: 44.22%
+Average delay: 0.844935 sec
+
+
+lambdA: 300; lambdB: 600; Queue Size: 256; Routing Speed: 750
+Loss probability: 16.21%
+Average delay: 0.343158 sec
+
+
+lambdA: 300; lambdB: 600; Queue Size: 256; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.011072 sec
+
+
+lambdA: 450; lambdB: 150; Queue Size: 64; Routing Speed: 500
+Loss probability: 16.07%
+Average delay: 0.138941 sec
+
+
+lambdA: 450; lambdB: 150; Queue Size: 64; Routing Speed: 750
+Loss probability: 0.00%
+Average delay: 0.009317 sec
+
+
+lambdA: 450; lambdB: 150; Queue Size: 64; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.006405 sec
+
+
+lambdA: 450; lambdB: 150; Queue Size: 96; Routing Speed: 500
+Loss probability: 16.05%
+Average delay: 0.202373 sec
+
+
+lambdA: 450; lambdB: 150; Queue Size: 96; Routing Speed: 750
+Loss probability: 0.00%
+Average delay: 0.009220 sec
+
+
+lambdA: 450; lambdB: 150; Queue Size: 96; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.006383 sec
+
+
+lambdA: 450; lambdB: 150; Queue Size: 128; Routing Speed: 500
+Loss probability: 16.30%
+Average delay: 0.266140 sec
+
+
+lambdA: 450; lambdB: 150; Queue Size: 128; Routing Speed: 750
+Loss probability: 0.00%
+Average delay: 0.009326 sec
+
+
+lambdA: 450; lambdB: 150; Queue Size: 128; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.006404 sec
+
+
+lambdA: 450; lambdB: 150; Queue Size: 192; Routing Speed: 500
+Loss probability: 16.77%
+Average delay: 0.392631 sec
+
+
+lambdA: 450; lambdB: 150; Queue Size: 192; Routing Speed: 750
+Loss probability: 0.00%
+Average delay: 0.009337 sec
+
+
+lambdA: 450; lambdB: 150; Queue Size: 192; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.006387 sec
+
+
+lambdA: 450; lambdB: 150; Queue Size: 256; Routing Speed: 500
+Loss probability: 15.96%
+Average delay: 0.514401 sec
+
+
+lambdA: 450; lambdB: 150; Queue Size: 256; Routing Speed: 750
+Loss probability: 0.00%
+Average delay: 0.009199 sec
+
+
+lambdA: 450; lambdB: 150; Queue Size: 256; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.006411 sec
+
+
+lambdA: 450; lambdB: 300; Queue Size: 64; Routing Speed: 500
+Loss probability: 33.00%
+Average delay: 0.140234 sec
+
+
+lambdA: 450; lambdB: 300; Queue Size: 64; Routing Speed: 750
+Loss probability: 0.57%
+Average delay: 0.045756 sec
+
+
+lambdA: 450; lambdB: 300; Queue Size: 64; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.007383 sec
+
+
+lambdA: 450; lambdB: 300; Queue Size: 96; Routing Speed: 500
+Loss probability: 32.90%
+Average delay: 0.204163 sec
+
+
+lambdA: 450; lambdB: 300; Queue Size: 96; Routing Speed: 750
+Loss probability: 0.60%
+Average delay: 0.079906 sec
+
+
+lambdA: 450; lambdB: 300; Queue Size: 96; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.007349 sec
+
+
+lambdA: 450; lambdB: 300; Queue Size: 128; Routing Speed: 500
+Loss probability: 33.35%
+Average delay: 0.268236 sec
+
+
+lambdA: 450; lambdB: 300; Queue Size: 128; Routing Speed: 750
+Loss probability: 0.46%
+Average delay: 0.098810 sec
+
+
+lambdA: 450; lambdB: 300; Queue Size: 128; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.007309 sec
+
+
+lambdA: 450; lambdB: 300; Queue Size: 192; Routing Speed: 500
+Loss probability: 33.19%
+Average delay: 0.394875 sec
+
+
+lambdA: 450; lambdB: 300; Queue Size: 192; Routing Speed: 750
+Loss probability: 0.46%
+Average delay: 0.119644 sec
+
+
+lambdA: 450; lambdB: 300; Queue Size: 192; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.007372 sec
+
+
+lambdA: 450; lambdB: 300; Queue Size: 256; Routing Speed: 500
+Loss probability: 32.92%
+Average delay: 0.521138 sec
+
+
+lambdA: 450; lambdB: 300; Queue Size: 256; Routing Speed: 750
+Loss probability: 0.35%
+Average delay: 0.228601 sec
+
+
+lambdA: 450; lambdB: 300; Queue Size: 256; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.007466 sec
+
+
+lambdA: 450; lambdB: 450; Queue Size: 64; Routing Speed: 500
+Loss probability: 43.90%
+Average delay: 0.143849 sec
+
+
+lambdA: 450; lambdB: 450; Queue Size: 64; Routing Speed: 750
+Loss probability: 16.63%
+Average delay: 0.089471 sec
+
+
+lambdA: 450; lambdB: 450; Queue Size: 64; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.011310 sec
+
+
+lambdA: 450; lambdB: 450; Queue Size: 96; Routing Speed: 500
+Loss probability: 44.22%
+Average delay: 0.207282 sec
+
+
+lambdA: 450; lambdB: 450; Queue Size: 96; Routing Speed: 750
+Loss probability: 16.50%
+Average delay: 0.131400 sec
+
+
+lambdA: 450; lambdB: 450; Queue Size: 96; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.010660 sec
+
+
+lambdA: 450; lambdB: 450; Queue Size: 128; Routing Speed: 500
+Loss probability: 44.02%
+Average delay: 0.270887 sec
+
+
+lambdA: 450; lambdB: 450; Queue Size: 128; Routing Speed: 750
+Loss probability: 17.15%
+Average delay: 0.174192 sec
+
+
+lambdA: 450; lambdB: 450; Queue Size: 128; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.010636 sec
+
+
+lambdA: 450; lambdB: 450; Queue Size: 192; Routing Speed: 500
+Loss probability: 43.82%
+Average delay: 0.397769 sec
+
+
+lambdA: 450; lambdB: 450; Queue Size: 192; Routing Speed: 750
+Loss probability: 16.28%
+Average delay: 0.258483 sec
+
+
+lambdA: 450; lambdB: 450; Queue Size: 192; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.010963 sec
+
+
+lambdA: 450; lambdB: 450; Queue Size: 256; Routing Speed: 500
+Loss probability: 44.35%
+Average delay: 0.525591 sec
+
+
+lambdA: 450; lambdB: 450; Queue Size: 256; Routing Speed: 750
+Loss probability: 16.30%
+Average delay: 0.342142 sec
+
+
+lambdA: 450; lambdB: 450; Queue Size: 256; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.010809 sec
+
+
+lambdA: 450; lambdB: 600; Queue Size: 64; Routing Speed: 500
+Loss probability: 52.07%
+Average delay: 0.210184 sec
+
+
+lambdA: 450; lambdB: 600; Queue Size: 64; Routing Speed: 750
+Loss probability: 28.34%
+Average delay: 0.092212 sec
+
+
+lambdA: 450; lambdB: 600; Queue Size: 64; Routing Speed: 1000
+Loss probability: 5.06%
+Average delay: 0.064337 sec
+
+
+lambdA: 450; lambdB: 600; Queue Size: 96; Routing Speed: 500
+Loss probability: 52.02%
+Average delay: 0.297684 sec
+
+
+lambdA: 450; lambdB: 600; Queue Size: 96; Routing Speed: 750
+Loss probability: 28.49%
+Average delay: 0.134708 sec
+
+
+lambdA: 450; lambdB: 600; Queue Size: 96; Routing Speed: 1000
+Loss probability: 4.46%
+Average delay: 0.093899 sec
+
+
+lambdA: 450; lambdB: 600; Queue Size: 128; Routing Speed: 500
+Loss probability: 52.10%
+Average delay: 0.447526 sec
+
+
+lambdA: 450; lambdB: 600; Queue Size: 128; Routing Speed: 750
+Loss probability: 28.26%
+Average delay: 0.177036 sec
+
+
+lambdA: 450; lambdB: 600; Queue Size: 128; Routing Speed: 1000
+Loss probability: 4.69%
+Average delay: 0.126428 sec
+
+
+lambdA: 450; lambdB: 600; Queue Size: 192; Routing Speed: 500
+Loss probability: 52.18%
+Average delay: 0.662839 sec
+
+
+lambdA: 450; lambdB: 600; Queue Size: 192; Routing Speed: 750
+Loss probability: 28.44%
+Average delay: 0.261756 sec
+
+
+lambdA: 450; lambdB: 600; Queue Size: 192; Routing Speed: 1000
+Loss probability: 5.01%
+Average delay: 0.190103 sec
+
+
+lambdA: 450; lambdB: 600; Queue Size: 256; Routing Speed: 500
+Loss probability: 52.21%
+Average delay: 0.744387 sec
+
+
+lambdA: 450; lambdB: 600; Queue Size: 256; Routing Speed: 750
+Loss probability: 28.27%
+Average delay: 0.346074 sec
+
+
+lambdA: 450; lambdB: 600; Queue Size: 256; Routing Speed: 1000
+Loss probability: 4.52%
+Average delay: 0.249859 sec
+
+
+lambdA: 600; lambdB: 150; Queue Size: 64; Routing Speed: 500
+Loss probability: 32.87%
+Average delay: 0.246669 sec
+
+
+lambdA: 600; lambdB: 150; Queue Size: 64; Routing Speed: 750
+Loss probability: 0.80%
+Average delay: 0.046943 sec
+
+
+lambdA: 600; lambdB: 150; Queue Size: 64; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.007406 sec
+
+
+lambdA: 600; lambdB: 150; Queue Size: 96; Routing Speed: 500
+Loss probability: 33.17%
+Average delay: 0.354794 sec
+
+
+lambdA: 600; lambdB: 150; Queue Size: 96; Routing Speed: 750
+Loss probability: 0.41%
+Average delay: 0.073115 sec
+
+
+lambdA: 600; lambdB: 150; Queue Size: 96; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.007423 sec
+
+
+lambdA: 600; lambdB: 150; Queue Size: 128; Routing Speed: 500
+Loss probability: 32.86%
+Average delay: 0.460823 sec
+
+
+lambdA: 600; lambdB: 150; Queue Size: 128; Routing Speed: 750
+Loss probability: 0.56%
+Average delay: 0.094988 sec
+
+
+lambdA: 600; lambdB: 150; Queue Size: 128; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.007441 sec
+
+
+lambdA: 600; lambdB: 150; Queue Size: 192; Routing Speed: 500
+Loss probability: 32.36%
+Average delay: 0.706054 sec
+
+
+lambdA: 600; lambdB: 150; Queue Size: 192; Routing Speed: 750
+Loss probability: 0.19%
+Average delay: 0.114503 sec
+
+
+lambdA: 600; lambdB: 150; Queue Size: 192; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.007453 sec
+
+
+lambdA: 600; lambdB: 150; Queue Size: 256; Routing Speed: 500
+Loss probability: 32.77%
+Average delay: 0.906967 sec
+
+
+lambdA: 600; lambdB: 150; Queue Size: 256; Routing Speed: 750
+Loss probability: 0.03%
+Average delay: 0.163297 sec
+
+
+lambdA: 600; lambdB: 150; Queue Size: 256; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.007452 sec
+
+
+lambdA: 600; lambdB: 300; Queue Size: 64; Routing Speed: 500
+Loss probability: 44.28%
+Average delay: 0.233300 sec
+
+
+lambdA: 600; lambdB: 300; Queue Size: 64; Routing Speed: 750
+Loss probability: 16.43%
+Average delay: 0.090527 sec
+
+
+lambdA: 600; lambdB: 300; Queue Size: 64; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.010719 sec
+
+
+lambdA: 600; lambdB: 300; Queue Size: 96; Routing Speed: 500
+Loss probability: 44.35%
+Average delay: 0.307852 sec
+
+
+lambdA: 600; lambdB: 300; Queue Size: 96; Routing Speed: 750
+Loss probability: 16.20%
+Average delay: 0.132950 sec
+
+
+lambdA: 600; lambdB: 300; Queue Size: 96; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.010948 sec
+
+
+lambdA: 600; lambdB: 300; Queue Size: 128; Routing Speed: 500
+Loss probability: 43.88%
+Average delay: 0.436312 sec
+
+
+lambdA: 600; lambdB: 300; Queue Size: 128; Routing Speed: 750
+Loss probability: 16.77%
+Average delay: 0.175482 sec
+
+
+lambdA: 600; lambdB: 300; Queue Size: 128; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.010553 sec
+
+
+lambdA: 600; lambdB: 300; Queue Size: 192; Routing Speed: 500
+Loss probability: 44.04%
+Average delay: 0.665940 sec
+
+
+lambdA: 600; lambdB: 300; Queue Size: 192; Routing Speed: 750
+Loss probability: 16.30%
+Average delay: 0.259447 sec
+
+
+lambdA: 600; lambdB: 300; Queue Size: 192; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.010635 sec
+
+
+lambdA: 600; lambdB: 300; Queue Size: 256; Routing Speed: 500
+Loss probability: 43.95%
+Average delay: 0.863052 sec
+
+
+lambdA: 600; lambdB: 300; Queue Size: 256; Routing Speed: 750
+Loss probability: 16.35%
+Average delay: 0.344435 sec
+
+
+lambdA: 600; lambdB: 300; Queue Size: 256; Routing Speed: 1000
+Loss probability: 0.00%
+Average delay: 0.010910 sec
+
+
+lambdA: 600; lambdB: 450; Queue Size: 64; Routing Speed: 500
+Loss probability: 52.14%
+Average delay: 0.219935 sec
+
+
+lambdA: 600; lambdB: 450; Queue Size: 64; Routing Speed: 750
+Loss probability: 28.77%
+Average delay: 0.092228 sec
+
+
+lambdA: 600; lambdB: 450; Queue Size: 64; Routing Speed: 1000
+Loss probability: 5.02%
+Average delay: 0.064237 sec
+
+
+lambdA: 600; lambdB: 450; Queue Size: 96; Routing Speed: 500
+Loss probability: 52.13%
+Average delay: 0.340544 sec
+
+
+lambdA: 600; lambdB: 450; Queue Size: 96; Routing Speed: 750
+Loss probability: 29.01%
+Average delay: 0.134753 sec
+
+
+lambdA: 600; lambdB: 450; Queue Size: 96; Routing Speed: 1000
+Loss probability: 4.58%
+Average delay: 0.093114 sec
+
+
+lambdA: 600; lambdB: 450; Queue Size: 128; Routing Speed: 500
+Loss probability: 51.94%
+Average delay: 0.431769 sec
+
+
+lambdA: 600; lambdB: 450; Queue Size: 128; Routing Speed: 750
+Loss probability: 28.40%
+Average delay: 0.177116 sec
+
+
+lambdA: 600; lambdB: 450; Queue Size: 128; Routing Speed: 1000
+Loss probability: 4.33%
+Average delay: 0.124929 sec
+
+
+lambdA: 600; lambdB: 450; Queue Size: 192; Routing Speed: 500
+Loss probability: 51.76%
+Average delay: 0.622710 sec
+
+
+lambdA: 600; lambdB: 450; Queue Size: 192; Routing Speed: 750
+Loss probability: 28.41%
+Average delay: 0.261724 sec
+
+
+lambdA: 600; lambdB: 450; Queue Size: 192; Routing Speed: 1000
+Loss probability: 4.86%
+Average delay: 0.188985 sec
+
+
+lambdA: 600; lambdB: 450; Queue Size: 256; Routing Speed: 500
+Loss probability: 51.89%
+Average delay: 0.850962 sec
+
+
+lambdA: 600; lambdB: 450; Queue Size: 256; Routing Speed: 750
+Loss probability: 28.52%
+Average delay: 0.346476 sec
+
+
+lambdA: 600; lambdB: 450; Queue Size: 256; Routing Speed: 1000
+Loss probability: 4.41%
+Average delay: 0.245883 sec
+
+
+lambdA: 600; lambdB: 600; Queue Size: 64; Routing Speed: 500
+Loss probability: 58.31%
+Average delay: 0.258282 sec
+
+
+lambdA: 600; lambdB: 600; Queue Size: 64; Routing Speed: 750
+Loss probability: 37.60%
+Average delay: 0.093413 sec
+
+
+lambdA: 600; lambdB: 600; Queue Size: 64; Routing Speed: 1000
+Loss probability: 16.71%
+Average delay: 0.071232 sec
+
+
+lambdA: 600; lambdB: 600; Queue Size: 96; Routing Speed: 500
+Loss probability: 57.87%
+Average delay: 0.384715 sec
+
+
+lambdA: 600; lambdB: 600; Queue Size: 96; Routing Speed: 750
+Loss probability: 37.25%
+Average delay: 0.135963 sec
+
+
+lambdA: 600; lambdB: 600; Queue Size: 96; Routing Speed: 1000
+Loss probability: 16.65%
+Average delay: 0.103522 sec
+
+
+lambdA: 600; lambdB: 600; Queue Size: 128; Routing Speed: 500
+Loss probability: 58.14%
+Average delay: 0.511315 sec
+
+
+lambdA: 600; lambdB: 600; Queue Size: 128; Routing Speed: 750
+Loss probability: 37.53%
+Average delay: 0.178451 sec
+
+
+lambdA: 600; lambdB: 600; Queue Size: 128; Routing Speed: 1000
+Loss probability: 16.59%
+Average delay: 0.135835 sec
+
+
+lambdA: 600; lambdB: 600; Queue Size: 192; Routing Speed: 500
+Loss probability: 57.88%
+Average delay: 0.764561 sec
+
+
+lambdA: 600; lambdB: 600; Queue Size: 192; Routing Speed: 750
+Loss probability: 37.21%
+Average delay: 0.263285 sec
+
+
+lambdA: 600; lambdB: 600; Queue Size: 192; Routing Speed: 1000
+Loss probability: 16.22%
+Average delay: 0.199563 sec
+
+
+lambdA: 600; lambdB: 600; Queue Size: 256; Routing Speed: 500
+Loss probability: 57.90%
+Average delay: 1.014627 sec
+
+
+lambdA: 600; lambdB: 600; Queue Size: 256; Routing Speed: 750
+Loss probability: 37.50%
+Average delay: 0.348161 sec
+
+
+lambdA: 600; lambdB: 600; Queue Size: 256; Routing Speed: 1000
+Loss probability: 16.30%
+Average delay: 0.262015 sec
+
+
