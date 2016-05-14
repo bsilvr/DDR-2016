@@ -1,7 +1,7 @@
 import simpy
 import random
+import sys
 import numpy as np
-import matplotlib.pyplot as plt
 
 class Packet(object):
 	"""
@@ -51,21 +51,22 @@ class Node(object):
 	def run(self):
 		while True:
 			pkt = (yield self.queue.get())
-			yield self.env.timeout(1.0*pkt.size/self.speed)
+			yield self.env.timeout(1.0/self.speed)
 			if self.out.has_key(pkt.dst):
 				#random routing over all possible paths to dst
 				outobj=self.out[pkt.dst][random.randint(0,len(self.out[pkt.dst])-1)]
-				print(str(self.env.now)+': Packet out node '+self.id+' - '+str(pkt))
+				#print(str(self.env.now)+': Packet out node '+self.id+' - '+str(pkt))
 				outobj.put(pkt)
 			else:
-				print(str(self.env.now)+': Packet lost in node '+self.id+'- No routing path - '+str(pkt))
+				pass
+				#print(str(self.env.now)+': Packet lost in node '+self.id+'- No routing path - '+str(pkt))
 
 	def put(self,pkt):
 		if len(self.queue.items)<self.qsize:
 			self.queue.put(pkt)
 		else:
 			self.lost_pkts += 1
-			print(str(env.now)+': Packet lost in node '+self.id+' queue - '+str(pkt))
+			#print(str(env.now)+': Packet lost in node '+self.id+' queue - '+str(pkt))
 
 class Link(object):
 	"""
@@ -89,7 +90,7 @@ class Link(object):
 		while True:
 			pkt = (yield self.queue.get())
 			yield self.env.timeout(1.0*pkt.size/self.speed)
-			print(str(self.env.now)+': Packet out link '+self.id+' - '+str(pkt))
+			#print(str(self.env.now)+': Packet out link '+self.id+' - '+str(pkt))
 			self.out.put(pkt)
 
 	def put(self,pkt):
@@ -97,7 +98,7 @@ class Link(object):
 			self.queue.put(pkt)
 		else:
 			self.lost_pkts += 1
-			print(str(self.env.now)+': Packet lost in link '+self.id+' queue - '+str(pkt))
+			#print(str(self.env.now)+': Packet lost in link '+self.id+' queue - '+str(pkt))
 
 
 class pkt_Sender(object):
@@ -129,7 +130,7 @@ class pkt_Sender(object):
 			else:
 				dst=self.dst[random.randint(0,len(self.dst)-1)]
 			pkt = Packet(self.env.now,size,dst)
-			print(str(self.env.now)+': Packet sent by '+self.id+' - '+str(pkt))
+			#print(str(self.env.now)+': Packet sent by '+self.id+' - '+str(pkt))
 			self.out.put(pkt)
 
 class pkt_Receiver(object):
@@ -153,121 +154,70 @@ class pkt_Receiver(object):
 			self.packets_recv += 1
 			self.overalldelay += self.env.now-pkt.time
 			self.overallbytes += pkt.size
-			print(str(self.env.now)+': Packet received by '+self.id+' - '+str(pkt))
+			#print(str(self.env.now)+': Packet received by '+self.id+' - '+str(pkt))
 
 	def put(self,pkt):
 		self.queue.put(pkt)
 
+class Logger(object):
+    def __init__(self, fname):
+        self.terminal = sys.stdout
+        self.log = open(fname, "w+")
 
-pkts_recv = [150,300,450]
+    def write(self, message):
+        self.terminal.write(message)
+        self.log.write(message)
+
+    def close(self):
+        self.log.close()
+
+
+
+
+
+
+sys.stdout = Logger("ex12.txt")
+
+
+pkts_recv = [150,301,450]
 queue_size = [64,96,128,10000]
 
-lp_list = []
-avg_list = []
-trans_list =[]
-
-loss_probability = []
-avg_delay = []
-trans_band = []
 
 for i in pkts_recv:
 	for j in queue_size:
 		env = simpy.Environment()
 
+		print "Lambda: " + str(i) + ";  Queue: " + str(j)
+
+		k = j
+		lambd = i
+
 		#Sender (tx) -> Node1 -> Link -> Receiver (rx)
 
 		rx=pkt_Receiver(env,'B')
-		tx=pkt_Sender(env,'A',i,'B')
-		node1=Node(env,'N1',np.inf)
-		link=Link(env,'L',2e6,j)
+		tx=pkt_Sender(env,'A',lambd,'B')
+		node1=Node(env,'N1',300, k)
+		link=Link(env,'L',2e6,k)
 
 		tx.out=node1
 		node1.add_conn(link,'B')
 		link.out=rx
 
-		print(node1.out)
-
 		simtime=100
 		env.run(simtime)
 
-		loss_probability.append(100.0*link.lost_pkts/tx.packets_sent)
-		avg_delay.append(1.0*rx.overalldelay/rx.packets_recv)
-		trans_band.append(1.0*rx.overallbytes/simtime)
-
-		print('Loss probability: %.2f%%'%(100.0*link.lost_pkts/tx.packets_sent))
+		print('Loss probability: %.2f%%'%(100.0*(link.lost_pkts+node1.lost_pkts)/tx.packets_sent))
 		print('Average delay: %f sec'%(1.0*rx.overalldelay/rx.packets_recv))
-		print('Transmitted bandwidth: %.1f Bytes/sec'%(1.0*rx.overallbytes/simtime))
 
-	lp_list.append(loss_probability)
-	avg_list.append(avg_delay)
-	trans_list.append(trans_band)
+		miu_link = 2000000.0/(0.5*1500.0*8.0 + 0.5*64.0*8.0)
+		miu_node = 300.0
 
-	loss_probability = []
-	avg_delay = []
-	trans_band = []
+		#    Atraso input queue                     + process Node + Output queue
+		W = (lambd)/(2.0*miu_node*(miu_node-lambd)) + (1/miu_node) + (1/(miu_link-lambd))
+		print "Theorical average delay: %f sec"%W
 
-# print lp_list
-# print avg_list
-# print trans_list
-
-#stored_lp = [[0.0, 0.0, 0.0, 0.0], [0.07613373055279708, 0.0, 0.0, 0.0], [28.387767746503805, 29.065443452314682, 28.355719622842912, 26.77072694169368]]
-#stored_avg_list = [[0.005680589746322665, 0.005837960156261968, 0.005733136554138936, 0.005762361160297351], [0.0424909320915409, 0.04883272060264993, 0.0463656895696208, 0.049909150481728955], [0.19571797717985354, 0.29046923713222356, 0.392399940169802, 2.9459918657566524]]
-#stored_trans_list = [[117227.2, 118888.52, 116542.24, 119491.16], [233896.72, 234677.28, 234677.96, 235138.28], [249963.72, 249966.72, 249962.4, 249962.72]]
-
-stored_lp = lp_list
-stored_avg_list = avg_list
-stored_trans_list = trans_list
-
-
-tmp_pl = []
-for i in stored_lp:
-	tmp_pl.append(i[0])
-
-tmp_ad = []
-for i in stored_avg_list:
-	tmp_ad.append(i[0])
-
-# Lambda
-fig, ax1 = plt.subplots()
-ax1.plot(pkts_recv, tmp_pl, 'b')
-ax1.set_xlabel('Pkts Incoming')
-# Make the y-axis label and tick labels match the line color.
-ax1.set_ylabel('Loss Packets %', color='b')
-for tl in ax1.get_yticklabels():
-    tl.set_color('b')
-
-ax2 = ax1.twinx()
-
-ax2.plot(pkts_recv, tmp_ad, 'r')
-ax2.set_ylabel('Average Delay (seg)', color='r')
-for tl in ax2.get_yticklabels():
-    tl.set_color('r')
-
-ax = plt.gca()
-
-plt.show()
-
-# Queue Size
-fig, ax1 = plt.subplots()
-ax1.plot(queue_size, stored_lp[2], 'b')
-ax1.set_xlabel('Queue Size')
-# Make the y-axis label and tick labels match the line color.
-ax1.set_ylabel('Loss Packets %', color='b')
-for tl in ax1.get_yticklabels():
-    tl.set_color('b')
-
-ax2 = ax1.twinx()
-
-ax2.plot(queue_size, stored_avg_list[2], 'r')
-ax2.set_ylabel('Average Delay (seg)', color='r')
-for tl in ax2.get_yticklabels():
-    tl.set_color('r')
-
-ax = plt.gca()
-
-plt.show()
-
-
-
+		print
+		print
+		print
 
 

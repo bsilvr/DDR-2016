@@ -1,0 +1,84 @@
+Lambda: 150;  Queue: 64
+Loss probability: 0.00%
+Average delay: 0.009930 sec
+Theorical average delay: 0.010893 sec
+
+
+
+Lambda: 150;  Queue: 96
+Loss probability: 0.00%
+Average delay: 0.009745 sec
+Theorical average delay: 0.010893 sec
+
+
+
+Lambda: 150;  Queue: 128
+Loss probability: 0.00%
+Average delay: 0.009720 sec
+Theorical average delay: 0.010893 sec
+
+
+
+Lambda: 150;  Queue: 10000
+Loss probability: 0.00%
+Average delay: 0.009947 sec
+Theorical average delay: 0.010893 sec
+
+
+
+Lambda: 301;  Queue: 64
+Loss probability: 0.54%
+Average delay: 0.130430 sec
+Theorical average delay: -0.444838 sec
+
+
+
+Lambda: 301;  Queue: 96
+Loss probability: 0.88%
+Average delay: 0.203122 sec
+Theorical average delay: -0.444838 sec
+
+
+
+Lambda: 301;  Queue: 128
+Loss probability: 0.22%
+Average delay: 0.225531 sec
+Theorical average delay: -0.444838 sec
+
+
+
+Lambda: 301;  Queue: 10000
+Loss probability: 0.00%
+Average delay: 0.220900 sec
+Theorical average delay: -0.444838 sec
+
+
+
+Lambda: 450;  Queue: 64
+Loss probability: 33.30%
+Average delay: 0.234405 sec
+Theorical average delay: -0.009341 sec
+
+
+
+Lambda: 450;  Queue: 96
+Loss probability: 33.13%
+Average delay: 0.338655 sec
+Theorical average delay: -0.009341 sec
+
+
+
+Lambda: 450;  Queue: 128
+Loss probability: 32.77%
+Average delay: 0.444517 sec
+Theorical average delay: -0.009341 sec
+
+
+
+Lambda: 450;  Queue: 10000
+Loss probability: 10.94%
+Average delay: 16.620317 sec
+Theorical average delay: -0.009341 sec
+
+
+

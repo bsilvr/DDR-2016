@@ -1,0 +1,120 @@
+Lambda: 150;  Queue: 64
+Theorical average delay: 0.011786
+Theorical packet loss: 0.00%
+Loss probability Link 1: 0.00%
+Loss probability Link 2: 0.00%
+Total loss probability: 0.00%
+Average delay: 0.010491 sec
+
+
+
+Lambda: 150;  Queue: 96
+Theorical average delay: 0.011786
+Theorical packet loss: 0.00%
+Loss probability Link 1: 0.00%
+Loss probability Link 2: 0.00%
+Total loss probability: 0.00%
+Average delay: 0.010457 sec
+
+
+
+Lambda: 150;  Queue: 128
+Theorical average delay: 0.011786
+Theorical packet loss: 0.00%
+Loss probability Link 1: 0.00%
+Loss probability Link 2: 0.00%
+Total loss probability: 0.00%
+Average delay: 0.010652 sec
+
+
+
+Lambda: 150;  Queue: 10000
+Theorical average delay: 0.011786
+Theorical packet loss: 0.00%
+Loss probability Link 1: 0.00%
+Loss probability Link 2: 0.00%
+Total loss probability: 0.00%
+Average delay: 0.010539 sec
+
+
+
+Lambda: 300;  Queue: 64
+Theorical average delay: 0.101558
+Theorical packet loss: 0.11%
+Loss probability Link 1: 0.02%
+Loss probability Link 2: 0.00%
+Total loss probability: 0.02%
+Average delay: 0.056248 sec
+
+
+
+Lambda: 300;  Queue: 96
+Theorical average delay: 0.101558
+Theorical packet loss: 0.01%
+Loss probability Link 1: 0.08%
+Loss probability Link 2: 0.00%
+Total loss probability: 0.08%
+Average delay: 0.065290 sec
+
+
+
+Lambda: 300;  Queue: 128
+Theorical average delay: 0.101558
+Theorical packet loss: 0.00%
+Loss probability Link 1: 0.00%
+Loss probability Link 2: 0.00%
+Total loss probability: 0.00%
+Average delay: 0.051056 sec
+
+
+
+Lambda: 300;  Queue: 10000
+Theorical average delay: 0.101558
+Theorical packet loss: 0.00%
+Loss probability Link 1: 0.00%
+Loss probability Link 2: 0.00%
+Total loss probability: 0.00%
+Average delay: 0.058569 sec
+
+
+
+Lambda: 450;  Queue: 64
+Theorical average delay: -0.015348
+Theorical packet loss: 28.96%
+Loss probability Link 1: 28.34%
+Loss probability Link 2: 0.00%
+Total loss probability: 28.34%
+Average delay: 0.199069 sec
+
+
+
+Lambda: 450;  Queue: 96
+Theorical average delay: -0.015348
+Theorical packet loss: 28.96%
+Loss probability Link 1: 28.53%
+Loss probability Link 2: 0.00%
+Total loss probability: 28.53%
+Average delay: 0.298659 sec
+
+
+
+Lambda: 450;  Queue: 128
+Theorical average delay: -0.015348
+Theorical packet loss: 28.96%
+Loss probability Link 1: 29.43%
+Loss probability Link 2: 0.00%
+Total loss probability: 29.43%
+Average delay: 0.402690 sec
+
+
+
+Lambda: 450;  Queue: 10000
+Theorical average delay: -0.015348
+Theorical packet loss: 28.96%
+Loss probability Link 1: 6.30%
+Loss probability Link 2: 0.00%
+Total loss probability: 6.30%
+Average delay: 14.113334 sec
+
+
+
