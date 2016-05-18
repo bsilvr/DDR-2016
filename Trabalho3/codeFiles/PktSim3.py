@@ -212,13 +212,9 @@ for i in pkts_recv:
 
         miu = 2000000/(0.5*1500.0*8.0 + 0.5*64.0*8.0)
 
-        w1 = lambd / (miu - lambd)
-        w2 = lambd / (miu - lambd)
-
         W = 2/(miu-lambd)
 
         ro = lambd/miu
-
         print "Theorical average delay: %f"%W
 
         theorical_pkts_loss = 0

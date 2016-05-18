@@ -170,9 +170,6 @@ if __name__ == '__main__':
     pkts_recv = [150,300,450]
     queue_size = [64.0,96.0,128.0,10000.0]
 
-    lambd = pkts_recv[0]
-    k = queue_size[0]
-
     for i in pkts_recv:
         for j in queue_size:
             lambd = i
