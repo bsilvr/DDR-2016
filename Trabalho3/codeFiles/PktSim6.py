@@ -1,6 +1,7 @@
 import simpy
 import sys
 import random
+import json
 import numpy as np
 
 class Packet(object):
@@ -164,73 +165,83 @@ def main():
 	pkts_recvB = [150,300,450,600]
 	queue_size = [64,96,128,192,256]
 	router_speed = [500,750,1000]
-
+	array = []
 	sys.stdout = Logger("ex13.txt")
 
-	for i in pkts_recvA:
-		for j in pkts_recvB:
-			for l in queue_size:
-				for m in router_speed:
-					lambdA = i
-					lambdB = j
+	
+	for j in pkts_recvB:
+		for l in queue_size:
+			for m in router_speed:
+				lambdA = j
+				lambdB = j
 
-					k = l
-					R = m
+				k = l
+				R = m
 
-					print "lambdA: " + str(lambdA) + "; lambdB: " + str(lambdB) + "; Queue Size: " + str(k) + "; Routing Speed: " + str(R)
+				print "lambdA: " + str(lambdA) + "; lambdB: " + str(lambdB) + "; Queue Size: " + str(k) + "; Routing Speed: " + str(R)
 
-					env = simpy.Environment()
+				env = simpy.Environment()
 
-					#Sender (tx) -> Node1 -> Link -> Receiver (rx)
+				#Sender (tx) -> Node1 -> Link -> Receiver (rx)
 
-					rx=pkt_Receiver(env,'Internet')
-					tx1=pkt_Sender(env,'A',lambdA,'Internet')
-					tx2=pkt_Sender(env,'B',lambdB,'Internet')
+				rx=pkt_Receiver(env,'Internet')
+				tx1=pkt_Sender(env,'A',lambdA,'Internet')
+				tx2=pkt_Sender(env,'B',lambdB,'Internet')
 
-					node1=Node(env,'N1',R,k)
-					node2=Node(env,'N2',R,k)
-					node3=Node(env,'N3',R,k)
-					node4=Node(env,'N4',R,k)
+				node1=Node(env,'N1',R,k)
+				node2=Node(env,'N2',R,k)
+				node3=Node(env,'N3',R,k)
+				node4=Node(env,'N4',R,k)
 
-					link1=Link(env,'L1',10e6,k)
-					link2=Link(env,'L2',10e6,k)
-					link3=Link(env,'L3',10e6,k)
-					link4=Link(env,'L4',10e6,k)
+				link1=Link(env,'L1',10e6,k)
+				link2=Link(env,'L2',10e6,k)
+				link3=Link(env,'L3',10e6,k)
+				link4=Link(env,'L4',10e6,k)
 
-					tx1.out=node1
-					tx2.out=node2
+				tx1.out=node1
+				tx2.out=node2
 
-					node1.add_conn(link1,'Internet')
-					node2.add_conn(link2,'Internet')
+				node1.add_conn(link1,'Internet')
+				node2.add_conn(link2,'Internet')
 
-					link1.out=node3
-					link2.out=node3
+				link1.out=node3
+				link2.out=node3
 
-					node3.add_conn(link3,'Internet')
+				node3.add_conn(link3,'Internet')
 
-					link3.out=node4
+				link3.out=node4
 
-					node4.add_conn(link4,'Internet')
-					link4.out=rx
-
-
-					#print(node1.out)
-
-					simtime=100
-					env.run(simtime)
+				node4.add_conn(link4,'Internet')
+				link4.out=rx
 
 
-					lost_pkts = (link1.lost_pkts + link2.lost_pkts + link3.lost_pkts + link4.lost_pkts + node1.lost_pkts + node2.lost_pkts + node3.lost_pkts + node4.lost_pkts)*1.0 / ((tx1.packets_sent + tx2.packets_sent)*1.0)
+				#print(node1.out)
 
-					avg_delay = 1.0*rx.overalldelay/rx.packets_recv
+				simtime=100
+				env.run(simtime)
 
-					print('Loss probability: %.2f%%'%(100.0*lost_pkts))
-					print('Average delay: %f sec'%(avg_delay))
 
-					print
-					print
+				lost_pkts = (link1.lost_pkts + link2.lost_pkts + link3.lost_pkts + link4.lost_pkts + node1.lost_pkts + node2.lost_pkts + node3.lost_pkts + node4.lost_pkts)*1.0 / ((tx1.packets_sent + tx2.packets_sent)*1.0)
 
+				avg_delay = 1.0*rx.overalldelay/rx.packets_recv
+
+				print('Loss probability: %.2f%%'%(100.0*lost_pkts))
+				print('Average delay: %f sec'%(avg_delay))
+
+				print
+				print
+				array = array + [{'LambdaA': lambdA,
+							'LambdaB': lambdB,
+							'Queue Size': k,
+							'Routing Speed': R,
+							'Loss': round(100.0*lost_pkts,3),
+							'Delay': round(avg_delay,5)}]
 	sys.stdout.close()
+	
+
+
+	with open('pktSim6.json', 'w') as outfile:
+		json.dump(array, outfile)
 
 
 class Logger(object):

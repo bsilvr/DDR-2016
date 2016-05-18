@@ -1,7 +1,8 @@
 import simpy
+import sys
 import random
+import json
 import numpy as np
-import matplotlib.pyplot as plt
 
 class Packet(object):
 	"""
@@ -51,21 +52,22 @@ class Node(object):
 	def run(self):
 		while True:
 			pkt = (yield self.queue.get())
-			yield self.env.timeout(1.0*pkt.size/self.speed)
+			yield self.env.timeout(1.0/self.speed)
 			if self.out.has_key(pkt.dst):
 				#random routing over all possible paths to dst
 				outobj=self.out[pkt.dst][random.randint(0,len(self.out[pkt.dst])-1)]
-				print(str(self.env.now)+': Packet out node '+self.id+' - '+str(pkt))
+				#print(str(self.env.now)+': Packet out node '+self.id+' - '+str(pkt))
 				outobj.put(pkt)
 			else:
-				print(str(self.env.now)+': Packet lost in node '+self.id+'- No routing path - '+str(pkt))
+				#print(str(self.env.now)+': Packet lost in node '+self.id+'- No routing path - '+str(pkt))
+				pass
 
 	def put(self,pkt):
 		if len(self.queue.items)<self.qsize:
 			self.queue.put(pkt)
 		else:
 			self.lost_pkts += 1
-			print(str(env.now)+': Packet lost in node '+self.id+' queue - '+str(pkt))
+			#print(str(env.now)+': Packet lost in node '+self.id+' queue - '+str(pkt))
 
 class Link(object):
 	"""
@@ -89,7 +91,7 @@ class Link(object):
 		while True:
 			pkt = (yield self.queue.get())
 			yield self.env.timeout(1.0*pkt.size/self.speed)
-			print(str(self.env.now)+': Packet out link '+self.id+' - '+str(pkt))
+			#print(str(self.env.now)+': Packet out link '+self.id+' - '+str(pkt))
 			self.out.put(pkt)
 
 	def put(self,pkt):
@@ -97,7 +99,7 @@ class Link(object):
 			self.queue.put(pkt)
 		else:
 			self.lost_pkts += 1
-			print(str(self.env.now)+': Packet lost in link '+self.id+' queue - '+str(pkt))
+			#print(str(self.env.now)+': Packet lost in link '+self.id+' queue - '+str(pkt))
 
 
 class pkt_Sender(object):
@@ -129,7 +131,7 @@ class pkt_Sender(object):
 			else:
 				dst=self.dst[random.randint(0,len(self.dst)-1)]
 			pkt = Packet(self.env.now,size,dst)
-			print(str(self.env.now)+': Packet sent by '+self.id+' - '+str(pkt))
+			#print(str(self.env.now)+': Packet sent by '+self.id+' - '+str(pkt))
 			self.out.put(pkt)
 
 class pkt_Receiver(object):
@@ -153,121 +155,135 @@ class pkt_Receiver(object):
 			self.packets_recv += 1
 			self.overalldelay += self.env.now-pkt.time
 			self.overallbytes += pkt.size
-			print(str(self.env.now)+': Packet received by '+self.id+' - '+str(pkt))
+			#print(str(self.env.now)+': Packet received by '+self.id+' - '+str(pkt))
 
 	def put(self,pkt):
 		self.queue.put(pkt)
 
+def main():
+	pkts_recvA = [150,300,450,600]
+	pkts_recvB = [150,300,450,600]
+	queue_size = [64,96,128,192,256]
+	router_speed = [500,750,1000]
+	array = []
+	sys.stdout = Logger("ex14.txt")
 
-pkts_recv = [150,300,450]
-queue_size = [64,96,128,10000]
+	for j in pkts_recvB:
+		for l in queue_size:
+			for m in router_speed:
+				lambdA = j
+				lambdB = j
 
-lp_list = []
-avg_list = []
-trans_list =[]
+				k = l
+				R = m
 
-loss_probability = []
-avg_delay = []
-trans_band = []
+				print "lambdA: " + str(lambdA) + "; lambdB: " + str(lambdB) + "; Queue Size: " + str(k) + "; Routing Speed: " + str(R)
 
-for i in pkts_recv:
-	for j in queue_size:
-		env = simpy.Environment()
+				env = simpy.Environment()
 
-		#Sender (tx) -> Node1 -> Link -> Receiver (rx)
+				#Sender (tx) -> Node1 -> Link -> Receiver (rx)
 
-		rx=pkt_Receiver(env,'B')
-		tx=pkt_Sender(env,'A',i,'B')
-		node1=Node(env,'N1',np.inf)
-		link=Link(env,'L',2e6,j)
+				rx=pkt_Receiver(env,'Internet')
+				rxA=pkt_Receiver(env,'rxA')
+				rxB=pkt_Receiver(env,'rxB')					
+				tx1=pkt_Sender(env,'A',lambdA,'Internet')
+				tx2=pkt_Sender(env,'B',lambdB,'Internet')
+				tx3=pkt_Sender(env,'Internet',lambdA,'rxA')
+				tx4=pkt_Sender(env,'Internet',lambdB,'rxB')
 
-		tx.out=node1
-		node1.add_conn(link,'B')
-		link.out=rx
+				node1=Node(env,'N1',R,k)
+				node2=Node(env,'N2',R,k)
+				node3=Node(env,'N3',R,k)
+				node4=Node(env,'N4',R,k)
 
-		print(node1.out)
+				link1=Link(env,'L1',10e6,k)
+				link2=Link(env,'L2',10e6,k)
+				link3=Link(env,'L3',10e6,k)
+				link4=Link(env,'L4',10e6,k)
+				link11=Link(env,'L11',10e6,k)
+				link22=Link(env,'L22',10e6,k)
+				link33=Link(env,'L33',10e6,k)
+				link44=Link(env,'L44',10e6,k)
+				link55=Link(env,'L55',10e6,k)
+				
 
-		simtime=100
-		env.run(simtime)
+				tx1.out=node1
+				tx2.out=node2
+				
+				node1.add_conn(link1,'Internet')
+				node2.add_conn(link2,'Internet')
+				
+				link1.out=node3
+				link2.out=node3
 
-		loss_probability.append(100.0*link.lost_pkts/tx.packets_sent)
-		avg_delay.append(1.0*rx.overalldelay/rx.packets_recv)
-		trans_band.append(1.0*rx.overallbytes/simtime)
+				node3.add_conn(link3,'Internet')
 
-		print('Loss probability: %.2f%%'%(100.0*link.lost_pkts/tx.packets_sent))
-		print('Average delay: %f sec'%(1.0*rx.overalldelay/rx.packets_recv))
-		print('Transmitted bandwidth: %.1f Bytes/sec'%(1.0*rx.overallbytes/simtime))
+				link3.out=node4
 
-	lp_list.append(loss_probability)
-	avg_list.append(avg_delay)
-	trans_list.append(trans_band)
+				node4.add_conn(link4,'Internet')
+				
+				link4.out=rx
+				
+				
+				
+				
+				
+				tx3.out=node4
+				tx4.out=node4
 
-	loss_probability = []
-	avg_delay = []
-	trans_band = []
+				node4.add_conn(link55, 'rxA')
+				node4.add_conn(link55, 'rxB')
+				link55.out=node3
+				
+				node3.add_conn(link44, 'rxA')
+				node3.add_conn(link33, 'rxB')
+				link44.out=node1
+				link33.out=node2
+				
+				node2.add_conn(link22, 'rxB')
+				link22.out=rxB
+				
+				node1.add_conn(link11, 'rxA')
+				link11.out=rxA
+				
+				
+				#print(node1.out)
 
-# print lp_list
-# print avg_list
-# print trans_list
-
-#stored_lp = [[0.0, 0.0, 0.0, 0.0], [0.07613373055279708, 0.0, 0.0, 0.0], [28.387767746503805, 29.065443452314682, 28.355719622842912, 26.77072694169368]]
-#stored_avg_list = [[0.005680589746322665, 0.005837960156261968, 0.005733136554138936, 0.005762361160297351], [0.0424909320915409, 0.04883272060264993, 0.0463656895696208, 0.049909150481728955], [0.19571797717985354, 0.29046923713222356, 0.392399940169802, 2.9459918657566524]]
-#stored_trans_list = [[117227.2, 118888.52, 116542.24, 119491.16], [233896.72, 234677.28, 234677.96, 235138.28], [249963.72, 249966.72, 249962.4, 249962.72]]
-
-stored_lp = lp_list
-stored_avg_list = avg_list
-stored_trans_list = trans_list
-
-
-tmp_pl = []
-for i in stored_lp:
-	tmp_pl.append(i[0])
-
-tmp_ad = []
-for i in stored_avg_list:
-	tmp_ad.append(i[0])
-
-# Lambda
-fig, ax1 = plt.subplots()
-ax1.plot(pkts_recv, tmp_pl, 'b')
-ax1.set_xlabel('Pkts Incoming')
-# Make the y-axis label and tick labels match the line color.
-ax1.set_ylabel('Loss Packets %', color='b')
-for tl in ax1.get_yticklabels():
-    tl.set_color('b')
-
-ax2 = ax1.twinx()
-
-ax2.plot(pkts_recv, tmp_ad, 'r')
-ax2.set_ylabel('Average Delay (seg)', color='r')
-for tl in ax2.get_yticklabels():
-    tl.set_color('r')
-
-ax = plt.gca()
-
-plt.show()
-
-# Queue Size
-fig, ax1 = plt.subplots()
-ax1.plot(queue_size, stored_lp[2], 'b')
-ax1.set_xlabel('Queue Size')
-# Make the y-axis label and tick labels match the line color.
-ax1.set_ylabel('Loss Packets %', color='b')
-for tl in ax1.get_yticklabels():
-    tl.set_color('b')
-
-ax2 = ax1.twinx()
-
-ax2.plot(queue_size, stored_avg_list[2], 'r')
-ax2.set_ylabel('Average Delay (seg)', color='r')
-for tl in ax2.get_yticklabels():
-    tl.set_color('r')
-
-ax = plt.gca()
-
-plt.show()
+				simtime=100
+				env.run(simtime)
 
 
+				lost_pkts = (link1.lost_pkts + link2.lost_pkts + link3.lost_pkts + link4.lost_pkts + link11.lost_pkts + link22.lost_pkts + link33.lost_pkts + link44.lost_pkts + link55.lost_pkts + node1.lost_pkts + node2.lost_pkts + node3.lost_pkts + node4.lost_pkts)*1.0 / ((tx1.packets_sent + tx2.packets_sent + tx3.packets_sent + tx4.packets_sent)*1.0)
 
+				avg_delay = (1.0*rx.overalldelay/rx.packets_recv) +  (1.0*rxA.overalldelay/rxA.packets_recv) +  (1.0*rxB.overalldelay/rxB.packets_recv)
 
+				print('Loss probability: %.2f%%'%(100.0*lost_pkts))
+				print('Average delay: %f sec'%(avg_delay))
+
+				print
+				array = array + [{'LambdaA': lambdA,
+							'LambdaB': lambdB,
+							'Queue Size': k,
+							'Routing Speed': R,
+							'Loss': round(100.0*lost_pkts,3),
+							'Delay': round(avg_delay,5)}]
+
+	sys.stdout.close()
+	with open('pktSim7.json', 'w') as outfile:
+		json.dump(array, outfile)
+
+class Logger(object):
+    def __init__(self, fname):
+        self.terminal = sys.stdout
+        self.log = open(fname, "w+")
+
+    def write(self, message):
+        self.terminal.write(message)
+        self.log.write(message)
+
+    def close(self):
+        self.log.close()
+
+if __name__ == '__main__':
+	main()
 

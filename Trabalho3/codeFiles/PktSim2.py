@@ -194,7 +194,7 @@ if __name__ == '__main__':
             rx=pkt_Receiver(env,'B')
             tx=pkt_Sender(env,'A',lambd,'B')
             node1=Node(env,'N1',100,k)
-            link=Link(env,'L',10e9, k)
+            link=Link(env,'L',10e9)
 
             tx.out=node1
             node1.add_conn(link,'B')
@@ -204,7 +204,7 @@ if __name__ == '__main__':
             simtime=100
             env.run(simtime)
 			
-            lp = 100.0*link.lost_pkts/tx.packets_sent
+            lp = 100.0*node1.lost_pkts/tx.packets_sent
             ad = 1.0*rx.overalldelay/rx.packets_recv
             tqo = (link.queue_sum/simtime)/k
 			
@@ -215,16 +215,16 @@ if __name__ == '__main__':
 
             print "M/M/1"
 
-            miu1 = 2000000.0/(1500.0*8.0)
+            miu1 = 100 #2000000.0/(1500.0*8.0)
 
-            miu2 = 2000000.0/(64.0*8.0)
+            #miu2 = 2000000.0/(64.0*8.0)
 
-            inv_miu = (0.5*(1.0/miu1)) + (0.5*(1.0/miu2))
+            inv_miu = 1/100
 
             ro = lambd*inv_miu
 
-            R = inv_miu*(1.0/(1.0-ro))
-
+            R = 1.0/(miu1-lambd)
+            
             queue_occ = (ro**2)/(1.0-ro)
 
             mm1ad = R
@@ -235,14 +235,14 @@ if __name__ == '__main__':
 
             print "M/M/1/K"
 
-            miu1 = 2000000.0/(1500.0*8.0)
+            miu1 = 100
 
-            miu2 = 2000000.0/(64.0*8.0)
+           
 
-            inv_miu = (0.5*(1.0/miu1)) + (0.5*(1.0/miu2))
+            inv_miu = 1.0*1/100
 
 
-            ro = lambd*inv_miu
+            ro = 1.0*lambd*inv_miu
 
             N = decimal.Decimal( decimal.Decimal( ro/(1.0-ro) ) - decimal.Decimal( decimal.Decimal( decimal.Decimal(k+1.0)* decimal.Decimal( ro)**decimal.Decimal(k+1.0)  ) ) / (decimal.Decimal(1.0)- decimal.Decimal(ro)**decimal.Decimal(k+1.0)  ) )
 
@@ -264,15 +264,15 @@ if __name__ == '__main__':
 
             print "M/D/1"
 
-            miu1 = 2000000.0/(1500.0*8.0)
+            miu1 =100
 
-            miu2 = 2000000.0/(64.0*8.0)
+            
 
-            inv_miu = (0.5*(1.0/miu1)) + (0.5*(1.0/miu2))
+            inv_miu = 1/100
 
             ro = lambd*inv_miu
 
-            miu = 1.0/inv_miu
+            miu = 100
 
             R = (2.0*miu-lambd)/(2.0*miu*(miu-lambd))
 
@@ -286,9 +286,9 @@ if __name__ == '__main__':
 
             print "M/G/1"
 
-            miu1 = 2000000.0/(1500.0*8.0)
+            miu1 = 10000000000.0/(1500.0*8.0)
 
-            miu2 = 2000000.0/(64.0*8.0)
+            miu2 = 10000000000.0/(64.0*8.0)
 
             Es = (0.5*(1.0/miu1)) + (0.5*(1.0/miu2))
             Es2 = (0.5*(1.0/miu1))**2 + (0.5*(1.0/miu2))**2
@@ -305,7 +305,7 @@ if __name__ == '__main__':
 			
             array = array + [{'lambda': lambd,
                               'queueSize': k,
-                              'Loss probability': lp,
+                              'Loss probability': round(lp, 5),
                               'Average delay': round(ad, 5),
                               'Transmitted bandwidth': tqo,
                               'M/M/1 Loss': 0,

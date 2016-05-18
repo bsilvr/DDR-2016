@@ -1,0 +1,1 @@
+lambdA: 150; lambdB: 150; Queue Size: 64; Routing Speed: 500
