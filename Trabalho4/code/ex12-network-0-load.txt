@@ -1,0 +1,378 @@
+{'Porto': {'Granada': 1552, 'Sevilha': 1551, 'Aveiro': 1576, 'Madrid': 1549, 'Portimao': 1538, 'Badajoz': 1593, 'Barcelona': 1531, 'Gijon': 1515, 'Andorra': 1551, 'Palma': 1557, 'Bilbau': 1459, 'Vigo': 1524, 'Lisboa': 1596, 'Valencia': 1562, 'Vilar.Formoso': 1517, 'Corunha': 1542, 'Braganca': 1530}, 'Granada': {'Porto': 1570, 'Sevilha': 1629, 'Aveiro': 1594, 'Madrid': 1529, 'Portimao': 1491, 'Badajoz': 1530, 'Barcelona': 1635, 'Gijon': 1476, 'Andorra': 1533, 'Palma': 1523, 'Bilbau': 1496, 'Vigo': 1505, 'Lisboa': 1599, 'Valencia': 1526, 'Vilar.Formoso': 1544, 'Corunha': 1581, 'Braganca': 1498}, 'Portimao': {'Porto': 1545, 'Granada': 1534, 'Vigo': 1579, 'Sevilha': 1506, 'Aveiro': 1593, 'Madrid': 1554, 'Badajoz': 1533, 'Barcelona': 1492, 'Gijon': 1478, 'Andorra': 1537, 'Palma': 1558, 'Bilbau': 1546, 'Corunha': 1554, 'Lisboa': 1547, 'Valencia': 1557, 'Vilar.Formoso': 1610, 'Braganca': 1574}, 'Aveiro': {'Porto': 1568, 'Granada': 1521, 'Sevilha': 1488, 'Madrid': 1542, 'Portimao': 1523, 'Badajoz': 1486, 'Barcelona': 1568, 'Gijon': 1538, 'Andorra': 1583, 'Palma': 1497, 'Bilbau': 1511, 'Vigo': 1511, 'Lisboa': 1585, 'Valencia': 1556, 'Vilar.Formoso': 1470, 'Corunha': 1544, 'Braganca': 1539}, 'Madrid': {'Porto': 1558, 'Granada': 1595, 'Sevilha': 1626, 'Aveiro': 1554, 'Portimao': 1548, 'Badajoz': 1536, 'Barcelona': 1590, 'Gijon': 1518, 'Andorra': 1488, 'Palma': 1636, 'Bilbau': 1573, 'Vigo': 1509, 'Lisboa': 1525, 'Valencia': 1505, 'Vilar.Formoso': 1575, 'Corunha': 1555, 'Braganca': 1532}, 'Sevilha': {'Porto': 1552, 'Granada': 1576, 'Vigo': 1550, 'Portimao': 1562, 'Aveiro': 1576, 'Madrid': 1459, 'Badajoz': 1539, 'Barcelona': 1556, 'Gijon': 1495, 'Andorra': 1494, 'Palma': 1475, 'Bilbau': 1573, 'Corunha': 1626, 'Lisboa': 1568, 'Valencia': 1563, 'Vilar.Formoso': 1591, 'Braganca': 1573}, 'Badajoz': {'Porto': 1616, 'Granada': 1587, 'Vigo': 1470, 'Portimao': 1449, 'Aveiro': 1611, 'Madrid': 1475, 'Sevilha': 1548, 'Barcelona': 1510, 'Gijon': 1549, 'Andorra': 1505, 'Palma': 1560, 'Bilbau': 1488, 'Corunha': 1594, 'Lisboa': 1523, 'Valencia': 1555, 'Vilar.Formoso': 1519, 'Braganca': 1541}, 'Barcelona': {'Porto': 1595, 'Granada': 1560, 'Portimao': 1518, 'Aveiro': 1563, 'Madrid': 1624, 'Sevilha': 1561, 'Badajoz': 1533, 'Gijon': 1511, 'Andorra': 1558, 'Palma': 1588, 'Bilbau': 1549, 'Vigo': 1610, 'Lisboa': 1470, 'Valencia': 1548, 'Vilar.Formoso': 1526, 'Corunha': 1563, 'Braganca': 1552}, 'Andorra': {'Porto': 1592, 'Granada': 1586, 'Vigo': 1547, 'Portimao': 1537, 'Aveiro': 1564, 'Madrid': 1527, 'Sevilha': 1479, 'Badajoz': 1557, 'Barcelona': 1551, 'Gijon': 1550, 'Palma': 1553, 'Bilbau': 1595, 'Corunha': 1505, 'Lisboa': 1620, 'Valencia': 1484, 'Vilar.Formoso': 1500, 'Braganca': 1589}, 'Palma': {'Porto': 1534, 'Granada': 1552, 'Portimao': 1531, 'Aveiro': 1516, 'Madrid': 1615, 'Sevilha': 1603, 'Badajoz': 1470, 'Barcelona': 1555, 'Andorra': 1532, 'Gijon': 1568, 'Bilbau': 1645, 'Vigo': 1562, 'Lisboa': 1505, 'Valencia': 1542, 'Vilar.Formoso': 1457, 'Corunha': 1576, 'Braganca': 1614}, 'Gijon': {'Porto': 1549, 'Granada': 1605, 'Portimao': 1588, 'Aveiro': 1513, 'Madrid': 1582, 'Sevilha': 1563, 'Badajoz': 1517, 'Barcelona': 1549, 'Andorra': 1556, 'Palma': 1506, 'Bilbau': 1519, 'Vigo': 1631, 'Lisboa': 1601, 'Valencia': 1582, 'Vilar.Formoso': 1591, 'Corunha': 1514, 'Braganca': 1530}, 'Bilbau': {'Porto': 1453, 'Granada': 1604, 'Portimao': 1509, 'Aveiro': 1503, 'Madrid': 1572, 'Sevilha': 1546, 'Badajoz': 1562, 'Barcelona': 1503, 'Andorra': 1538, 'Palma': 1548, 'Gijon': 1502, 'Braganca': 1507, 'Vigo': 1404, 'Lisboa': 1555, 'Valencia': 1580, 'Vilar.Formoso': 1485, 'Corunha': 1539}, 'Vigo': {'Porto': 1536, 'Granada': 1491, 'Portimao': 1550, 'Aveiro': 1613, 'Madrid': 1594, 'Sevilha': 1568, 'Badajoz': 1579, 'Barcelona': 1512, 'Andorra': 1569, 'Palma': 1548, 'Gijon': 1540, 'Bilbau': 1497, 'Corunha': 1577, 'Lisboa': 1489, 'Valencia': 1556, 'Vilar.Formoso': 1530, 'Braganca': 1537}, 'Lisboa': {'Porto': 1603, 'Granada': 1501, 'Portimao': 1509, 'Aveiro': 1577, 'Madrid': 1530, 'Sevilha': 1528, 'Badajoz': 1518, 'Barcelona': 1505, 'Andorra': 1549, 'Palma': 1518, 'Gijon': 1492, 'Bilbau': 1555, 'Vigo': 1518, 'Valencia': 1547, 'Vilar.Formoso': 1561, 'Corunha': 1572, 'Braganca': 1506}, 'Valencia': {'Porto': 1549, 'Granada': 1474, 'Portimao': 1563, 'Aveiro': 1555, 'Madrid': 1544, 'Sevilha': 1485, 'Badajoz': 1524, 'Barcelona': 1566, 'Andorra': 1508, 'Palma': 1563, 'Gijon': 1602, 'Bilbau': 1589, 'Corunha': 1524, 'Lisboa': 1533, 'Vigo': 1584, 'Vilar.Formoso': 1507, 'Braganca': 1558}, 'Vilar.Formoso': {'Porto': 1509, 'Granada': 1529, 'Portimao': 1577, 'Madrid': 1575, 'Sevilha': 1518, 'Badajoz': 1538, 'Barcelona': 1559, 'Andorra': 1510, 'Palma': 1510, 'Gijon': 1530, 'Bilbau': 1526, 'Vigo': 1522, 'Lisboa': 1617, 'Valencia': 1588, 'Aveiro': 1560, 'Corunha': 1512, 'Braganca': 1537}, 'Corunha': {'Porto': 1589, 'Granada': 1609, 'Portimao': 1616, 'Aveiro': 1559, 'Madrid': 1606, 'Sevilha': 1576, 'Badajoz': 1565, 'Barcelona': 1560, 'Andorra': 1546, 'Palma': 1585, 'Gijon': 1516, 'Bilbau': 1624, 'Vigo': 1610, 'Lisboa': 1546, 'Valencia': 1523, 'Vilar.Formoso': 1554, 'Braganca': 1496}, 'Braganca': {'Porto': 1524, 'Granada': 1535, 'Portimao': 1528, 'Aveiro': 1584, 'Madrid': 1474, 'Sevilha': 1497, 'Badajoz': 1571, 'Barcelona': 1618, 'Andorra': 1544, 'Palma': 1520, 'Gijon': 1552, 'Bilbau': 1570, 'Vigo': 1539, 'Lisboa': 1531, 'Valencia': 1559, 'Vilar.Formoso': 1612, 'Corunha': 1537}}
+---
+Best run was on pass 2
+Solution:{('Vilar.Formoso', 'Granada'): ['Vilar.Formoso', 'Badajoz', 'Valencia', 'Granada'], ('Portimao', 'Palma'): ['Portimao', 'Sevilha', 'Granada', 'Palma'], ('Gijon', 'Corunha'): ['Gijon', 'Corunha'], ('Madrid', 'Gijon'): ['Madrid', 'Bilbau', 'Gijon'], ('Aveiro', 'Andorra'): ['Aveiro', 'Vilar.Formoso', 'Braganca', 'Bilbau', 'Andorra'], ('Portimao', 'Badajoz'): ['Portimao', 'Sevilha', 'Badajoz'], ('Palma', 'Porto'): ['Palma', 'Barcelona', 'Andorra', 'Bilbau', 'Gijon', 'Braganca', 'Porto'], ('Granada', 'Sevilha'): ['Granada', 'Sevilha'], ('Badajoz', 'Vigo'): ['Badajoz', 'Lisboa', 'Aveiro', 'Porto', 'Vigo'], ('Valencia', 'Vigo'): ['Valencia', 'Badajoz', 'Lisboa', 'Aveiro', 'Porto', 'Vigo'], ('Porto', 'Granada'): ['Porto', 'Braganca', 'Vilar.Formoso', 'Badajoz', 'Sevilha', 'Granada'], ('Lisboa', 'Vigo'): ['Lisboa', 'Aveiro', 'Porto', 'Vigo'], ('Lisboa', 'Porto'): ['Lisboa', 'Aveiro', 'Porto'], ('Portimao', 'Andorra'): ['Portimao', 'Sevilha', 'Granada', 'Valencia', 'Barcelona', 'Andorra'], ('Palma', 'Gijon'): ['Palma', 'Barcelona', 'Andorra', 'Bilbau', 'Gijon'], ('Bilbau', 'Sevilha'): ['Bilbau', 'Madrid', 'Valencia', 'Granada', 'Sevilha'], ('Valencia', 'Madrid'): ['Valencia', 'Madrid'], ('Porto', 'Vilar.Formoso'): ['Porto', 'Braganca', 'Vilar.Formoso'], ('Palma', 'Andorra'): ['Palma', 'Barcelona', 'Andorra'], ('Barcelona', 'Vilar.Formoso'): ['Barcelona', 'Valencia', 'Granada', 'Sevilha', 'Portimao', 'Lisboa', 'Aveiro', 'Vilar.Formoso'], ('Braganca', 'Palma'): ['Braganca', 'Bilbau', 'Andorra', 'Barcelona', 'Palma'], ('Palma', 'Valencia'): ['Palma', 'Valencia'], ('Porto', 'Vigo'): ['Porto', 'Vigo'], ('Gijon', 'Lisboa'): ['Gijon', 'Corunha', 'Vigo', 'Porto', 'Aveiro', 'Lisboa'], ('Granada', 'Badajoz'): ['Granada', 'Sevilha', 'Badajoz'], ('Portimao', 'Porto'): ['Portimao', 'Lisboa', 'Aveiro', 'Porto'], ('Barcelona', 'Portimao'): ['Barcelona', 'Palma', 'Granada', 'Sevilha', 'Portimao'], ('Portimao', 'Sevilha'): ['Portimao', 'Sevilha'], ('Vigo', 'Sevilha'): ['Vigo', 'Porto', 'Aveiro', 'Lisboa', 'Portimao', 'Sevilha'], ('Madrid', 'Andorra'): ['Madrid', 'Barcelona', 'Andorra'], ('Gijon', 'Vilar.Formoso'): ['Gijon', 'Braganca', 'Vilar.Formoso'], ('Vilar.Formoso', 'Porto'): ['Vilar.Formoso', 'Braganca', 'Porto'], ('Granada', 'Braganca'): ['Granada', 'Valencia', 'Madrid', 'Bilbau', 'Braganca'], ('Porto', 'Aveiro'): ['Porto', 'Aveiro'], ('Valencia', 'Braganca'): ['Valencia', 'Badajoz', 'Vilar.Formoso', 'Braganca'], ('Gijon', 'Vigo'): ['Gijon', 'Corunha', 'Vigo'], ('Braganca', 'Sevilha'): ['Braganca', 'Vilar.Formoso', 'Badajoz', 'Sevilha'], ('Aveiro', 'Valencia'): ['Aveiro', 'Lisboa', 'Badajoz', 'Valencia'], ('Madrid', 'Vigo'): ['Madrid', 'Bilbau', 'Braganca', 'Porto', 'Vigo'], ('Andorra', 'Sevilha'): ['Andorra', 'Barcelona', 'Valencia', 'Granada', 'Sevilha'], ('Gijon', 'Badajoz'): ['Gijon', 'Braganca', 'Vilar.Formoso', 'Badajoz'], ('Lisboa', 'Andorra'): ['Lisboa', 'Badajoz', 'Valencia', 'Barcelona', 'Andorra'], ('Madrid', 'Aveiro'): ['Madrid', 'Vilar.Formoso', 'Aveiro'], ('Braganca', 'Madrid'): ['Braganca', 'Vilar.Formoso', 'Madrid'], ('Granada', 'Palma'): ['Granada', 'Palma'], ('Corunha', 'Braganca'): ['Corunha', 'Gijon', 'Braganca'], ('Braganca', 'Granada'): ['Braganca', 'Bilbau', 'Madrid', 'Valencia', 'Palma', 'Granada'], ('Andorra', 'Gijon'): ['Andorra', 'Bilbau', 'Gijon'], ('Andorra', 'Vilar.Formoso'): ['Andorra', 'Barcelona', 'Madrid', 'Vilar.Formoso'], ('Granada', 'Porto'): ['Granada', 'Valencia', 'Madrid', 'Vilar.Formoso', 'Aveiro', 'Porto'], ('Braganca', 'Badajoz'): ['Braganca', 'Vilar.Formoso', 'Badajoz'], ('Vigo', 'Madrid'): ['Vigo', 'Porto', 'Aveiro', 'Vilar.Formoso', 'Madrid'], ('Vigo', 'Aveiro'): ['Vigo', 'Porto', 'Aveiro'], ('Vigo', 'Corunha'): ['Vigo', 'Corunha'], ('Badajoz', 'Braganca'): ['Badajoz', 'Vilar.Formoso', 'Braganca'], ('Sevilha', 'Barcelona'): ['Sevilha', 'Badajoz', 'Valencia', 'Barcelona'], ('Andorra', 'Lisboa'): ['Andorra', 'Barcelona', 'Valencia', 'Badajoz', 'Lisboa'], ('Madrid', 'Barcelona'): ['Madrid', 'Barcelona'], ('Bilbau', 'Braganca'): ['Bilbau', 'Gijon', 'Braganca'], ('Sevilha', 'Porto'): ['Sevilha', 'Badajoz', 'Vilar.Formoso', 'Aveiro', 'Porto'], ('Sevilha', 'Badajoz'): ['Sevilha', 'Badajoz'], ('Madrid', 'Braganca'): ['Madrid', 'Vilar.Formoso', 'Braganca'], ('Braganca', 'Aveiro'): ['Braganca', 'Vilar.Formoso', 'Aveiro'], ('Braganca', 'Corunha'): ['Braganca', 'Gijon', 'Corunha'], ('Gijon', 'Barcelona'): ['Gijon', 'Bilbau', 'Madrid', 'Barcelona'], ('Corunha', 'Palma'): ['Corunha', 'Gijon', 'Bilbau', 'Andorra', 'Barcelona', 'Palma'], ('Palma', 'Madrid'): ['Palma', 'Barcelona', 'Madrid'], ('Bilbau', 'Granada'): ['Bilbau', 'Madrid', 'Valencia', 'Granada'], ('Andorra', 'Vigo'): ['Andorra', 'Bilbau', 'Braganca', 'Porto', 'Vigo'], ('Barcelona', 'Palma'): ['Barcelona', 'Palma'], ('Aveiro', 'Lisboa'): ['Aveiro', 'Lisboa'], ('Valencia', 'Vilar.Formoso'): ['Valencia', 'Badajoz', 'Vilar.Formoso'], ('Corunha', 'Vigo'): ['Corunha', 'Vigo'], ('Porto', 'Bilbau'): ['Porto', 'Braganca', 'Bilbau'], ('Porto', 'Corunha'): ['Porto', 'Vigo', 'Corunha'], ('Vilar.Formoso', 'Madrid'): ['Vilar.Formoso', 'Madrid'], ('Vilar.Formoso', 'Gijon'): ['Vilar.Formoso', 'Braganca', 'Gijon'], ('Aveiro', 'Madrid'): ['Aveiro', 'Vilar.Formoso', 'Madrid'], ('Valencia', 'Badajoz'): ['Valencia', 'Badajoz'], ('Badajoz', 'Lisboa'): ['Badajoz', 'Lisboa'], ('Vilar.Formoso', 'Bilbau'): ['Vilar.Formoso', 'Madrid', 'Bilbau'], ('Badajoz', 'Gijon'): ['Badajoz', 'Vilar.Formoso', 'Braganca', 'Gijon'], ('Aveiro', 'Porto'): ['Aveiro', 'Porto'], ('Lisboa', 'Corunha'): ['Lisboa', 'Badajoz', 'Vilar.Formoso', 'Braganca', 'Porto', 'Vigo', 'Corunha'], ('Badajoz', 'Andorra'): ['Badajoz', 'Valencia', 'Barcelona', 'Andorra'], ('Valencia', 'Bilbau'): ['Valencia', 'Madrid', 'Bilbau'], ('Granada', 'Aveiro'): ['Granada', 'Valencia', 'Madrid', 'Vilar.Formoso', 'Aveiro'], ('Granada', 'Corunha'): ['Granada', 'Valencia', 'Madrid', 'Bilbau', 'Gijon', 'Corunha'], ('Lisboa', 'Bilbau'): ['Lisboa', 'Badajoz', 'Valencia', 'Barcelona', 'Madrid', 'Bilbau'], ('Bilbau', 'Lisboa'): ['Bilbau', 'Braganca', 'Porto', 'Aveiro', 'Lisboa'], ('Valencia', 'Corunha'): ['Valencia', 'Madrid', 'Bilbau', 'Gijon', 'Corunha'], ('Porto', 'Badajoz'): ['Porto', 'Aveiro', 'Lisboa', 'Badajoz'], ('Palma', 'Lisboa'): ['Palma', 'Valencia', 'Badajoz', 'Lisboa'], ('Palma', 'Braganca'): ['Palma', 'Barcelona', 'Madrid', 'Vilar.Formoso', 'Braganca'], ('Bilbau', 'Vilar.Formoso'): ['Bilbau', 'Braganca', 'Vilar.Formoso'], ('Porto', 'Barcelona'): ['Porto', 'Braganca', 'Vilar.Formoso', 'Madrid', 'Barcelona'], ('Madrid', 'Vilar.Formoso'): ['Madrid', 'Vilar.Formoso'], ('Corunha', 'Portimao'): ['Corunha', 'Vigo', 'Porto', 'Aveiro', 'Lisboa', 'Portimao'], ('Valencia', 'Andorra'): ['Valencia', 'Barcelona', 'Andorra'], ('Vilar.Formoso', 'Corunha'): ['Vilar.Formoso', 'Braganca', 'Gijon', 'Corunha'], ('Valencia', 'Aveiro'): ['Valencia', 'Madrid', 'Vilar.Formoso', 'Aveiro'], ('Braganca', 'Andorra'): ['Braganca', 'Bilbau', 'Andorra'], ('Andorra', 'Valencia'): ['Andorra', 'Barcelona', 'Valencia'], ('Sevilha', 'Vilar.Formoso'): ['Sevilha', 'Badajoz', 'Vilar.Formoso'], ('Aveiro', 'Sevilha'): ['Aveiro', 'Vilar.Formoso', 'Badajoz', 'Sevilha'], ('Bilbau', 'Portimao'): ['Bilbau', 'Madrid', 'Vilar.Formoso', 'Aveiro', 'Lisboa', 'Portimao'], ('Portimao', 'Corunha'): ['Portimao', 'Lisboa', 'Aveiro', 'Porto', 'Vigo', 'Corunha'], ('Vigo', 'Vilar.Formoso'): ['Vigo', 'Porto', 'Braganca', 'Vilar.Formoso'], ('Corunha', 'Valencia'): ['Corunha', 'Gijon', 'Bilbau', 'Madrid', 'Valencia'], ('Portimao', 'Bilbau'): ['Portimao', 'Sevilha', 'Granada', 'Palma', 'Barcelona', 'Andorra', 'Bilbau'], ('Badajoz', 'Porto'): ['Badajoz', 'Lisboa', 'Aveiro', 'Porto'], ('Porto', 'Braganca'): ['Porto', 'Braganca'], ('Madrid', 'Bilbau'): ['Madrid', 'Bilbau'], ('Braganca', 'Vilar.Formoso'): ['Braganca', 'Vilar.Formoso'], ('Barcelona', 'Sevilha'): ['Barcelona', 'Valencia', 'Granada', 'Sevilha'], ('Andorra', 'Corunha'): ['Andorra', 'Bilbau', 'Gijon', 'Corunha'], ('Corunha', 'Madrid'): ['Corunha', 'Gijon', 'Bilbau', 'Madrid'], ('Gijon', 'Granada'): ['Gijon', 'Bilbau', 'Madrid', 'Barcelona', 'Valencia', 'Granada'], ('Palma', 'Sevilha'): ['Palma', 'Granada', 'Sevilha'], ('Vigo', 'Barcelona'): ['Vigo', 'Porto', 'Aveiro', 'Vilar.Formoso', 'Madrid', 'Barcelona'], ('Granada', 'Madrid'): ['Granada', 'Valencia', 'Madrid'], ('Porto', 'Sevilha'): ['Porto', 'Aveiro', 'Lisboa', 'Portimao', 'Sevilha'], ('Lisboa', 'Badajoz'): ['Lisboa', 'Badajoz'], ('Portimao', 'Vilar.Formoso'): ['Portimao', 'Lisboa', 'Aveiro', 'Vilar.Formoso'], ('Andorra', 'Barcelona'): ['Andorra', 'Barcelona'], ('Madrid', 'Corunha'): ['Madrid', 'Bilbau', 'Gijon', 'Corunha'], ('Madrid', 'Badajoz'): ['Madrid', 'Valencia', 'Badajoz'], ('Barcelona', 'Andorra'): ['Barcelona', 'Andorra'], ('Aveiro', 'Granada'): ['Aveiro', 'Vilar.Formoso', 'Madrid', 'Valencia', 'Granada'], ('Braganca', 'Bilbau'): ['Braganca', 'Bilbau'], ('Granada', 'Andorra'): ['Granada', 'Palma', 'Barcelona', 'Andorra'], ('Lisboa', 'Aveiro'): ['Lisboa', 'Aveiro'], ('Gijon', 'Palma'): ['Gijon', 'Bilbau', 'Madrid', 'Valencia', 'Palma'], ('Barcelona', 'Vigo'): ['Barcelona', 'Andorra', 'Bilbau', 'Gijon', 'Corunha', 'Vigo'], ('Porto', 'Gijon'): ['Porto', 'Braganca', 'Gijon'], ('Vilar.Formoso', 'Braganca'): ['Vilar.Formoso', 'Braganca'], ('Gijon', 'Braganca'): ['Gijon', 'Braganca'], ('Badajoz', 'Bilbau'): ['Badajoz', 'Vilar.Formoso', 'Braganca', 'Bilbau'], ('Aveiro', 'Gijon'): ['Aveiro', 'Porto', 'Braganca', 'Gijon'], ('Sevilha', 'Andorra'): ['Sevilha', 'Granada', 'Valencia', 'Barcelona', 'Andorra'], ('Vilar.Formoso', 'Barcelona'): ['Vilar.Formoso', 'Madrid', 'Barcelona'], ('Palma', 'Granada'): ['Palma', 'Granada'], ('Andorra', 'Bilbau'): ['Andorra', 'Barcelona', 'Madrid', 'Bilbau'], ('Barcelona', 'Madrid'): ['Barcelona', 'Madrid'], ('Vilar.Formoso', 'Badajoz'): ['Vilar.Formoso', 'Badajoz'], ('Barcelona', 'Corunha'): ['Barcelona', 'Andorra', 'Bilbau', 'Gijon', 'Corunha'], ('Badajoz', 'Sevilha'): ['Badajoz', 'Sevilha'], ('Portimao', 'Gijon'): ['Portimao', 'Sevilha', 'Badajoz', 'Vilar.Formoso', 'Braganca', 'Bilbau', 'Gijon'], ('Bilbau', 'Gijon'): ['Bilbau', 'Gijon'], ('Corunha', 'Sevilha'): ['Corunha', 'Gijon', 'Braganca', 'Vilar.Formoso', 'Badajoz', 'Sevilha'], ('Valencia', 'Gijon'): ['Valencia', 'Madrid', 'Bilbau', 'Braganca', 'Gijon'], ('Granada', 'Vilar.Formoso'): ['Granada', 'Valencia', 'Madrid', 'Vilar.Formoso'], ('Palma', 'Bilbau'): ['Palma', 'Valencia', 'Madrid', 'Bilbau'], ('Portimao', 'Barcelona'): ['Portimao', 'Sevilha', 'Granada', 'Valencia', 'Barcelona'], ('Bilbau', 'Aveiro'): ['Bilbau', 'Braganca', 'Porto', 'Aveiro'], ('Andorra', 'Palma'): ['Andorra', 'Barcelona', 'Palma'], ('Lisboa', 'Granada'): ['Lisboa', 'Portimao', 'Sevilha', 'Granada'], ('Palma', 'Corunha'): ['Palma', 'Valencia', 'Madrid', 'Bilbau', 'Gijon', 'Corunha'], ('Badajoz', 'Granada'): ['Badajoz', 'Sevilha', 'Granada'], ('Sevilha', 'Aveiro'): ['Sevilha', 'Badajoz', 'Lisboa', 'Aveiro'], ('Granada', 'Bilbau'): ['Granada', 'Palma', 'Valencia', 'Madrid', 'Bilbau'], ('Vigo', 'Palma'): ['Vigo', 'Porto', 'Braganca', 'Bilbau', 'Madrid', 'Barcelona', 'Palma'], ('Vigo', 'Bilbau'): ['Vigo', 'Corunha', 'Gijon', 'Bilbau'], ('Vilar.Formoso', 'Vigo'): ['Vilar.Formoso', 'Braganca', 'Porto', 'Vigo'], ('Sevilha', 'Corunha'): ['Sevilha', 'Badajoz', 'Vilar.Formoso', 'Braganca', 'Gijon', 'Corunha'], ('Badajoz', 'Barcelona'): ['Badajoz', 'Valencia', 'Barcelona'], ('Sevilha', 'Gijon'): ['Sevilha', 'Badajoz', 'Vilar.Formoso', 'Braganca', 'Gijon'], ('Sevilha', 'Bilbau'): ['Sevilha', 'Badajoz', 'Vilar.Formoso', 'Braganca', 'Bilbau'], ('Barcelona', 'Valencia'): ['Barcelona', 'Valencia'], ('Madrid', 'Porto'): ['Madrid', 'Bilbau', 'Braganca', 'Porto'], ('Vilar.Formoso', 'Andorra'): ['Vilar.Formoso', 'Madrid', 'Bilbau', 'Andorra'], ('Andorra', 'Madrid'): ['Andorra', 'Barcelona', 'Madrid'], ('Bilbau', 'Porto'): ['Bilbau', 'Braganca', 'Porto'], ('Lisboa', 'Vilar.Formoso'): ['Lisboa', 'Aveiro', 'Vilar.Formoso'], ('Gijon', 'Porto'): ['Gijon', 'Braganca', 'Porto'], ('Barcelona', 'Lisboa'): ['Barcelona', 'Valencia', 'Badajoz', 'Lisboa'], ('Barcelona', 'Badajoz'): ['Barcelona', 'Valencia', 'Badajoz'], ('Andorra', 'Porto'): ['Andorra', 'Bilbau', 'Braganca', 'Porto'], ('Bilbau', 'Madrid'): ['Bilbau', 'Madrid'], ('Gijon', 'Portimao'): ['Gijon', 'Braganca', 'Vilar.Formoso', 'Badajoz', 'Sevilha', 'Portimao'], ('Sevilha', 'Granada'): ['Sevilha', 'Granada'], ('Braganca', 'Porto'): ['Braganca', 'Porto'], ('Gijon', 'Andorra'): ['Gijon', 'Bilbau', 'Andorra'], ('Lisboa', 'Palma'): ['Lisboa', 'Badajoz', 'Valencia', 'Palma'], ('Palma', 'Barcelona'): ['Palma', 'Barcelona'], ('Porto', 'Palma'): ['Porto', 'Braganca', 'Bilbau', 'Madrid', 'Barcelona', 'Palma'], ('Porto', 'Madrid'): ['Porto', 'Aveiro', 'Vilar.Formoso', 'Madrid'], ('Braganca', 'Vigo'): ['Braganca', 'Gijon', 'Corunha', 'Vigo'], ('Badajoz', 'Palma'): ['Badajoz', 'Valencia', 'Palma'], ('Corunha', 'Vilar.Formoso'): ['Corunha', 'Gijon', 'Braganca', 'Vilar.Formoso'], ('Vigo', 'Granada'): ['Vigo', 'Porto', 'Aveiro', 'Lisboa', 'Portimao', 'Sevilha', 'Granada'], ('Portimao', 'Vigo'): ['Portimao', 'Lisboa', 'Aveiro', 'Porto', 'Vigo'], ('Lisboa', 'Valencia'): ['Lisboa', 'Badajoz', 'Valencia'], ('Gijon', 'Sevilha'): ['Gijon', 'Braganca', 'Vilar.Formoso', 'Badajoz', 'Sevilha'], ('Palma', 'Aveiro'): ['Palma', 'Valencia', 'Badajoz', 'Vilar.Formoso', 'Aveiro'], ('Aveiro', 'Barcelona'): ['Aveiro', 'Vilar.Formoso', 'Madrid', 'Barcelona'], ('Valencia', 'Palma'): ['Valencia', 'Palma'], ('Badajoz', 'Portimao'): ['Badajoz', 'Sevilha', 'Portimao'], ('Madrid', 'Granada'): ['Madrid', 'Valencia', 'Granada'], ('Portimao', 'Valencia'): ['Portimao', 'Sevilha', 'Granada', 'Valencia'], ('Vilar.Formoso', 'Valencia'): ['Vilar.Formoso', 'Badajoz', 'Valencia'], ('Vilar.Formoso', 'Palma'): ['Vilar.Formoso', 'Madrid', 'Barcelona', 'Palma'], ('Lisboa', 'Gijon'): ['Lisboa', 'Aveiro', 'Vilar.Formoso', 'Braganca', 'Gijon'], ('Lisboa', 'Madrid'): ['Lisboa', 'Badajoz', 'Valencia', 'Madrid'], ('Aveiro', 'Braganca'): ['Aveiro', 'Porto', 'Braganca'], ('Corunha', 'Granada'): ['Corunha', 'Gijon', 'Bilbau', 'Andorra', 'Barcelona', 'Palma', 'Granada'], ('Palma', 'Vigo'): ['Palma', 'Barcelona', 'Andorra', 'Bilbau', 'Gijon', 'Corunha', 'Vigo'], ('Portimao', 'Madrid'): ['Portimao', 'Lisboa', 'Badajoz', 'Valencia', 'Madrid'], ('Corunha', 'Lisboa'): ['Corunha', 'Vigo', 'Porto', 'Aveiro', 'Lisboa'], ('Aveiro', 'Corunha'): ['Aveiro', 'Porto', 'Vigo', 'Corunha'], ('Granada', 'Portimao'): ['Granada', 'Sevilha', 'Portimao'], ('Sevilha', 'Lisboa'): ['Sevilha', 'Portimao', 'Lisboa'], ('Granada', 'Vigo'): ['Granada', 'Valencia', 'Madrid', 'Bilbau', 'Gijon', 'Corunha', 'Vigo'], ('Aveiro', 'Palma'): ['Aveiro', 'Lisboa', 'Badajoz', 'Valencia', 'Palma'], ('Barcelona', 'Bilbau'): ['Barcelona', 'Andorra', 'Bilbau'], ('Valencia', 'Barcelona'): ['Valencia', 'Barcelona'], ('Bilbau', 'Badajoz'): ['Bilbau', 'Madrid', 'Valencia', 'Badajoz'], ('Aveiro', 'Vigo'): ['Aveiro', 'Porto', 'Vigo'], ('Bilbau', 'Barcelona'): ['Bilbau', 'Andorra', 'Barcelona'], ('Braganca', 'Valencia'): ['Braganca', 'Bilbau', 'Madrid', 'Valencia'], ('Bilbau', 'Palma'): ['Bilbau', 'Andorra', 'Barcelona', 'Palma'], ('Sevilha', 'Braganca'): ['Sevilha', 'Badajoz', 'Vilar.Formoso', 'Braganca'], ('Madrid', 'Portimao'): ['Madrid', 'Valencia', 'Granada', 'Sevilha', 'Portimao'], ('Barcelona', 'Braganca'): ['Barcelona', 'Andorra', 'Bilbau', 'Braganca'], ('Madrid', 'Palma'): ['Madrid', 'Valencia', 'Palma'], ('Palma', 'Portimao'): ['Palma', 'Granada', 'Sevilha', 'Portimao'], ('Gijon', 'Bilbau'): ['Gijon', 'Bilbau'], ('Valencia', 'Granada'): ['Valencia', 'Granada'], ('Valencia', 'Lisboa'): ['Valencia', 'Badajoz', 'Lisboa'], ('Bilbau', 'Corunha'): ['Bilbau', 'Gijon', 'Corunha'], ('Vigo', 'Valencia'): ['Vigo', 'Corunha', 'Gijon', 'Bilbau', 'Andorra', 'Barcelona', 'Valencia'], ('Madrid', 'Lisboa'): ['Madrid', 'Valencia', 'Badajoz', 'Lisboa'], ('Corunha', 'Barcelona'): ['Corunha', 'Gijon', 'Bilbau', 'Andorra', 'Barcelona'], ('Vigo', 'Porto'): ['Vigo', 'Porto'], ('Vigo', 'Gijon'): ['Vigo', 'Corunha', 'Gijon'], ('Corunha', 'Porto'): ['Corunha', 'Vigo', 'Porto'], ('Corunha', 'Badajoz'): ['Corunha', 'Gijon', 'Bilbau', 'Madrid', 'Vilar.Formoso', 'Badajoz'], ('Portimao', 'Aveiro'): ['Portimao', 'Lisboa', 'Aveiro'], ('Vilar.Formoso', 'Sevilha'): ['Vilar.Formoso', 'Badajoz', 'Sevilha'], ('Badajoz', 'Vilar.Formoso'): ['Badajoz', 'Vilar.Formoso'], ('Aveiro', 'Portimao'): ['Aveiro', 'Lisboa', 'Portimao'], ('Andorra', 'Portimao'): ['Andorra', 'Barcelona', 'Valencia', 'Granada', 'Sevilha', 'Portimao'], ('Sevilha', 'Madrid'): ['Sevilha', 'Granada', 'Palma', 'Barcelona', 'Madrid'], ('Sevilha', 'Palma'): ['Sevilha', 'Granada', 'Palma'], ('Aveiro', 'Bilbau'): ['Aveiro', 'Porto', 'Braganca', 'Bilbau'], ('Porto', 'Lisboa'): ['Porto', 'Aveiro', 'Lisboa'], ('Braganca', 'Portimao'): ['Braganca', 'Vilar.Formoso', 'Badajoz', 'Lisboa', 'Portimao'], ('Gijon', 'Valencia'): ['Gijon', 'Bilbau', 'Madrid', 'Valencia'], ('Lisboa', 'Sevilha'): ['Lisboa', 'Portimao', 'Sevilha'], ('Corunha', 'Aveiro'): ['Corunha', 'Vigo', 'Porto', 'Aveiro'], ('Andorra', 'Badajoz'): ['Andorra', 'Barcelona', 'Valencia', 'Badajoz'], ('Sevilha', 'Vigo'): ['Sevilha', 'Portimao', 'Lisboa', 'Aveiro', 'Porto', 'Vigo'], ('Granada', 'Barcelona'): ['Granada', 'Palma', 'Barcelona'], ('Granada', 'Valencia'): ['Granada', 'Valencia'], ('Palma', 'Vilar.Formoso'): ['Palma', 'Barcelona', 'Madrid', 'Vilar.Formoso'], ('Porto', 'Portimao'): ['Porto', 'Aveiro', 'Lisboa', 'Portimao'], ('Gijon', 'Madrid'): ['Gijon', 'Bilbau', 'Madrid'], ('Vilar.Formoso', 'Portimao'): ['Vilar.Formoso', 'Badajoz', 'Sevilha', 'Portimao'], ('Vilar.Formoso', 'Lisboa'): ['Vilar.Formoso', 'Badajoz', 'Lisboa'], ('Barcelona', 'Porto'): ['Barcelona', 'Madrid', 'Vilar.Formoso', 'Aveiro', 'Porto'], ('Braganca', 'Lisboa'): ['Braganca', 'Vilar.Formoso', 'Aveiro', 'Lisboa'], ('Madrid', 'Sevilha'): ['Madrid', 'Valencia', 'Badajoz', 'Sevilha'], ('Barcelona', 'Aveiro'): ['Barcelona', 'Madrid', 'Vilar.Formoso', 'Aveiro'], ('Vigo', 'Andorra'): ['Vigo', 'Porto', 'Braganca', 'Bilbau', 'Andorra'], ('Palma', 'Badajoz'): ['Palma', 'Barcelona', 'Valencia', 'Badajoz'], ('Corunha', 'Andorra'): ['Corunha', 'Gijon', 'Bilbau', 'Andorra'], ('Lisboa', 'Portimao'): ['Lisboa', 'Portimao'], ('Bilbau', 'Valencia'): ['Bilbau', 'Madrid', 'Valencia'], ('Vigo', 'Lisboa'): ['Vigo', 'Porto', 'Aveiro', 'Lisboa'], ('Aveiro', 'Vilar.Formoso'): ['Aveiro', 'Vilar.Formoso'], ('Portimao', 'Lisboa'): ['Portimao', 'Lisboa'], ('Braganca', 'Gijon'): ['Braganca', 'Gijon'], ('Gijon', 'Aveiro'): ['Gijon', 'Braganca', 'Porto', 'Aveiro'], ('Valencia', 'Portimao'): ['Valencia', 'Badajoz', 'Lisboa', 'Portimao'], ('Lisboa', 'Barcelona'): ['Lisboa', 'Badajoz', 'Valencia', 'Barcelona'], ('Granada', 'Gijon'): ['Granada', 'Valencia', 'Barcelona', 'Andorra', 'Bilbau', 'Gijon'], ('Portimao', 'Granada'): ['Portimao', 'Sevilha', 'Granada'], ('Badajoz', 'Valencia'): ['Badajoz', 'Valencia'], ('Vigo', 'Badajoz'): ['Vigo', 'Porto', 'Aveiro', 'Vilar.Formoso', 'Badajoz'], ('Bilbau', 'Andorra'): ['Bilbau', 'Andorra'], ('Barcelona', 'Gijon'): ['Barcelona', 'Madrid', 'Bilbau', 'Gijon'], ('Aveiro', 'Badajoz'): ['Aveiro', 'Lisboa', 'Badajoz'], ('Sevilha', 'Valencia'): ['Sevilha', 'Granada', 'Palma', 'Valencia'], ('Braganca', 'Barcelona'): ['Braganca', 'Vilar.Formoso', 'Madrid', 'Barcelona'], ('Bilbau', 'Vigo'): ['Bilbau', 'Gijon', 'Corunha', 'Vigo'], ('Portimao', 'Braganca'): ['Portimao', 'Lisboa', 'Aveiro', 'Porto', 'Braganca'], ('Andorra', 'Granada'): ['Andorra', 'Barcelona', 'Palma', 'Granada'], ('Porto', 'Valencia'): ['Porto', 'Braganca', 'Vilar.Formoso', 'Madrid', 'Valencia'], ('Barcelona', 'Granada'): ['Barcelona', 'Palma', 'Granada'], ('Lisboa', 'Braganca'): ['Lisboa', 'Badajoz', 'Vilar.Formoso', 'Braganca'], ('Porto', 'Andorra'): ['Porto', 'Braganca', 'Bilbau', 'Andorra'], ('Sevilha', 'Portimao'): ['Sevilha', 'Portimao'], ('Granada', 'Lisboa'): ['Granada', 'Sevilha', 'Portimao', 'Lisboa'], ('Valencia', 'Sevilha'): ['Valencia', 'Granada', 'Sevilha'], ('Corunha', 'Gijon'): ['Corunha', 'Gijon'], ('Andorra', 'Aveiro'): ['Andorra', 'Barcelona', 'Madrid', 'Vilar.Formoso', 'Aveiro'], ('Corunha', 'Bilbau'): ['Corunha', 'Gijon', 'Bilbau'], ('Andorra', 'Braganca'): ['Andorra', 'Bilbau', 'Braganca'], ('Vigo', 'Portimao'): ['Vigo', 'Porto', 'Aveiro', 'Lisboa', 'Portimao'], ('Vilar.Formoso', 'Aveiro'): ['Vilar.Formoso', 'Aveiro'], ('Vigo', 'Braganca'): ['Vigo', 'Porto', 'Braganca'], ('Badajoz', 'Corunha'): ['Badajoz', 'Vilar.Formoso', 'Braganca', 'Gijon', 'Corunha'], ('Badajoz', 'Aveiro'): ['Badajoz', 'Lisboa', 'Aveiro'], ('Badajoz', 'Madrid'): ['Badajoz', 'Valencia', 'Madrid'], ('Madrid', 'Valencia'): ['Madrid', 'Valencia'], ('Valencia', 'Porto'): ['Valencia', 'Madrid', 'Bilbau', 'Braganca', 'Porto']}
+---
+#link Gijon-Bilbau: 26570 pkts/sec -- link-load: 21.26% -- one_way_delay: 10.16 micro sec
+#link Bilbau-Gijon: 30568 pkts/sec -- link-load: 24.45% -- one_way_delay: 10.59 micro sec
+#link Granada-Sevilha: 21583 pkts/sec -- link-load: 17.27% -- one_way_delay: 9.67 micro sec
+#link Sevilha-Granada: 22922 pkts/sec -- link-load: 18.34% -- one_way_delay: 9.80 micro sec
+#link Badajoz-Lisboa: 21741 pkts/sec -- link-load: 17.39% -- one_way_delay: 9.68 micro sec
+#link Lisboa-Badajoz: 21486 pkts/sec -- link-load: 17.19% -- one_way_delay: 9.66 micro sec
+#link Badajoz-Sevilha: 18569 pkts/sec -- link-load: 14.86% -- one_way_delay: 9.40 micro sec
+#link Sevilha-Badajoz: 18622 pkts/sec -- link-load: 14.90% -- one_way_delay: 9.40 micro sec
+#link Aveiro-Porto: 29521 pkts/sec -- link-load: 23.62% -- one_way_delay: 10.47 micro sec
+#link Porto-Aveiro: 32692 pkts/sec -- link-load: 26.15% -- one_way_delay: 10.83 micro sec
+#link Badajoz-Vilar.Formoso: 26238 pkts/sec -- link-load: 20.99% -- one_way_delay: 10.13 micro sec
+#link Vilar.Formoso-Badajoz: 26391 pkts/sec -- link-load: 21.11% -- one_way_delay: 10.14 micro sec
+#link Porto-Braganca: 26120 pkts/sec -- link-load: 20.90% -- one_way_delay: 10.11 micro sec
+#link Braganca-Porto: 22989 pkts/sec -- link-load: 18.39% -- one_way_delay: 9.80 micro sec
+#link Braganca-Gijon: 20081 pkts/sec -- link-load: 16.06% -- one_way_delay: 9.53 micro sec
+#link Gijon-Braganca: 18518 pkts/sec -- link-load: 14.81% -- one_way_delay: 9.39 micro sec
+#link Palma-Valencia: 10843 pkts/sec -- link-load: 8.67% -- one_way_delay: 8.76 micro sec
+#link Valencia-Palma: 10815 pkts/sec -- link-load: 8.65% -- one_way_delay: 8.76 micro sec
+#link Barcelona-Andorra: 27664 pkts/sec -- link-load: 22.13% -- one_way_delay: 10.27 micro sec
+#link Andorra-Barcelona: 29434 pkts/sec -- link-load: 23.55% -- one_way_delay: 10.46 micro sec
+#link Bilbau-Madrid: 28090 pkts/sec -- link-load: 22.47% -- one_way_delay: 10.32 micro sec
+#link Madrid-Bilbau: 30975 pkts/sec -- link-load: 24.78% -- one_way_delay: 10.64 micro sec
+#link Barcelona-Valencia: 19946 pkts/sec -- link-load: 15.96% -- one_way_delay: 9.52 micro sec
+#link Valencia-Barcelona: 18253 pkts/sec -- link-load: 14.60% -- one_way_delay: 9.37 micro sec
+#link Portimao-Sevilha: 21380 pkts/sec -- link-load: 17.10% -- one_way_delay: 9.65 micro sec
+#link Sevilha-Portimao: 20044 pkts/sec -- link-load: 16.04% -- one_way_delay: 9.53 micro sec
+#link Madrid-Vilar.Formoso: 23291 pkts/sec -- link-load: 18.63% -- one_way_delay: 9.83 micro sec
+#link Vilar.Formoso-Madrid: 23151 pkts/sec -- link-load: 18.52% -- one_way_delay: 9.82 micro sec
+#link Granada-Valencia: 19903 pkts/sec -- link-load: 15.92% -- one_way_delay: 9.52 micro sec
+#link Valencia-Granada: 20010 pkts/sec -- link-load: 16.01% -- one_way_delay: 9.52 micro sec
+#link Aveiro-Lisboa: 29381 pkts/sec -- link-load: 23.50% -- one_way_delay: 10.46 micro sec
+#link Lisboa-Aveiro: 28139 pkts/sec -- link-load: 22.51% -- one_way_delay: 10.32 micro sec
+#link Badajoz-Valencia: 26089 pkts/sec -- link-load: 20.87% -- one_way_delay: 10.11 micro sec
+#link Valencia-Badajoz: 26189 pkts/sec -- link-load: 20.95% -- one_way_delay: 10.12 micro sec
+#link Braganca-Vilar.Formoso: 30981 pkts/sec -- link-load: 24.78% -- one_way_delay: 10.64 micro sec
+#link Vilar.Formoso-Braganca: 32384 pkts/sec -- link-load: 25.91% -- one_way_delay: 10.80 micro sec
+#link Aveiro-Vilar.Formoso: 21595 pkts/sec -- link-load: 17.28% -- one_way_delay: 9.67 micro sec
+#link Vilar.Formoso-Aveiro: 20247 pkts/sec -- link-load: 16.20% -- one_way_delay: 9.55 micro sec
+#link Portimao-Lisboa: 18799 pkts/sec -- link-load: 15.04% -- one_way_delay: 9.42 micro sec
+#link Lisboa-Portimao: 19975 pkts/sec -- link-load: 15.98% -- one_way_delay: 9.52 micro sec
+#link Granada-Palma: 13788 pkts/sec -- link-load: 11.03% -- one_way_delay: 8.99 micro sec
+#link Palma-Granada: 12494 pkts/sec -- link-load: 10.00% -- one_way_delay: 8.89 micro sec
+#link Bilbau-Andorra: 23278 pkts/sec -- link-load: 18.62% -- one_way_delay: 9.83 micro sec
+#link Andorra-Bilbau: 21743 pkts/sec -- link-load: 17.39% -- one_way_delay: 9.68 micro sec
+#link Vigo-Corunha: 12382 pkts/sec -- link-load: 9.91% -- one_way_delay: 8.88 micro sec
+#link Corunha-Vigo: 18772 pkts/sec -- link-load: 15.02% -- one_way_delay: 9.41 micro sec
+#link Madrid-Barcelona: 18635 pkts/sec -- link-load: 14.91% -- one_way_delay: 9.40 micro sec
+#link Barcelona-Madrid: 20179 pkts/sec -- link-load: 16.14% -- one_way_delay: 9.54 micro sec
+#link Braganca-Bilbau: 23045 pkts/sec -- link-load: 18.44% -- one_way_delay: 9.81 micro sec
+#link Bilbau-Braganca: 19992 pkts/sec -- link-load: 15.99% -- one_way_delay: 9.52 micro sec
+#link Madrid-Valencia: 28051 pkts/sec -- link-load: 22.44% -- one_way_delay: 10.31 micro sec
+#link Valencia-Madrid: 29460 pkts/sec -- link-load: 23.57% -- one_way_delay: 10.47 micro sec
+#link Corunha-Gijon: 23353 pkts/sec -- link-load: 18.68% -- one_way_delay: 9.84 micro sec
+#link Gijon-Corunha: 29478 pkts/sec -- link-load: 23.58% -- one_way_delay: 10.47 micro sec
+#link Barcelona-Palma: 18682 pkts/sec -- link-load: 14.95% -- one_way_delay: 9.41 micro sec
+#link Palma-Barcelona: 20080 pkts/sec -- link-load: 16.06% -- one_way_delay: 9.53 micro sec
+#link Porto-Vigo: 21526 pkts/sec -- link-load: 17.22% -- one_way_delay: 9.66 micro sec
+#link Vigo-Porto: 28027 pkts/sec -- link-load: 22.42% -- one_way_delay: 10.31 micro sec
+---
+#flow ('Vilar.Formoso', 'Granada'): one way delay: 29.78 micro sec
+#flow ('Portimao', 'Palma'): one way delay: 28.44 micro sec
+#flow ('Gijon', 'Corunha'): one way delay: 10.47 micro sec
+#flow ('Madrid', 'Gijon'): one way delay: 21.23 micro sec
+#flow ('Aveiro', 'Andorra'): one way delay: 40.11 micro sec
+#flow ('Portimao', 'Badajoz'): one way delay: 19.05 micro sec
+#flow ('Palma', 'Porto'): one way delay: 59.27 micro sec
+#flow ('Granada', 'Sevilha'): one way delay: 9.67 micro sec
+#flow ('Badajoz', 'Vigo'): one way delay: 40.15 micro sec
+#flow ('Valencia', 'Vigo'): one way delay: 50.27 micro sec
+#flow ('Porto', 'Granada'): one way delay: 50.08 micro sec
+#flow ('Lisboa', 'Vigo'): one way delay: 30.46 micro sec
+#flow ('Lisboa', 'Porto'): one way delay: 20.80 micro sec
+#flow ('Portimao', 'Andorra'): one way delay: 48.60 micro sec
+#flow ('Palma', 'Gijon'): one way delay: 40.08 micro sec
+#flow ('Bilbau', 'Sevilha'): one way delay: 39.83 micro sec
+#flow ('Valencia', 'Madrid'): one way delay: 10.47 micro sec
+#flow ('Porto', 'Vilar.Formoso'): one way delay: 20.75 micro sec
+#flow ('Palma', 'Andorra'): one way delay: 19.80 micro sec
+#flow ('Barcelona', 'Vilar.Formoso'): one way delay: 67.65 micro sec
+#flow ('Braganca', 'Palma'): one way delay: 39.51 micro sec
+#flow ('Palma', 'Valencia'): one way delay: 8.76 micro sec
+#flow ('Porto', 'Vigo'): one way delay: 9.66 micro sec
+#flow ('Gijon', 'Lisboa'): one way delay: 51.49 micro sec
+#flow ('Granada', 'Badajoz'): one way delay: 19.07 micro sec
+#flow ('Portimao', 'Porto'): one way delay: 30.21 micro sec
+#flow ('Barcelona', 'Portimao'): one way delay: 37.49 micro sec
+#flow ('Portimao', 'Sevilha'): one way delay: 9.65 micro sec
+#flow ('Vigo', 'Sevilha'): one way delay: 50.78 micro sec
+#flow ('Madrid', 'Andorra'): one way delay: 19.68 micro sec
+#flow ('Gijon', 'Vilar.Formoso'): one way delay: 20.03 micro sec
+#flow ('Vilar.Formoso', 'Porto'): one way delay: 20.60 micro sec
+#flow ('Granada', 'Braganca'): one way delay: 40.14 micro sec
+#flow ('Porto', 'Aveiro'): one way delay: 10.83 micro sec
+#flow ('Valencia', 'Braganca'): one way delay: 31.04 micro sec
+#flow ('Gijon', 'Vigo'): one way delay: 19.88 micro sec
+#flow ('Braganca', 'Sevilha'): one way delay: 30.17 micro sec
+#flow ('Aveiro', 'Valencia'): one way delay: 30.23 micro sec
+#flow ('Madrid', 'Vigo'): one way delay: 39.63 micro sec
+#flow ('Andorra', 'Sevilha'): one way delay: 39.18 micro sec
+#flow ('Gijon', 'Badajoz'): one way delay: 30.17 micro sec
+#flow ('Lisboa', 'Andorra'): one way delay: 39.41 micro sec
+#flow ('Madrid', 'Aveiro'): one way delay: 19.38 micro sec
+#flow ('Braganca', 'Madrid'): one way delay: 20.45 micro sec
+#flow ('Granada', 'Palma'): one way delay: 8.99 micro sec
+#flow ('Corunha', 'Braganca'): one way delay: 19.23 micro sec
+#flow ('Braganca', 'Granada'): one way delay: 48.09 micro sec
+#flow ('Andorra', 'Gijon'): one way delay: 20.27 micro sec
+#flow ('Andorra', 'Vilar.Formoso'): one way delay: 29.84 micro sec
+#flow ('Granada', 'Porto'): one way delay: 49.83 micro sec
+#flow ('Braganca', 'Badajoz'): one way delay: 20.78 micro sec
+#flow ('Vigo', 'Madrid'): one way delay: 40.63 micro sec
+#flow ('Vigo', 'Aveiro'): one way delay: 21.15 micro sec
+#flow ('Vigo', 'Corunha'): one way delay: 8.88 micro sec
+#flow ('Badajoz', 'Braganca'): one way delay: 20.92 micro sec
+#flow ('Sevilha', 'Barcelona'): one way delay: 28.88 micro sec
+#flow ('Andorra', 'Lisboa'): one way delay: 39.79 micro sec
+#flow ('Madrid', 'Barcelona'): one way delay: 9.40 micro sec
+#flow ('Bilbau', 'Braganca'): one way delay: 19.98 micro sec
+#flow ('Sevilha', 'Porto'): one way delay: 39.55 micro sec
+#flow ('Sevilha', 'Badajoz'): one way delay: 9.40 micro sec
+#flow ('Madrid', 'Braganca'): one way delay: 20.63 micro sec
+#flow ('Braganca', 'Aveiro'): one way delay: 20.18 micro sec
+#flow ('Braganca', 'Corunha'): one way delay: 20.00 micro sec
+#flow ('Gijon', 'Barcelona'): one way delay: 29.88 micro sec
+#flow ('Corunha', 'Palma'): one way delay: 49.70 micro sec
+#flow ('Palma', 'Madrid'): one way delay: 19.07 micro sec
+#flow ('Bilbau', 'Granada'): one way delay: 30.16 micro sec
+#flow ('Andorra', 'Vigo'): one way delay: 38.67 micro sec
+#flow ('Barcelona', 'Palma'): one way delay: 9.41 micro sec
+#flow ('Aveiro', 'Lisboa'): one way delay: 10.46 micro sec
+#flow ('Valencia', 'Vilar.Formoso'): one way delay: 20.25 micro sec
+#flow ('Corunha', 'Vigo'): one way delay: 9.41 micro sec
+#flow ('Porto', 'Bilbau'): one way delay: 19.92 micro sec
+#flow ('Porto', 'Corunha'): one way delay: 18.54 micro sec
+#flow ('Vilar.Formoso', 'Madrid'): one way delay: 9.82 micro sec
+#flow ('Vilar.Formoso', 'Gijon'): one way delay: 20.33 micro sec
+#flow ('Aveiro', 'Madrid'): one way delay: 19.49 micro sec
+#flow ('Valencia', 'Badajoz'): one way delay: 10.12 micro sec
+#flow ('Badajoz', 'Lisboa'): one way delay: 9.68 micro sec
+#flow ('Vilar.Formoso', 'Bilbau'): one way delay: 20.45 micro sec
+#flow ('Badajoz', 'Gijon'): one way delay: 30.45 micro sec
+#flow ('Aveiro', 'Porto'): one way delay: 10.47 micro sec
+#flow ('Lisboa', 'Corunha'): one way delay: 58.93 micro sec
+#flow ('Badajoz', 'Andorra'): one way delay: 29.75 micro sec
+#flow ('Valencia', 'Bilbau'): one way delay: 21.10 micro sec
+#flow ('Granada', 'Aveiro'): one way delay: 39.36 micro sec
+#flow ('Granada', 'Corunha'): one way delay: 51.68 micro sec
+#flow ('Lisboa', 'Bilbau'): one way delay: 49.31 micro sec
+#flow ('Bilbau', 'Lisboa'): one way delay: 40.62 micro sec
+#flow ('Valencia', 'Corunha'): one way delay: 42.16 micro sec
+#flow ('Porto', 'Badajoz'): one way delay: 30.95 micro sec
+#flow ('Palma', 'Lisboa'): one way delay: 28.56 micro sec
+#flow ('Palma', 'Braganca'): one way delay: 39.70 micro sec
+#flow ('Bilbau', 'Vilar.Formoso'): one way delay: 20.16 micro sec
+#flow ('Porto', 'Barcelona'): one way delay: 39.97 micro sec
+#flow ('Madrid', 'Vilar.Formoso'): one way delay: 9.83 micro sec
+#flow ('Corunha', 'Portimao'): one way delay: 50.54 micro sec
+#flow ('Valencia', 'Andorra'): one way delay: 19.64 micro sec
+#flow ('Vilar.Formoso', 'Corunha'): one way delay: 30.80 micro sec
+#flow ('Valencia', 'Aveiro'): one way delay: 29.85 micro sec
+#flow ('Braganca', 'Andorra'): one way delay: 19.64 micro sec
+#flow ('Andorra', 'Valencia'): one way delay: 19.98 micro sec
+#flow ('Sevilha', 'Vilar.Formoso'): one way delay: 19.53 micro sec
+#flow ('Aveiro', 'Sevilha'): one way delay: 29.21 micro sec
+#flow ('Bilbau', 'Portimao'): one way delay: 49.68 micro sec
+#flow ('Portimao', 'Corunha'): one way delay: 48.76 micro sec
+#flow ('Vigo', 'Vilar.Formoso'): one way delay: 31.06 micro sec
+#flow ('Corunha', 'Valencia'): one way delay: 40.63 micro sec
+#flow ('Portimao', 'Bilbau'): one way delay: 57.93 micro sec
+#flow ('Badajoz', 'Porto'): one way delay: 30.48 micro sec
+#flow ('Porto', 'Braganca'): one way delay: 10.11 micro sec
+#flow ('Madrid', 'Bilbau'): one way delay: 10.64 micro sec
+#flow ('Braganca', 'Vilar.Formoso'): one way delay: 10.64 micro sec
+#flow ('Barcelona', 'Sevilha'): one way delay: 28.71 micro sec
+#flow ('Andorra', 'Corunha'): one way delay: 30.74 micro sec
+#flow ('Corunha', 'Madrid'): one way delay: 30.32 micro sec
+#flow ('Gijon', 'Granada'): one way delay: 48.92 micro sec
+#flow ('Palma', 'Sevilha'): one way delay: 18.56 micro sec
+#flow ('Vigo', 'Barcelona'): one way delay: 50.04 micro sec
+#flow ('Granada', 'Madrid'): one way delay: 19.98 micro sec
+#flow ('Porto', 'Sevilha'): one way delay: 40.46 micro sec
+#flow ('Lisboa', 'Badajoz'): one way delay: 9.66 micro sec
+#flow ('Portimao', 'Vilar.Formoso'): one way delay: 29.41 micro sec
+#flow ('Andorra', 'Barcelona'): one way delay: 10.46 micro sec
+#flow ('Madrid', 'Corunha'): one way delay: 31.69 micro sec
+#flow ('Madrid', 'Badajoz'): one way delay: 20.44 micro sec
+#flow ('Barcelona', 'Andorra'): one way delay: 10.27 micro sec
+#flow ('Aveiro', 'Granada'): one way delay: 39.33 micro sec
+#flow ('Braganca', 'Bilbau'): one way delay: 9.81 micro sec
+#flow ('Granada', 'Andorra'): one way delay: 28.80 micro sec
+#flow ('Lisboa', 'Aveiro'): one way delay: 10.32 micro sec
+#flow ('Gijon', 'Palma'): one way delay: 39.55 micro sec
+#flow ('Barcelona', 'Vigo'): one way delay: 50.43 micro sec
+#flow ('Porto', 'Gijon'): one way delay: 19.64 micro sec
+#flow ('Vilar.Formoso', 'Braganca'): one way delay: 10.80 micro sec
+#flow ('Gijon', 'Braganca'): one way delay: 9.39 micro sec
+#flow ('Badajoz', 'Bilbau'): one way delay: 30.73 micro sec
+#flow ('Aveiro', 'Gijon'): one way delay: 30.12 micro sec
+#flow ('Sevilha', 'Andorra'): one way delay: 38.95 micro sec
+#flow ('Vilar.Formoso', 'Barcelona'): one way delay: 19.22 micro sec
+#flow ('Palma', 'Granada'): one way delay: 8.89 micro sec
+#flow ('Andorra', 'Bilbau'): one way delay: 30.64 micro sec
+#flow ('Barcelona', 'Madrid'): one way delay: 9.54 micro sec
+#flow ('Vilar.Formoso', 'Badajoz'): one way delay: 10.14 micro sec
+#flow ('Barcelona', 'Corunha'): one way delay: 41.02 micro sec
+#flow ('Badajoz', 'Sevilha'): one way delay: 9.40 micro sec
+#flow ('Portimao', 'Gijon'): one way delay: 60.37 micro sec
+#flow ('Bilbau', 'Gijon'): one way delay: 10.59 micro sec
+#flow ('Corunha', 'Sevilha'): one way delay: 49.40 micro sec
+#flow ('Valencia', 'Gijon'): one way delay: 40.16 micro sec
+#flow ('Granada', 'Vilar.Formoso'): one way delay: 29.81 micro sec
+#flow ('Palma', 'Bilbau'): one way delay: 29.86 micro sec
+#flow ('Portimao', 'Barcelona'): one way delay: 38.33 micro sec
+#flow ('Bilbau', 'Aveiro'): one way delay: 30.16 micro sec
+#flow ('Andorra', 'Palma'): one way delay: 19.87 micro sec
+#flow ('Lisboa', 'Granada'): one way delay: 28.97 micro sec
+#flow ('Palma', 'Corunha'): one way delay: 50.92 micro sec
+#flow ('Badajoz', 'Granada'): one way delay: 19.19 micro sec
+#flow ('Sevilha', 'Aveiro'): one way delay: 29.41 micro sec
+#flow ('Granada', 'Bilbau'): one way delay: 38.85 micro sec
+#flow ('Vigo', 'Palma'): one way delay: 59.36 micro sec
+#flow ('Vigo', 'Bilbau'): one way delay: 28.88 micro sec
+#flow ('Vilar.Formoso', 'Vigo'): one way delay: 30.26 micro sec
+#flow ('Sevilha', 'Corunha'): one way delay: 50.32 micro sec
+#flow ('Badajoz', 'Barcelona'): one way delay: 19.48 micro sec
+#flow ('Sevilha', 'Gijon'): one way delay: 39.85 micro sec
+#flow ('Sevilha', 'Bilbau'): one way delay: 40.13 micro sec
+#flow ('Barcelona', 'Valencia'): one way delay: 9.52 micro sec
+#flow ('Madrid', 'Porto'): one way delay: 29.96 micro sec
+#flow ('Vilar.Formoso', 'Andorra'): one way delay: 30.28 micro sec
+#flow ('Andorra', 'Madrid'): one way delay: 20.00 micro sec
+#flow ('Bilbau', 'Porto'): one way delay: 19.33 micro sec
+#flow ('Lisboa', 'Vilar.Formoso'): one way delay: 19.99 micro sec
+#flow ('Gijon', 'Porto'): one way delay: 19.19 micro sec
+#flow ('Barcelona', 'Lisboa'): one way delay: 29.32 micro sec
+#flow ('Barcelona', 'Badajoz'): one way delay: 19.64 micro sec
+#flow ('Andorra', 'Porto'): one way delay: 29.01 micro sec
+#flow ('Bilbau', 'Madrid'): one way delay: 10.32 micro sec
+#flow ('Gijon', 'Portimao'): one way delay: 49.09 micro sec
+#flow ('Sevilha', 'Granada'): one way delay: 9.80 micro sec
+#flow ('Braganca', 'Porto'): one way delay: 9.80 micro sec
+#flow ('Gijon', 'Andorra'): one way delay: 19.99 micro sec
+#flow ('Lisboa', 'Palma'): one way delay: 28.53 micro sec
+#flow ('Palma', 'Barcelona'): one way delay: 9.53 micro sec
+#flow ('Porto', 'Palma'): one way delay: 49.05 micro sec
+#flow ('Porto', 'Madrid'): one way delay: 30.32 micro sec
+#flow ('Braganca', 'Vigo'): one way delay: 29.41 micro sec
+#flow ('Badajoz', 'Palma'): one way delay: 18.87 micro sec
+#flow ('Corunha', 'Vilar.Formoso'): one way delay: 29.87 micro sec
+#flow ('Vigo', 'Granada'): one way delay: 60.57 micro sec
+#flow ('Portimao', 'Vigo'): one way delay: 39.88 micro sec
+#flow ('Lisboa', 'Valencia'): one way delay: 19.77 micro sec
+#flow ('Gijon', 'Sevilha'): one way delay: 39.56 micro sec
+#flow ('Palma', 'Aveiro'): one way delay: 38.55 micro sec
+#flow ('Aveiro', 'Barcelona'): one way delay: 28.89 micro sec
+#flow ('Valencia', 'Palma'): one way delay: 8.76 micro sec
+#flow ('Badajoz', 'Portimao'): one way delay: 18.92 micro sec
+#flow ('Madrid', 'Granada'): one way delay: 19.84 micro sec
+#flow ('Portimao', 'Valencia'): one way delay: 28.96 micro sec
+#flow ('Vilar.Formoso', 'Valencia'): one way delay: 20.25 micro sec
+#flow ('Vilar.Formoso', 'Palma'): one way delay: 28.63 micro sec
+#flow ('Lisboa', 'Gijon'): one way delay: 40.32 micro sec
+#flow ('Lisboa', 'Madrid'): one way delay: 30.24 micro sec
+#flow ('Aveiro', 'Braganca'): one way delay: 20.59 micro sec
+#flow ('Corunha', 'Granada'): one way delay: 58.59 micro sec
+#flow ('Palma', 'Vigo'): one way delay: 59.96 micro sec
+#flow ('Portimao', 'Madrid'): one way delay: 39.65 micro sec
+#flow ('Corunha', 'Lisboa'): one way delay: 41.02 micro sec
+#flow ('Aveiro', 'Corunha'): one way delay: 29.02 micro sec
+#flow ('Granada', 'Portimao'): one way delay: 19.20 micro sec
+#flow ('Sevilha', 'Lisboa'): one way delay: 18.94 micro sec
+#flow ('Granada', 'Vigo'): one way delay: 61.09 micro sec
+#flow ('Aveiro', 'Palma'): one way delay: 38.99 micro sec
+#flow ('Barcelona', 'Bilbau'): one way delay: 19.96 micro sec
+#flow ('Valencia', 'Barcelona'): one way delay: 9.37 micro sec
+#flow ('Bilbau', 'Badajoz'): one way delay: 30.75 micro sec
+#flow ('Aveiro', 'Vigo'): one way delay: 20.14 micro sec
+#flow ('Bilbau', 'Barcelona'): one way delay: 20.29 micro sec
+#flow ('Braganca', 'Valencia'): one way delay: 30.44 micro sec
+#flow ('Bilbau', 'Palma'): one way delay: 29.70 micro sec
+#flow ('Sevilha', 'Braganca'): one way delay: 30.32 micro sec
+#flow ('Madrid', 'Portimao'): one way delay: 39.04 micro sec
+#flow ('Barcelona', 'Braganca'): one way delay: 29.48 micro sec
+#flow ('Madrid', 'Palma'): one way delay: 19.07 micro sec
+#flow ('Palma', 'Portimao'): one way delay: 28.09 micro sec
+#flow ('Gijon', 'Bilbau'): one way delay: 10.16 micro sec
+#flow ('Valencia', 'Granada'): one way delay: 9.52 micro sec
+#flow ('Valencia', 'Lisboa'): one way delay: 19.80 micro sec
+#flow ('Bilbau', 'Corunha'): one way delay: 21.06 micro sec
+#flow ('Vigo', 'Valencia'): one way delay: 58.69 micro sec
+#flow ('Madrid', 'Lisboa'): one way delay: 30.12 micro sec
+#flow ('Corunha', 'Barcelona'): one way delay: 40.29 micro sec
+#flow ('Vigo', 'Porto'): one way delay: 10.31 micro sec
+#flow ('Vigo', 'Gijon'): one way delay: 18.72 micro sec
+#flow ('Corunha', 'Porto'): one way delay: 19.73 micro sec
+#flow ('Corunha', 'Badajoz'): one way delay: 50.29 micro sec
+#flow ('Portimao', 'Aveiro'): one way delay: 19.74 micro sec
+#flow ('Vilar.Formoso', 'Sevilha'): one way delay: 19.54 micro sec
+#flow ('Badajoz', 'Vilar.Formoso'): one way delay: 10.13 micro sec
+#flow ('Aveiro', 'Portimao'): one way delay: 19.98 micro sec
+#flow ('Andorra', 'Portimao'): one way delay: 48.70 micro sec
+#flow ('Sevilha', 'Madrid'): one way delay: 37.86 micro sec
+#flow ('Sevilha', 'Palma'): one way delay: 18.79 micro sec
+#flow ('Aveiro', 'Bilbau'): one way delay: 30.40 micro sec
+#flow ('Porto', 'Lisboa'): one way delay: 21.29 micro sec
+#flow ('Braganca', 'Portimao'): one way delay: 39.98 micro sec
+#flow ('Gijon', 'Valencia'): one way delay: 30.79 micro sec
+#flow ('Lisboa', 'Sevilha'): one way delay: 19.17 micro sec
+#flow ('Corunha', 'Aveiro'): one way delay: 30.56 micro sec
+#flow ('Andorra', 'Badajoz'): one way delay: 30.10 micro sec
+#flow ('Sevilha', 'Vigo'): one way delay: 49.41 micro sec
+#flow ('Granada', 'Barcelona'): one way delay: 18.52 micro sec
+#flow ('Granada', 'Valencia'): one way delay: 9.52 micro sec
+#flow ('Palma', 'Vilar.Formoso'): one way delay: 28.90 micro sec
+#flow ('Porto', 'Portimao'): one way delay: 30.81 micro sec
+#flow ('Gijon', 'Madrid'): one way delay: 20.48 micro sec
+#flow ('Vilar.Formoso', 'Portimao'): one way delay: 29.06 micro sec
+#flow ('Vilar.Formoso', 'Lisboa'): one way delay: 19.83 micro sec
+#flow ('Barcelona', 'Porto'): one way delay: 39.39 micro sec
+#flow ('Braganca', 'Lisboa'): one way delay: 30.64 micro sec
+#flow ('Madrid', 'Sevilha'): one way delay: 29.83 micro sec
+#flow ('Barcelona', 'Aveiro'): one way delay: 28.92 micro sec
+#flow ('Vigo', 'Andorra'): one way delay: 40.06 micro sec
+#flow ('Palma', 'Badajoz'): one way delay: 29.17 micro sec
+#flow ('Corunha', 'Andorra'): one way delay: 29.83 micro sec
+#flow ('Lisboa', 'Portimao'): one way delay: 9.52 micro sec
+#flow ('Bilbau', 'Valencia'): one way delay: 20.63 micro sec
+#flow ('Vigo', 'Lisboa'): one way delay: 31.60 micro sec
+#flow ('Aveiro', 'Vilar.Formoso'): one way delay: 9.67 micro sec
+#flow ('Portimao', 'Lisboa'): one way delay: 9.42 micro sec
+#flow ('Braganca', 'Gijon'): one way delay: 9.53 micro sec
+#flow ('Gijon', 'Aveiro'): one way delay: 30.03 micro sec
+#flow ('Valencia', 'Portimao'): one way delay: 29.33 micro sec
+#flow ('Lisboa', 'Barcelona'): one way delay: 29.14 micro sec
+#flow ('Granada', 'Gijon'): one way delay: 49.43 micro sec
+#flow ('Portimao', 'Granada'): one way delay: 19.45 micro sec
+#flow ('Badajoz', 'Valencia'): one way delay: 10.11 micro sec
+#flow ('Vigo', 'Badajoz'): one way delay: 40.96 micro sec
+#flow ('Bilbau', 'Andorra'): one way delay: 9.83 micro sec
+#flow ('Barcelona', 'Gijon'): one way delay: 30.77 micro sec
+#flow ('Aveiro', 'Badajoz'): one way delay: 20.12 micro sec
+#flow ('Sevilha', 'Valencia'): one way delay: 27.55 micro sec
+#flow ('Braganca', 'Barcelona'): one way delay: 29.86 micro sec
+#flow ('Bilbau', 'Vigo'): one way delay: 30.47 micro sec
+#flow ('Portimao', 'Braganca'): one way delay: 40.33 micro sec
+#flow ('Andorra', 'Granada'): one way delay: 28.76 micro sec
+#flow ('Porto', 'Valencia'): one way delay: 40.88 micro sec
+#flow ('Barcelona', 'Granada'): one way delay: 18.29 micro sec
+#flow ('Lisboa', 'Braganca'): one way delay: 30.58 micro sec
+#flow ('Porto', 'Andorra'): one way delay: 29.75 micro sec
+#flow ('Sevilha', 'Portimao'): one way delay: 9.53 micro sec
+#flow ('Granada', 'Lisboa'): one way delay: 28.61 micro sec
+#flow ('Valencia', 'Sevilha'): one way delay: 19.19 micro sec
+#flow ('Corunha', 'Gijon'): one way delay: 9.84 micro sec
+#flow ('Andorra', 'Aveiro'): one way delay: 39.38 micro sec
+#flow ('Corunha', 'Bilbau'): one way delay: 20.00 micro sec
+#flow ('Andorra', 'Braganca'): one way delay: 19.21 micro sec
+#flow ('Vigo', 'Portimao'): one way delay: 41.13 micro sec
+#flow ('Vilar.Formoso', 'Aveiro'): one way delay: 9.55 micro sec
+#flow ('Vigo', 'Braganca'): one way delay: 20.43 micro sec
+#flow ('Badajoz', 'Corunha'): one way delay: 40.92 micro sec
+#flow ('Badajoz', 'Aveiro'): one way delay: 20.01 micro sec
+#flow ('Badajoz', 'Madrid'): one way delay: 20.58 micro sec
+#flow ('Madrid', 'Valencia'): one way delay: 10.31 micro sec
+#flow ('Valencia', 'Porto'): one way delay: 40.43 micro sec
+---
+Average link load of: 18.28%
+Worst link load on link ('Porto', 'Aveiro') with load of: 26.15%
+---
+Average one way time delay of: 9.82 micro sec
+Worst one way time on link ('Porto', 'Aveiro') with delay of: 10.83 micro sec
+---
+Worst QoS on flow ('Barcelona', 'Vilar.Formoso') with delay of: 67.65 micro sec

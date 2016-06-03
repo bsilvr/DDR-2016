@@ -1,0 +1,40 @@
+{'Lisboa': {'Viseu': 31483, 'Aveiro': 31143, 'Porto': 31412}, 'Viseu': {'Lisboa': 31267, 'Porto': 31347, 'Aveiro': 31360}, 'Aveiro': {'Lisboa': 31343, 'Viseu': 31069, 'Porto': 31228}, 'Porto': {'Lisboa': 31130, 'Viseu': 31224, 'Aveiro': 31199}}
+(('Aveiro', 'Viseu'), 62.564445855735535, (40.6405055, -8.6537539), (40.6565861, -7.9124712))
+(('Viseu', 'Lisboa'), 239.33425671132269, (40.6565861, -7.9124712), (38.7222524, -9.1393366))
+(('Aveiro', 'Porto'), 57.573797447051476, (40.6405055, -8.6537539), (41.1579438, -8.629105299999999))
+(('Viseu', 'Porto'), 82.065863427652673, (40.6565861, -7.9124712), (41.1579438, -8.629105299999999))
+(('Aveiro', 'Lisboa'), 217.30918549582466, (40.6405055, -8.6537539), (38.7222524, -9.1393366))
+---
+Solution:{('Lisboa', 'Viseu'): ['Lisboa', 'Viseu'], ('Porto', 'Lisboa'): ['Porto', 'Viseu', 'Lisboa'], ('Viseu', 'Porto'): ['Viseu', 'Porto'], ('Lisboa', 'Aveiro'): ['Lisboa', 'Aveiro'], ('Aveiro', 'Viseu'): ['Aveiro', 'Viseu'], ('Viseu', 'Aveiro'): ['Viseu', 'Aveiro'], ('Aveiro', 'Porto'): ['Aveiro', 'Viseu', 'Porto'], ('Porto', 'Viseu'): ['Porto', 'Viseu'], ('Porto', 'Aveiro'): ['Porto', 'Aveiro'], ('Lisboa', 'Porto'): ['Lisboa', 'Aveiro', 'Porto'], ('Viseu', 'Lisboa'): ['Viseu', 'Aveiro', 'Lisboa'], ('Aveiro', 'Lisboa'): ['Aveiro', 'Lisboa']}
+---
+#link Aveiro-Viseu: 62297 pkts/sec -- link-load: 49.84% -- one_way_delay: 15.95 micro sec
+#link Viseu-Aveiro: 62627 pkts/sec -- link-load: 50.10% -- one_way_delay: 16.03 micro sec
+#link Viseu-Lisboa: 31130 pkts/sec -- link-load: 24.90% -- one_way_delay: 10.65 micro sec
+#link Lisboa-Viseu: 31483 pkts/sec -- link-load: 25.19% -- one_way_delay: 10.69 micro sec
+#link Aveiro-Porto: 31412 pkts/sec -- link-load: 25.13% -- one_way_delay: 10.69 micro sec
+#link Porto-Aveiro: 31199 pkts/sec -- link-load: 24.96% -- one_way_delay: 10.66 micro sec
+#link Viseu-Porto: 62575 pkts/sec -- link-load: 50.06% -- one_way_delay: 16.02 micro sec
+#link Porto-Viseu: 62354 pkts/sec -- link-load: 49.88% -- one_way_delay: 15.96 micro sec
+#link Aveiro-Lisboa: 62610 pkts/sec -- link-load: 50.09% -- one_way_delay: 16.03 micro sec
+#link Lisboa-Aveiro: 62555 pkts/sec -- link-load: 50.04% -- one_way_delay: 16.01 micro sec
+---
+#flow ('Lisboa', 'Viseu'): one way delay: 10.69 micro sec
+#flow ('Porto', 'Lisboa'): one way delay: 26.62 micro sec
+#flow ('Viseu', 'Porto'): one way delay: 16.02 micro sec
+#flow ('Lisboa', 'Aveiro'): one way delay: 16.01 micro sec
+#flow ('Aveiro', 'Viseu'): one way delay: 15.95 micro sec
+#flow ('Viseu', 'Aveiro'): one way delay: 16.03 micro sec
+#flow ('Aveiro', 'Porto'): one way delay: 31.97 micro sec
+#flow ('Porto', 'Viseu'): one way delay: 15.96 micro sec
+#flow ('Porto', 'Aveiro'): one way delay: 10.66 micro sec
+#flow ('Lisboa', 'Porto'): one way delay: 26.70 micro sec
+#flow ('Viseu', 'Lisboa'): one way delay: 32.06 micro sec
+#flow ('Aveiro', 'Lisboa'): one way delay: 16.03 micro sec
+---
+Average link load of: 40.02%
+Worst link load on link ('Viseu', 'Aveiro') with load of: 50.10%
+---
+Average one way time delay of: 13.87 micro sec
+Worst one way time on link ('Viseu', 'Aveiro') with delay of: 16.03 micro sec
+---
+Worst QoS on flow ('Viseu', 'Lisboa') with delay of: 32.06 micro sec

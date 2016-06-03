@@ -38,41 +38,74 @@ def listStats(L):
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-f', '--file', nargs='?', help='input network file', default='network.dat')
+parser.add_argument('-r', '--runs', nargs='?', help='number of runs', default='1')
 args=parser.parse_args()
 
 filename=args.file
+runs = int(args.runs)
 
-sys.stdout = Logger("ex2-4-" + filename.split(".")[0] + ".txt")
-
+sys.stdout = Logger("ex12-" + filename.split(".")[0] + ".txt")
 
 with open(filename) as f:
 	nodes, links, pos, tm = pickle.load(f)
 
 print(tm)
 
-net=nx.DiGraph()
-for node in nodes:
-	net.add_node(node)
+best_sol = None
+best_net = None
+min_delay = 0
+best_run = 0
 
-for link in links:
-	dist=geodist((pos[link[0]][1],pos[link[0]][0]),(pos[link[1]][1],pos[link[1]][0]))
-	net.add_edge(link[0],link[1],distance=dist, load=0, delay=0)
-	net.add_edge(link[1],link[0],distance=dist, load=0, delay=0)
-	print(link,dist,(pos[link[0]][1],pos[link[0]][0]),(pos[link[1]][1],pos[link[1]][0]))
+for i in range(0,runs):
 
-nx.draw(net,pos,with_labels=True)
-plt.show()
+	net=nx.DiGraph()
+	for node in nodes:
+		net.add_node(node)
 
-allpairs=list(itertools.permutations(nodes,2))
-sol={}
+	for link in links:
+		dist=geodist((pos[link[0]][1],pos[link[0]][0]),(pos[link[1]][1],pos[link[1]][0]))
+		net.add_edge(link[0],link[1],distance=dist, load=0, delay=0)
+		net.add_edge(link[1],link[0],distance=dist, load=0, delay=0)
+		#print(link,dist,(pos[link[0]][1],pos[link[0]][0]),(pos[link[1]][1],pos[link[1]][0]))
 
-for pair in allpairs:
-	path=nx.shortest_path(net,pair[0],pair[1],weight='distance')
-	sol.update({pair:path})
-	for i in range(0,len(path)-1):
-		net[path[i]][path[i+1]]['load']+=tm[pair[0]][pair[1]]
+	nx.draw(net,pos,with_labels=True)
+	#plt.show()
 
+	allpairs=list(itertools.permutations(nodes,2))
+	sol={}
+
+	random.shuffle(allpairs)
+
+	for pair in allpairs:
+		path=nx.shortest_path(net,pair[0],pair[1],weight='load')
+		sol.update({pair:path})
+		for i in range(0,len(path)-1):
+			net[path[i]][path[i+1]]['load']+=tm[pair[0]][pair[1]]
+			net[path[i]][path[i+1]]['delay']+= 1000000.0/(mu-tm[pair[0]][pair[1]])
+
+
+	delay_sum = 0
+	for link in links:
+		delay_sum += 1000000.0/(mu-net[link[0]][link[1]]['load'])
+
+	delay_avg = delay_sum / len(links)
+
+	if best_sol == None:
+		best_sol = sol
+		best_net = net
+		min_delay = delay_avg
+	else:
+		if min_delay > delay_avg:
+			best_sol = sol
+			best_net = net
+			min_delay = delay_avg
+			best_run = i
+
+
+sol = best_sol
+net = best_net
 print('---')
+print('Best run was on pass %d'%(i))
 print('Solution:'+str(sol))
 
 print('---')

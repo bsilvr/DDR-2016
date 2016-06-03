@@ -42,8 +42,7 @@ args=parser.parse_args()
 
 filename=args.file
 
-sys.stdout = Logger("ex2-4-" + filename.split(".")[0] + ".txt")
-
+sys.stdout = Logger("ex5-6-" + filename.split(".")[0] + ".txt")
 
 with open(filename) as f:
 	nodes, links, pos, tm = pickle.load(f)
@@ -67,7 +66,7 @@ allpairs=list(itertools.permutations(nodes,2))
 sol={}
 
 for pair in allpairs:
-	path=nx.shortest_path(net,pair[0],pair[1],weight='distance')
+	path=nx.shortest_path(net,pair[0],pair[1],weight='load')
 	sol.update({pair:path})
 	for i in range(0,len(path)-1):
 		net[path[i]][path[i+1]]['load']+=tm[pair[0]][pair[1]]
